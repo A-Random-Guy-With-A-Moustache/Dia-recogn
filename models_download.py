@@ -13,13 +13,13 @@ MODELS = {
 #        "repo_id": "Qwen/Qwen3-VL-8B-Instruct",
 #        "subfolder": "teacher",
 #        "description": "Techer",
- #   },
-  #  "analyzer-2B": {
-   #     "name": "Qwen/Qwen3-VL-2B-Instruct",
-    #    "repo_id": "Qwen/Qwen3-VL-2B-Instruct",
-     #   "subfolder": "analyzer-2B",
-      #  "description": "Analyzer",
-    #},
+#    },
+    "analyzer-2B": {
+        "name": "Qwen/Qwen3-VL-2B-Instruct",
+        "repo_id": "Qwen/Qwen3-VL-2B-Instruct",
+        "subfolder": "analyzer-2B",
+        "description": "Analyzer",
+    },
         "analyzer-4B": {
         "name": "Qwen/Qwen3-VL-4B-Instruct",
         "repo_id": "Qwen/Qwen3-VL-4B-Instruct",
