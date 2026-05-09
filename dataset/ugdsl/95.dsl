@@ -1,0 +1,27 @@
+N A S 500 100 C W
+N B 1 200 300 C W
+N C 2 400 300 C W
+N D 3 600 300 C W
+N E 4 100 500 C W
+N F 5 300 500 C W
+N G 6 400 600 C W
+N H 7 500 600 C W
+N I 8 600 500 C W
+N J 9 500 700 C W
+N K 4 700 700 C W
+N L 4 700 700 C W
+
+E A B -
+E A C -
+E A D -
+
+E B E -
+E B F -
+E B G -
+
+E C H -
+E C J -
+
+E D I -
+E I K -
+E I L -

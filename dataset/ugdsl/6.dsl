@@ -1,0 +1,13 @@
+N A A 350 150 C B
+N B B 650 50 C B
+N C C 750 250 C B
+N D D 250 350 C B
+N F F 450 450 C B
+N G G 450 650 C B
+N H H 650 550 C B
+
+U A B -
+U A C -
+U A D -
+U F G -
+U F D -

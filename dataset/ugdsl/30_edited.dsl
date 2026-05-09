@@ -1,0 +1,11 @@
+N A Д 200 100 C W
+N B Б 800 100 C W
+N C К 500 300 C W
+N D П 100 700 C W
+N E М 900 700 C W
+U A B -
+U A C -
+U B C -
+U B E -
+U C D -
+U A P_M -

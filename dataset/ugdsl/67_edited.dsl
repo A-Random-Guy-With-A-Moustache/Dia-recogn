@@ -1,0 +1,17 @@
+N A A 300 300 C W
+N B B 450 200 C W
+N C C 600 200 C W
+N D D 450 500 C W
+N E E 600 500 C W
+N F F 800 350 C W
+E A B -
+E A C -
+E A D -
+E B C -
+E C D -
+E C E -
+E C F -
+E D E -
+E E C -
+E E F -
+E F C -

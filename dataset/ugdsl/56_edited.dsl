@@ -1,0 +1,13 @@
+N A A 400 200 C B
+N B B 700 150 C B
+N C C 700 300 C B
+N D D 200 350 C B
+N F F 400 400 C B
+N G G 400 500 C B
+N H H 600 450 C B
+U A B -
+U A C -
+U A D -
+U F G -
+U F H -
+E D F -

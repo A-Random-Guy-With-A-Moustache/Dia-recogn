@@ -1,0 +1,16 @@
+N A FACTOR_A 500 300 B W
+N B FACTOR_B 800 500 B W
+N C FACTOR_C 650 800 B W
+N D FACTOR_D 350 800 B W
+N E FACTOR_E 200 500 B W
+E A E -
+E A B -
+E A C -
+E A D -
+E B E -
+E B D -
+E B C -
+E E B -
+E D B -
+E D C -
+E E C -

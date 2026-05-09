@@ -1,0 +1,15 @@
+N A A 100 300 C K
+N B B 300 100 C K
+N C C 500 100 C K
+N D D 300 500 C K
+N E E 500 300 C K
+N F F 800 300 C K
+E A B -
+E A C -
+E A D -
+E B C -
+E D C -
+E D E -
+E E C -
+E E F -
+E F C -

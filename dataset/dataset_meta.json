@@ -1,0 +1,2202 @@
+[
+  {
+    "index": "1",
+    "image": "1.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "процесс посадки саженца",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\1_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 100 E W\nN B ВЫКОПАТЬ_ЯМУ 500 200 B W\nN C ОПУСТИТЬ_В_ЯМУ_САЖЕНЕЦ 500 300 B W\nN D ЗАКОПАТЬ_ЯМУ 500 400 B W\nN E ПОЛИТЬ_САЖЕНЕЦ 500 500 B W\nN F КОНЕЦ 500 600 E W\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\1_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 100 E W\nN B ВЫКОПАТЬ_ЯМУ 500 200 B W\nN C ОПУСТИТЬ_В_ЯМУ_САЖЕНЕЦ 500 300 B W\nN D ЗАКОПАТЬ_ЯМУ 500 400 B O\nN E ПОЛИТЬ_САЖЕНЕЦ 500 500 B W\nN F КОНЕЦ 500 600 E W\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\1_edit.pt",
+    "step_times": {
+      "answer_s": 8.624,
+      "dsl_gen_s": 14.789,
+      "edit_s": 11.339
+    }
+  },
+  {
+    "index": "2",
+    "image": "2.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "1",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\2_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 100 E W\nN B 4_4_16 500 200 B W\nN C 16_2_18 500 300 B W\nN D 18_2_9 500 400 B W\nN E 8_2_10 500 500 B W\nN F 10_9_90 500 600 B W\nN G ОТВЕТ_90 500 700 I W\nN H КОНЕЦ 500 800 E W\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\2_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 100 E W\nN B MULTIPLY_16_2_18 500 200 B Y\nN C MULTIPLY_16_2_18 500 300 B Y\nN D MULTIPLY_18_2_9 500 400 B Y\nN E ADDITION_8_2_10 500 500 B G\nN F MULTIPLY_10_9_90 500 600 B Y\nN G ANSWER_90 500 700 I W\nN H КОНЕЦ 500 800 E W\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\2_edit.pt",
+    "step_times": {
+      "answer_s": 0.317,
+      "dsl_gen_s": 13.575,
+      "edit_s": 22.85
+    }
+  },
+  {
+    "index": "3",
+    "image": "3.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Диаграмма влияния. Описывает факторы, влияющие на ошибки при наборе текста.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\3_answer.pt",
+    "dsl_code": "N A СКОРОСТЬ 100 100 B W\nN B ОПЕРАТОР 300 100 B W\nN C ОШИБКИ_ПРИ_НАБОРЕ_ТЕКСТА 500 200 D R\nN D ТЕЛЕФОННЫЕ_ЗВОНКИ 100 300 B W\nN E ШУМ 100 400 B W\nN F ОПЫТ 800 100 B W\nN G ПРЕДВАРИТЕЛЬНЫЙ_КОНТРОЛЬ 800 200 B W\nN H РАСПОЛОЖЕНИЕ_ИСТОЧНИКА 800 300 B W\nN I УСЛОВИЯ_РАБОТЫ 500 400 B W\nN J ОСВЕЩЕНИЕ 800 400 B W\nN K ТИП_ОБОРУДОВАНИЯ 100 500 B W\nN L ЯРКОСТЬ 800 500 B W\n\nE A B -\nE B C -\nE D C -\nE E I -\nE F B -\nE G B -\nE H I -\nE I J -\nE J K -\nE L J -\n\nU C I -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\3_dsl.pt",
+    "edited_dsl": "N A СКОРОСТЬ 100 100 B W\nN B ОПЕРАТОР 300 100 B W\nN C ОШИБКИ_ПРИ_НАБОРЕ_ТЕКСТА 500 200 D R\nN D ТЕЛЕФОННЫЕ_ЗВОНКИ 100 300 B W\nN E ШУМ 100 400 B W\nN F ОПЫТ 800 100 B W\nN G ПРЕДВАРИТЕЛЬНЫЙ_КОНТРОЛЬ 800 200 B W\nN H РАСПОЛОЖЕНИЕ_ИСТОЧНИКА 800 300 B W\nN I УСЛОВИЯ_РАБОТЫ 500 400 B W\nN J ОСВЕЩЕНИЕ 800 400 B W\nN K ТИП_ОБОРУДОВАНИЯ 100 500 B W\nN L ЯРКОСТЬ 800 500 B W\n\nE A B -\nE B C -\nE D C -\nE E I -\nE F B -\nE G B -\nE H I -\nE I J -\nE J K -\nE L J -\n\nU C I -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\3_edit.pt",
+    "step_times": {
+      "answer_s": 3.707,
+      "dsl_gen_s": 35.505,
+      "edit_s": 39.628
+    }
+  },
+  {
+    "index": "4",
+    "image": "4.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Диаграммы UML. 14.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\4_answer.pt",
+    "dsl_code": "N A Диаграммы_UML 500 50 B blue\nN B Структурные_диаграммы 250 150 B blue\nN C Диаграммы_поведения 750 150 B blue\nN D Диаграмма_классов 100 300 B white\nN E Диаграмма_объектов 300 300 B white\nN F Диаграмма_компонентов 500 300 B white\nN G Диаграмма_профилей 700 300 B white\nN H Диаграмма_развертывания 100 450 B white\nN I Диаграмма_пакетов 300 450 B white\nN J Диаграмма_кооперации 500 450 B white\nN K Диаграмма_состояний 250 550 B white\nN L Диаграмма_прецедентов 650 550 B white\nN M Диаграммы_взаимодействий 450 550 B white\nN N Диаграмма_последовательности 250 700 B white\nN O Диаграмма_синхронизации 650 700 B white\nN P Диаграмма_коммуникации 450 800 B white\nN Q Диаграмма_обзора_взаимодействия 850 800 B white\nN R Диаграмма_деятельности 900 550 B white\n\nE A B -\nE A C -\nE B D -\nE B E -\nE B F -\nE B G -\nE B H -\nE B I -\nE B J -\nE C K -\nE C L -\nE C M -\nE C N -\nE C O -\nE C P -\nE C Q -\nE C R -\nE M N -\nE M O -\nE M P -\nE M Q -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\4_dsl.pt",
+    "edited_dsl": "N A Диаграммы_UML 500 50 B red\nN B Структурные_диаграммы 250 150 B dark_red\nN C Диаграммы_поведения 750 150 B darker_red\nN D Диаграмма_классов 100 300 B white\nN E Диаграмма_объектов 300 300 B white\nN F Диаграмма_компонентов 500 300 B white\nN G Диаграмма_профилей 700 300 B white\nN H Диаграмма_развертывания 100 450 B white\nN I Диаграмма_пакетов 300 450 B white\nN J Диаграмма_кооперации 500 450 B white\nN K Диаграмма_состояний 250 550 B white\nN L Диаграмма_прецедентов 650 550 B white\nN M Диаграммы_взаимодействий 450 550 B white\nN N Диаграмма_последовательности 250 700 B white\nN O Диаграмма_синхронизации 650 700 B white\nN P Диаграмма_коммуникации 450 800 B white\nN Q Диаграмма_обзора_взаимодействия 850 800 B white\nN R Диаграмма_деятельности 900 550 B white\n\nE A B -\nE A C -\nE B D -\nE B E -\nE B F -\nE B G -\nE B H -\nE B I -\nE B J -\nE C K -\nE C L -\nE C M -\nE C N -\nE C O -\nE C P -\nE C Q -\nE C R -\nE M N -\nE M O -\nE M P -\nE M Q -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\4_edit.pt",
+    "step_times": {
+      "answer_s": 1.219,
+      "dsl_gen_s": 63.943,
+      "edit_s": 64.074
+    }
+  },
+  {
+    "index": "5",
+    "image": "5.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Д-Б-М, Д-К-Б-М, Д-К-М",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\5_answer.pt",
+    "dsl_code": "N A Д 200 100 C W\nN B Б 600 100 C W\nN C К 400 300 C W\nN D М 800 300 C W\nN E П 100 500 C W\nU A B -\nU A C -\nU B C -\nU B D -\nU C D -\nU C E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\5_dsl.pt",
+    "edited_dsl": "N A Д 200 100 C W\nN B Б 600 100 C W\nN C К 400 300 C W\nN D М 800 300 C W\nN E П 100 500 C W\nU A B -\nU A C -\nU B C -\nU B D -\nU C D -\nU C E -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\5_edit.pt",
+    "step_times": {
+      "answer_s": 3.014,
+      "dsl_gen_s": 12.979,
+      "edit_s": 11.324
+    }
+  },
+  {
+    "index": "6",
+    "image": "6.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "4",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\6_answer.pt",
+    "dsl_code": "N A A 350 150 C B\nN B B 650 50 C B\nN C C 750 250 C B\nN D D 250 350 C B\nN F F 450 450 C B\nN G G 450 650 C B\nN H H 650 550 C B\n\nU A B -\nU A C -\nU A D -\nU F G -\nU F D -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\6_dsl.pt",
+    "edited_dsl": "N A A 350 150 C B\nN B B 650 50 C B\nN C C 750 250 C B\nN D D 250 350 C B\nN F F 450 450 C B\nN G G 450 650 C B\nN H H 650 550 C B\nU A B -\nU A C -\nU A D -\nU F G -\nU F D -\nE D F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\6_edit.pt",
+    "step_times": {
+      "answer_s": 0.712,
+      "dsl_gen_s": 15.979,
+      "edit_s": 15.299
+    }
+  },
+  {
+    "index": "7",
+    "image": "7.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Нахождение максимального значения среди трёх чисел a, b и c.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\7_answer.pt",
+    "dsl_code": "N A Start 500 50 G\nN B Declare_variables_a_b_and_c 500 150 B B\nN C Assign_a_b_and_c 500 250 I B\nN D Is_a>b? 500 350 D B\nN E Is_c>b? 300 450 D B\nN F Print_b 300 550 I B\nN G Is_a>c? 800 450 D B\nN H Print_c 500 550 I B\nN I Print_a 800 550 I B\nN J Stop 500 650 C R\n\nE A B -\nE B C -\nE C D -\nE D E False\nE D G True\nE E F False\nE G H False\nE G I True\nE F J -\nE H J -\nE I J -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\7_dsl.pt",
+    "edited_dsl": "N A Start 500 50 G\nN B Declare_variables_a_b_and_c 500 150 B B\nN C Assign_a_b_and_c 500 250 I B\nN D Is_a>b? 500 350 D Y\nN E Is_c>b? 300 450 D Y\nN F Print_b 300 550 I B\nN G Is_a>c? 800 450 D Y\nN H Print_c 500 550 I B\nN I Print_a 800 550 I B\nN J Stop 500 650 C R\n\nE A B -\nE B C -\nE C D -\nE D E False\nE D G True\nE E F False\nE G H False\nE G I True\nE F J -\nE H J -\nE I J -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\7_edit.pt",
+    "step_times": {
+      "answer_s": 3.019,
+      "dsl_gen_s": 26.781,
+      "edit_s": 25.71
+    }
+  },
+  {
+    "index": "8",
+    "image": "8.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\8_answer.pt",
+    "dsl_code": "N A A 100 300 E W\nN B B 300 100 E W\nN C C 500 150 E W\nN D D 300 400 E W\nN E E 500 400 E W\nN F F 600 100 E W\nN G G 600 250 E W\nN H H 600 400 E W\nN I I 800 400 E W\nN J J 800 550 E W\nN K K 900 200 E W\n\nE A B -\nE A C -\nE A D -\nE A E -\nE B C -\nE B F -\nE B G -\nE C G -\nE C H -\nE D E -\nE D H -\nE E H -\nE E J -\nE F G -\nE F K -\nE G H -\nE G I -\nE G K -\nE H I -\nE H J -\nE I K -\nE I J -\nE J K -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\8_dsl.pt",
+    "edited_dsl": "N A A 100 300 E W\nN B B 300 100 E W\nN C C 500 150 E W\nN D D 300 400 E W\nN E E 500 400 E W\nN F F 600 100 E W\nN G G 600 250 E W\nN H H 600 400 E W\nN I I 800 400 E W\nN J J 800 550 E W\nN K K 900 200 E W\n\nE A B -\nE A C -\nE A D -\nE A E -\nE B C -\nE B F -\nE B G -\nE C G -\nE C H -\nE D E -\nE D H -\nE E H -\nE E J -\nE F G -\nE F K -\nE G H -\nE G I -\nE G K -\nE H I -\nE H J -\nE I K -\nE I J -\nE J K -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\8_edit.pt",
+    "step_times": {
+      "answer_s": 0.664,
+      "dsl_gen_s": 30.649,
+      "edit_s": 30.23
+    }
+  },
+  {
+    "index": "9",
+    "image": "9.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Процесс оформления и доставки товара клиенту с согласованием счета и условий доставки.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\9_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 50 E W\nN B УСТАНОВЛЕНИЕ_КОНТАКА_С_КЛИЕНТОМ 300 150 B W\nN C ВЫЯВЛЕНИЕ_ПОТРЕБНОСТИ_КЛИЕНТА 500 250 B W\nN D ФОРМИРОВАНИЕ_СЧЕТА_ИСХОДЯ_ИЗ_ПОТРЕБНОСТИ_КЛИЕНТА 500 400 D W\nN E КЛИЕНТ_СЧЕТ_ПОДТВЕРДИЛ 300 550 B W\nN F ОПЛАТА_СЧЕТА_КЛИЕНТОМ 300 650 B W\nN G СОГЛАСОВАНИЕ_ФОРМАТА_ДОСТАВКИ_И_АДРЕСА 300 750 B W\nN H ДОСТАВКА_ТОВАРА 300 850 B W\nN I КОНЦЕ 500 950 E W\n\nE A B -\nE B C -\nE C D -\nE D E да\nE D F нет\nE E F -\nE F G -\nE G H -\nE H I -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\9_dsl.pt",
+    "edited_dsl": "N A START 500 50 E W\nN B ESTABLISH_CONTACT_WITH_CUSTOMER 300 150 B W\nN C IDENTIFY_CUSTOMER_NEEDS 500 250 B W\nN D CREATE_INVOICE_BASED_ON_CUSTOMER_NEEDS 500 400 D W\nN E CUSTOMER_CONFIRMED_INVOICE 300 550 B W\nN F CUSTOMER_PAID_INVOICE 300 650 B W\nN G AGREEMENT_ON_DELIVERY_FORMAT_AND_ADDRESS 300 750 B W\nN H DELIVER_GOODS 300 850 B W\nN I END 500 950 E W\n\nE A B -\nE B C -\nE C D -\nE D E yes\nE D F no\nE E F -\nE F G -\nE G H -\nE H I -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\9_edit.pt",
+    "step_times": {
+      "answer_s": 2.918,
+      "dsl_gen_s": 37.933,
+      "edit_s": 24.613
+    }
+  },
+  {
+    "index": "10",
+    "image": "10.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "12",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\10_answer.pt",
+    "dsl_code": "N A 0 100 200 E W\nN B 1 200 300 E W\nN C 2 300 400 E W\nN D 3 400 500 E W\nN E 4 500 600 E W\nN F 5 100 400 E W\nN G 6 600 500 E W\nN H 7 800 600 E W\nN I 8 700 700 E W\nN J 9 900 700 E W\n\nU A B -\nU A C -\nU A F -\nU B C -\nU B D -\nU B I -\nU C D -\nU C E -\nU C I -\nU D E -\nU D F -\nU D G -\nU E G -\nU E I -\nU E J -\nU F G -\nU F I -\nU G H -\nU G J -\nU I J -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\10_dsl.pt",
+    "edited_dsl": "N A 0 100 200 E W\nN B 1 200 300 E W\nN C 2 300 400 E W\nN D 3 400 500 E W\nN E 4 500 600 E W\nN F 5 100 400 E W\nN G 6 600 500 E W\nN H 7 800 600 E W\nN I 8 700 700 E W\nN J 9 900 700 E W\nN K 10 500 500 E W\nU A B -\nU A C -\nU A F -\nU B C -\nU B D -\nU B I -\nU C D -\nU C E -\nU C I -\nU D E -\nU D F -\nU D G -\nU E G -\nU E I -\nU E J -\nU F G -\nU F I -\nU G H -\nU G J -\nU I J -\nU K 4 -\nU K 7 -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\10_edit.pt",
+    "step_times": {
+      "answer_s": 0.717,
+      "dsl_gen_s": 28.738,
+      "edit_s": 31.304
+    }
+  },
+  {
+    "index": "11",
+    "image": "11.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\11_answer.pt",
+    "dsl_code": "N A Диаграмма_связей_бизнесидей 500 50 W W\nN B Коучингцентр 100 150 B gray\nN C Психология_личности 180 200 B orange\nN D Кафе_элитной_выпечки 250 190 B gray\nN E Кулинария 280 250 B orange\nN F PRагентство 350 150 B yellow\nN G Party_center 450 150 B yellow\nN H репетиторство 550 150 B yellow\nN I Легоцентр 650 150 B yellow\nN J коммуникация 400 250 B green\nN K творчество 500 250 B green\nN L обучение 600 250 B green\nN M Умения 550 350 B green\nN N Интересы 200 350 B orange\nN O Бизнесидеи 400 450 B blue\nN P Мотивация 200 550 B purple\nN Q первооткрыватель 100 650 B purple\nN R лидер 300 650 B purple\nN S Консьержсервис 100 750 B pink\nN T Клуб_здорового_питания 200 750 B pink\nN U Частная_школа 300 750 B pink\nN V Потребности_общества 600 550 B red\nN W досуг 500 650 B brown\nN X Клуб_для_пенсионеров 500 750 B cyan\nN Y Парк_отдыха_и_занятий_спортом 600 750 B cyan\n\nE B C -\nE D C -\nE B N -\nE D N -\nE F J -\nE G J -\nE H K -\nE I L -\nE J M -\nE K M -\nE L M -\nE N O -\nE P Q -\nE P R -\nE Q S -\nE Q T -\nE Q U -\nE R S -\nE R T -\nE R U -\nE V W -\nE W X -\nE W Y -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\11_dsl.pt",
+    "edited_dsl": "N A Диаграмма_связей_бизнесидей 500 50 W W\nN B Коучингцентр 100 150 B gray\nN C Психология_личности 180 200 B orange\nN D Кафе_элитной_выпечки 250 190 B gray\nN E Кулинария 280 250 B orange\nN F PRагентство 350 150 B yellow\nN G Party_center 450 150 B yellow\nN H репетиторство 550 150 B yellow\nN I Легоцентр 650 150 B yellow\nN J коммуникация 400 250 B green\nN K творчество 500 250 B green\nN L обучение 600 250 B green\nN M Умения 550 350 B green\nN N Интересы 200 350 B orange\nN O Бизнесидеи 400 450 B blue\nN P Мотивация 200 550 B purple\nN Q первооткрыватель 100 650 B purple\nN R лидер 300 650 B purple\nN S Консьержсервис 100 750 B pink\nN T Клуб_здорового_питания 200 750 B pink\nN U Частная_школа 300 750 B pink\nN V Потребности_общества 600 550 B red\nN W досуг 500 650 B brown\nN X Клуб_для_пенсионеров 500 750 B cyan\nN Y Парк_отдыха_и_занятий_спортом 600 750 B cyan\nN Z бассейн 500 650 B blue\nE B C -\nE D C -\nE B N -\nE D N -\nE F J -\nE G J -\nE H K -\nE I L -\nE J M -\nE K M -\nE L M -\nE N O -\nE P Q -\nE P R -\nE Q S -\nE Q T -\nE Q U -\nE R S -\nE R T -\nE R U -\nE V W -\nE W X -\nE W Y -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\11_edit.pt",
+    "step_times": {
+      "answer_s": 0.629,
+      "dsl_gen_s": 69.639,
+      "edit_s": 71.302
+    }
+  },
+  {
+    "index": "12",
+    "image": "12.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "4",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\12_answer.pt",
+    "dsl_code": "N A КЛИЕНТЫ 400 150 B K\nN B Наименование_компании 380 90 E W\nN C Адрес 200 120 E W\nN D Телефон 600 120 E W\nN E ФИО_клиента 100 180 E W\nN F ИНН 200 220 E W\nN G Город 600 180 E W\nN H Индекс 500 220 E W\nN I Заказ_Договор 700 250 B K\nN J Сумма_по_договору 800 300 E W\nN K Дата_договора 700 350 E W\nN L Номер_договора 500 300 E W\nN M Заказы 400 400 B K\nN N Дата_заказа 400 450 E W\nN O Срок_выполнения 500 450 E W\nN P Код_клиента 300 350 E W\nN Q Код_услуги 200 500 E W\nN R Наименование_заказа 300 550 E W\nN S Номер_заказа 400 550 E W\nN T Заказ_Услуги 200 600 B K\nN U Услуги 200 700 B K\nN V Код_услуги 200 750 E W\nN W Наименование_услуг 300 750 E W\nN X Код_услуги 200 800 E W\nN Y Сотрудники 700 600 B K\nN Z ФИО_сотрудника 700 650 E W\nN AA Адрес 700 700 E W\nN AB Телефон 700 750 E W\nN AC ИНН 700 800 E W\nN AD Код_сотрудника 700 550 E W\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE A H -\nE A P -\nE I L -\nE I K -\nE I J -\nE M N -\nE M O -\nE M P -\nE M Q -\nE M R -\nE M S -\nE M T -\nE T V -\nE T W -\nE T X -\nE Y Z -\nE Y AA -\nE Y AB -\nE Y AC -\nE Y AD -\n\nU A I -\nU I M -\nU M T -\nU T U -\nU T V -\nU T X -\nU Y M -\nU M T -\nU T U -\nU T V -\nU T X -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\12_dsl.pt",
+    "edited_dsl": "N A КЛИЕНТЫ 400 150 B K\nN B Наименование_компании 380 90 E W\nN C Адрес 200 120 E W\nN D Телефон 600 120 E W\nN E ФИО_клиента 100 180 E W\nN F ИНН 200 220 E W\nN G Город 600 180 E W\nN H Индекс 500 220 E W\nN I Заказ_Договор 700 250 B K\nN J Сумма_по_договору 800 300 E W\nN K Дата_договора 700 350 E W\nN L Номер_договора 500 300 E W\nN M Заказы 400 400 B K\nN N Дата_заказа 400 450 E W\nN O Срок_выполнения 500 450 E W\nN P Код_клиента 300 350 E W\nN Q Код_услуги 200 500 E W\nN R Наименование_заказа 300 550 E W\nN S Номер_заказа 400 550 E W\nN T Заказ_Услуги 200 600 B K\nN U Услуги 200 700 B K\nN V Код_услуги 200 750 E W\nN W Наименование_услуг 300 750 E W\nN X Код_услуги 200 800 E W\nN Y Сотрудники 700 600 B K\nN Z ФИО_сотрудника 700 650 E W\nN AA Адрес 700 700 E W\nN AB Телефон 700 750 E W\nN AC ИНН 700 800 E W\nN AD Код_сотрудника 700 550 E W\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE A H -\nE A P -\nE I L -\nE I K -\nE I J -\nE M N -\nE M O -\nE M P -\nE M Q -\nE M R -\nE M S -\nE M T -\nE T V -\nE T W -\nE T X -\nE Y Z -\nE Y AA -\nE Y AB -\nE Y AC -\nE Y AD -\n\nU A I -\nU I M -\nU M T -\nU T U -\nU T V -\nU T X -\nU Y M -\nU M T -\nU T U -\nU T V -\nU T X -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\12_edit.pt",
+    "step_times": {
+      "answer_s": 0.423,
+      "dsl_gen_s": 86.637,
+      "edit_s": 85.339
+    }
+  },
+  {
+    "index": "13",
+    "image": "13.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Интернет-торговля",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\13_answer.pt",
+    "dsl_code": "N A ENTITY_RELATIONSHIP_DIAGRAM_-_INTERNET_SALES_MODEL 500 50 B W\nN B Entity 100 100 B T\nN C Action 180 100 D T\nN D Attribute 260 100 E T\nN E One 300 90 L W\nN F Zero_or_more_Optional 300 110 L W\nN G Many 300 130 L W\nN H Customer 300 200 B T\nN I Name 350 220 E T\nN J Address 350 240 E T\nN K E_mail 350 260 E T\nN L Item 600 200 B T\nN M Name 650 220 E T\nN N Price 650 240 E T\nN O Company 800 150 B T\nN P Name 850 170 E T\nN Q Produces 800 200 D T\nN R Shipping 100 300 B T\nN S Ships_Item 200 300 D T\nN T Orders 400 300 D T\nN U Has 300 300 D T\nN V Credit_Card 300 400 B T\nN W Verifies 300 400 D T\nN X E_Commerce 100 500 B T\nN Y Processes 200 500 D T\nN Z Order 400 500 B T\nN AA Order_Number 450 520 E T\nN AB Shopping_Cart 700 500 B T\nN AC Creates 600 500 D T\nN AD Contains 500 400 D T\nN AE Contains 600 400 D T\nN AF Forwards_Order 100 400 D T\nE H L -\nE H R -\nE H S -\nE H T -\nE H U -\nE L Q -\nE L R -\nE L S -\nE L T -\nE L U -\nE L V -\nE L W -\nE L X -\nE L Y -\nE L Z -\nE L AB -\nE L AD -\nE L AE -\nE L AF -\nE O Q -\nE R S -\nE R AF -\nE R Y -\nE R Z -\nE V W -\nE V Y -\nE V Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\13_dsl.pt",
+    "edited_dsl": "N A ENTITY_RELATIONSHIP_DIAGRAM_-_INTERNET_SALES_MODEL 500 50 B W\nN B Entity 100 100 B T\nN C Action 180 100 D T\nN D Attribute 260 100 E O\nN E One 300 90 L W\nN F Zero_or_more_Optional 300 110 L W\nN G Many 300 130 L W\nN H Customer 300 200 B T\nN I Name 350 220 E T\nN J Address 350 240 E T\nN K E_mail 350 260 E T\nN L Item 600 200 B T\nN M Name 650 220 E T\nN N Price 650 240 E T\nN O Company 800 150 B T\nN P Name 850 170 E T\nN Q Produces 800 200 D T\nN R Shipping 100 300 B T\nN S Ships_Item 200 300 D T\nN T Orders 400 300 D T\nN U Has 300 300 D T\nN V Credit_Card 300 400 B T\nN W Verifies 300 400 D T\nN X E_Commerce 100 500 B T\nN Y Processes 200 500 D T\nN Z Order 400 500 B T\nN AA Order_Number 450 520 E T\nN AB Shopping_Cart 700 500 B T\nN AC Creates 600 500 D T\nN AD Contains 500 400 D T\nN AE Contains 600 400 D T\nN AF Forwards_Order 100 400 D T\nE H L -\nE H R -\nE H S -\nE H T -\nE H U -\nE L Q -\nE L R -\nE L S -\nE L T -\nE L U -\nE L V -\nE L W -\nE L X -\nE L Y -\nE L Z -\nE L AB -\nE L AD -\nE L AE -\nE L AF -\nE O Q -\nE R S -\nE R AF -\nE R Y -\nE R Z -\nE V W -\nE V Y -\nE V Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -\nE Z AB -\nE Z AD -\nE Z AE -\nE Z AF -\nE Z Y -\nE Z Z -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\13_edit.pt",
+    "step_times": {
+      "answer_s": 1.483,
+      "dsl_gen_s": 58.355,
+      "edit_s": 41.559
+    }
+  },
+  {
+    "index": "14",
+    "image": "14.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\14_answer.pt",
+    "dsl_code": "N A CUSTOMER 300 100 B TURQUOISE\nN B PROJECT 800 100 B TURQUOISE\nN C SOFTWARE_DEVELOPMENT_COMPANY 500 300 B TURQUOISE\nN D DEVELOPER 900 300 B TURQUOISE\nN E CONTACT 100 150 E PURPLE\nN F NAME 100 200 E PURPLE\nN G ID 900 100 E PURPLE\nN H NAME_PROJECT 900 150 E PURPLE\nN I LOCATION 500 350 E PURPLE\nN J TECHNOLOGY 900 400 E PURPLE\nN K NAME_DEV 900 450 E PURPLE\nN L HOURLY_RATE 900 500 E PURPLE\n\nE A B ORDERS M 1\nE A C PAYS M 1\nE B D WORKS M 1\nE C D EMPLOYS 1 M\nE D B SPECIALIZES M 1\nE A E CONTACT 1 1\nE A F NAME 1 1\nE B G ID 1 1\nE B H NAME_PROJECT 1 1\nE C I LOCATION 1 1\nE D J TECHNOLOGY 1 1\nE D K NAME_DEV 1 1\nE D L HOURLY_RATE 1 1",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\14_dsl.pt",
+    "edited_dsl": "N A CUSTOMER 300 100 B TURQUOISE\nN B PROJECT 800 100 B TURQUOISE\nN C SOFTWARE_DEVELOPMENT_COMPANY 500 300 B TURQUOISE\nN D DEVELOPER 900 300 B TURQUOISE\nN E CONTACT 100 150 E PURPLE\nN F NAME 100 200 E PURPLE\nN G ID 900 100 E PURPLE\nN H NAME_PROJECT 900 150 E PURPLE\nN I LOCATION 500 350 E PURPLE\nN J TECHNOLOGY 900 400 E PURPLE\nN K NAME_DEV 900 450 E PURPLE\nN L HOURLY_RATE 900 500 E PURPLE\nN M EMAIL 900 550 E PURPLE\n\nE A B ORDERS M 1\nE A C PAYS M 1\nE B D WORKS M 1\nE C D EMPLOYS 1 M\nE D B SPECIALIZES M 1\nE A E CONTACT 1 1\nE A F NAME 1 1\nE B G ID 1 1\nE B H NAME_PROJECT 1 1\nE C I LOCATION 1 1\nE D J TECHNOLOGY 1 1\nE D K NAME_DEV 1 1\nE D L HOURLY_RATE 1 1\nE C M EMAIL 1 1",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\14_edit.pt",
+    "step_times": {
+      "answer_s": 0.281,
+      "dsl_gen_s": 18.445,
+      "edit_s": 20.027
+    }
+  },
+  {
+    "index": "15",
+    "image": "15.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "5",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\15_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 100 E B\nN B ЗВОНOK_ДОМОЙ 500 200 I B\nN C ДОМА_ЕСТЬ_ХЛЕБ? 500 300 D B\nN D ИДЁМ_ДОМОЙ 500 500 B B\nN E КОНЕЦ 500 600 E B\nN F ПОДПРОГРАММА_ПОКУПКИ_ТОВАРОВ 800 350 B B\n\nE A B -\nE B C -\nE C D ДА\nE C F НЕТ\nE F D -\nE D E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\15_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 100 E R\nN B ЗВОНOK_ДОМОЙ 500 200 I R\nN C ДОМА_ЕСТЬ_ХЛЕБ? 500 300 D R\nN D ИДЁМ_ДОМОЙ 500 500 B R\nN E КОНЕЦ 500 600 E R\nN F ПОДПРОГРАММА_ПОКУПКИ_ТОВАРОВ 800 350 B R\n\nE A B -\nE B C -\nE C D ДА\nE C F НЕТ\nE F D -\nE D E -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\15_edit.pt",
+    "step_times": {
+      "answer_s": 0.416,
+      "dsl_gen_s": 10.124,
+      "edit_s": 9.556
+    }
+  },
+  {
+    "index": "16",
+    "image": "16.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "количество чисел > 5",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\16_answer.pt",
+    "dsl_code": "N A НАЧАЛО 300 50 E W\nN B УСТАНОВКА_ЭКРАНА 300 100 I W\nN C НАЧАЛЬНЫЕ_ЗНАЧЕНИЯ_ПЕРЕМЕННЫХ 300 150 I W\nN D ГЕНЕРАТОР_СЛУЧАЙНЫХ_ЧИСЕЛ_A_RND 300 200 B W\nN E СЧЁТЧИК_КОЛИЧЕСТВА_ЧИСЕЛ_N_N_1 300 250 B W\nN F ЧИСЛО_N_LEQ_20 300 300 D W\nN G ПЕЧАТЬ_КОЛИЧЕСТВА_ЧИСЕЛ_GT_5 300 350 I W\nN H КОНЕЦ 300 400 C W\nN I А_ГТЕ_5 600 300 D W\nN J СЧЁТЧИК_КОЛИЧЕСТВА_ЧИСЕЛ_GT_5_2 600 350 B W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE F I -\nE I J -\nE J G -\nE G H -\n\nU F I -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\16_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 300 50 E W\nN B УСТАНОВКА_ЭКРАНА 300 100 I W\nN C НАЧАЛЬНЫЕ_ЗНАЧЕНИЯ_ПЕРЕМЕННЫХ 300 150 I W\nN D ГЕНЕРАТОР_СЛУЧАЙНЫХ_ЧИСЕЛ_A_RND 300 200 B W\nN E СЧЁТЧИК_КОЛИЧЕСТВА_ЧИСЕЛ_N_N_1 300 250 B W\nN F ЧИСЛО_N_LEQ_20 300 300 D W\nN G ПЕЧАТЬ_КОЛИЧЕСТВА_ЧИСЕЛ_GT_10 300 350 I W\nN H КОНЕЦ 300 400 C W\nN I А_ГТЕ_10 600 300 D W\nN J СЧЁТЧИК_КОЛИЧЕСТВА_ЧИСЕЛ_GT_10_2 600 350 B W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE F I -\nE I J -\nE J G -\nE G H -\n\nU F I -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\16_edit.pt",
+    "step_times": {
+      "answer_s": 0.841,
+      "dsl_gen_s": 18.906,
+      "edit_s": 19.627
+    }
+  },
+  {
+    "index": "17",
+    "image": "17.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "0",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\17_answer.pt",
+    "dsl_code": "N A A 100 300 C K\nN B B 300 100 C K\nN C C 500 100 C K\nN D D 300 500 C K\nN E E 500 300 C K\nN F F 800 300 C K\nE A B -\nE A C -\nE A D -\nE B C -\nE D C -\nE D E -\nE E C -\nE E F -\nE F C -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\17_dsl.pt",
+    "edited_dsl": "N A A 100 300 C K\nN B B 300 100 C K\nN C C 500 100 C K\nN D D 300 500 C K\nN E E 500 300 C K\nN F F 800 300 C K\nE A B -\nE A C -\nE A D -\nE B C -\nE D C -\nE D E -\nE E C -\nE E F -\nE F C -\nN B B 300 100 C Y",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\17_edit.pt",
+    "step_times": {
+      "answer_s": 0.315,
+      "dsl_gen_s": 7.813,
+      "edit_s": 8.548
+    }
+  },
+  {
+    "index": "18",
+    "image": "18.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2,3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\18_answer.pt",
+    "dsl_code": "N A 0 100 200 E W\nN B 1 300 200 E W\nN C 2 500 200 E W\nN D 3 300 100 E B\nN E 4 500 100 E W\nN F 5 300 300 E W\nN G 6 500 300 E W\nN H 7 500 400 E W\nN I 8 400 100 E B\nN J 9 500 500 E W\nN K 10 600 400 E W\nN L 11 600 100 E B\n\nE A C -\nE B C -\nE C H -\nE D I -\nE E H -\nE F I -\nE F J -\nE G J -\nE G K -\nE H J -\nE I K -\nE I L -\nE J K -\nE K L -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\18_dsl.pt",
+    "edited_dsl": "N A 0 100 200 E W\nN B 1 300 200 E W\nN C 2 500 200 E W\nN D 3 300 100 E B\nN E 4 500 100 E W\nN F 5 300 300 E W\nN G 6 500 300 E W\nN H 7 500 400 E W\nN I 8 400 100 E B\nN J 9 500 500 E W\nN K 10 600 400 E W\nN L 11 600 100 E B\n\nE A C -\nE B C -\nE C H -\nE D I -\nE E H -\nE F I -\nE F J -\nE G J -\nE G K -\nE H J -\nE I K -\nE I L -\nE J K -\nE K L -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\18_edit.pt",
+    "step_times": {
+      "answer_s": 0.446,
+      "dsl_gen_s": 13.663,
+      "edit_s": 13.717
+    }
+  },
+  {
+    "index": "19",
+    "image": "19.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "6",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\19_answer.pt",
+    "dsl_code": "N A Код_клиента 100 50 E W\nN B Клиент 200 150 B W\nN C Номер_заказа 400 50 E W\nN D Заказ_клиента 500 100 B W\nN E Код_продавца 800 50 E W\nN F Продавец 900 150 B W\nN G Номер_счета 100 300 E W\nN H Счет 200 350 B W\nN I Заказанный_товар 500 300 B W\nN J Каталог 800 300 B W\nN K Код_товара 900 350 E W\nN L Склад 950 400 B W\n\nE A B Заказывает\nE C D Заказывает\nE E F Оформляет\nE G H Оплачивается\nE I J Выбирается\nE I L Вывозится_из\nE J K Формируется\nE K L -\n\nU D I Включает",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\19_dsl.pt",
+    "edited_dsl": "N A Код_клиента 100 50 E W\nN B Клиент 200 150 B W\nN C Номер_заказа 400 50 E W\nN D Заказ_клиента 500 100 B W\nN E Код_продавца 800 50 E W\nN G Номер_счета 100 300 E W\nN H Счет 200 350 B W\nN I Заказанный_товар 500 300 B W\nN J Каталог 800 300 B W\nN K Код_товара 900 350 E W\nN L Склад 950 400 B W\n\nE A B Заказывает\nE C D Заказывает\nE E F Оформляет\nE G H Оплачивается\nE I J Выбирается\nE I L Вывозится_из\nE J K Формируется\nE K L -\n\nU D I Включает",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\19_edit.pt",
+    "step_times": {
+      "answer_s": 0.343,
+      "dsl_gen_s": 28.548,
+      "edit_s": 32.355
+    }
+  },
+  {
+    "index": "20",
+    "image": "20.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Управление учебным процессом в университете",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\20_answer.pt",
+    "dsl_code": "N A STUDENT_ID 800 100 E P\nN B ENROLLMENT_DATE 800 150 E P\nN C COURSE_NAME 800 200 E P\nN D ADDRESS 900 100 E P\nN E TELEPHONE 900 150 E P\nN F NAME 900 200 E P\nN G DATE_OF_BIRTH 900 250 E P\nN H NID 900 300 E P\nN I CC_ID 600 350 E T\nN J SUBJECT 600 400 E T\nN K TIME 600 450 E T\nN L DATE 600 500 E T\nN M LECTURER_NAME 600 550 E T\nN N SUBJECT_CODE 300 600 E B\nN O SUBJECT_UNIT 300 650 E B\nN P SUBJECT_DESC 300 700 E B\nN Q LECTURER_ID 800 750 E Y\nN R NAME_LECTURER 800 800 E Y\nN S ADDRESS_LECTURER 800 850 E Y\nN T TELEPHONE_LECTURER 800 900 E Y\nN U EMAIL_LECTURER 800 950 E Y\n\nE A C enrolls\nE C I Lecture\nE I J Subject\nE J N Subjects\nE N Q Lecturer\nE Q R Name_Lecturer\nE R S Address_Lecturer\nE S T Telephone_Lecturer\nE T U Email_Lecturer\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\20_dsl.pt",
+    "edited_dsl": "N A STUDENT_ID 800 100 E P\nN B ENROLLMENT_DATE 800 150 E P\nN C COURSE_NAME 800 200 E P\nN D ADDRESS 900 100 E P\nN E TELEPHONE 900 150 E P\nN F NAME 900 200 E P\nN G DATE_OF_BIRTH 900 250 E P\nN H NID 900 300 E P\nN I CC_ID 600 350 E T\nN J SUBJECT 600 400 E T\nN K TIME 600 450 E T\nN L DATE 600 500 E T\nN M LECTURER_NAME 600 550 E T\nN N SUBJECT_CODE 300 600 E B\nN O SUBJECT_UNIT 300 650 E B\nN P SUBJECT_DESC 300 700 E B\nN Q LECTURER_ID 800 750 E Y\nN R NAME_LECTURER 800 800 E Y\nN S ADDRESS_LECTURER 800 850 E Y\nN T TELEPHONE_LECTURER 800 900 E Y\nN U EMAIL_LECTURER 800 950 E Y\n\nE A C enrolls\nE C I Lecture\nE I J Subject\nE J N Subjects\nE N Q Lecturer\nE Q R Name_Lecturer\nE R S Address_Lecturer\nE S T Telephone_Lecturer\nE T U Email_Lecturer\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time\nE I L Date\nE I M Time\nE I L Date\nE I K Time",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\20_edit.pt",
+    "step_times": {
+      "answer_s": 1.622,
+      "dsl_gen_s": 89.29,
+      "edit_s": 89.603
+    }
+  },
+  {
+    "index": "21",
+    "image": "21.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "4",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\21_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 100 C W\nN B ВВОД_A_B_C 500 200 D W\nN C S 800 200 D W\nN D X 900 200 D W\nN E X1_X2 900 300 D W\nN F ВЫВОД_X 900 400 D W\nN G ВЫВОД_X1_X2 900 500 D W\nN H КОНЦ 900 600 C W\n\nE A B +\nE B C =\nE C D +\nE D E +\nE E F +\nE F G +\nE G H +\n\nU B C -\nU C D -\nU D E -\n\nU E F -\nU F G -\nU G H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\21_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 100 C W\nN B ВВОД_A_B_C 500 200 D W\nN C S 800 200 D W\nN D X 900 200 D W\nN E X1_X2 900 300 D W\nN F ВЫВОД_X 900 400 D W\nN G ВЫВОД_X1_X2 900 500 D W\nN H КОНЦ 900 600 C W\n\nE B C +\nE C D +\nE D E +\nE E F +\nE F G +\nE G H +\n\nU A B -\nU B C -\nU C D -\nU D E -\nU E F -\nU F G -\nU G H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\21_edit.pt",
+    "step_times": {
+      "answer_s": 0.267,
+      "dsl_gen_s": 22.253,
+      "edit_s": 24.076
+    }
+  },
+  {
+    "index": "22",
+    "image": "22.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "шар",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\22_answer.pt",
+    "dsl_code": "N A начало 500 50 E W\nN B взять_шар 500 150 B W\nN C шар_белый? 500 250 D W\nN D убрать_направо 500 350 B W\nN E убрать_налево 800 350 B W\nN F есть_шары? 500 450 D W\nN G конец 900 600 E W\n\nE A B -\nE B C -\nE C D да\nE C E нет\nE D F -\nE E F -\nE F G нет\nE F A да",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\22_dsl.pt",
+    "edited_dsl": "N A начало 500 50 E W\nN B взять_камень 500 150 B W\nN C камень_белый? 500 250 D W\nN D убрать_направо 500 350 B W\nN E убрать_налево 800 350 B W\nN F есть_камни? 500 450 D W\nN G конец 900 600 E W\nE A B -\nE B C -\nE C D да\nE C E нет\nE D F -\nE E F -\nE F G нет\nE F A да",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\22_edit.pt",
+    "step_times": {
+      "answer_s": 0.703,
+      "dsl_gen_s": 20.42,
+      "edit_s": 19.652
+    }
+  },
+  {
+    "index": "23",
+    "image": "23.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "7",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\23_answer.pt",
+    "dsl_code": "N A 1 100 200 E W\nN B 2 300 400 E W\nN C 3 500 300 E W\nN D 4 600 500 E W\nN E 5 400 100 E W\nN F 6 200 600 E W\nN G 7 800 200 E W\nU A B -\nU A C -\nU A D -\nU A E -\nU A F -\nU A G -\nU B C -\nU B D -\nU B E -\nU B F -\nU B G -\nU C D -\nU C E -\nU C F -\nU C G -\nU D E -\nU D F -\nU D G -\nU E F -\nU E G -\nU F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\23_dsl.pt",
+    "edited_dsl": "N A 1 100 200 E W\nN B 2 300 400 E W\nN C 3 500 300 E W\nN D 4 600 500 E W\nN E 5 400 100 E W\nN F 6 200 600 E W\nN G 7 800 200 E W\nU A B -\nU A C -\nU A D -\nU A E -\nU A F -\nU A G -\nU B C -\nU B D -\nU B E -\nU B F -\nU B G -\nU C D -\nU C E -\nU C F -\nU C G -\nU D E -\nU D F -\nU D G -\nU E F -\nU E G -\nU F G -\nU B E -   // Удалена связь между 2 и 5 (B-E)\nU C E     // Добавлена связь между 3 и 5 (C-E)",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\23_edit.pt",
+    "step_times": {
+      "answer_s": 0.361,
+      "dsl_gen_s": 23.357,
+      "edit_s": 28.602
+    }
+  },
+  {
+    "index": "24",
+    "image": "24.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Игра \"Угадай число\", где компьютер загадывает случайное число от 1 до 100, а пользователь пытается его угадать, получая подсказки \"больше\" или \"меньше\", пока не угадает.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\24_answer.pt",
+    "dsl_code": "N A НАЧАЛО_АЛГОРИТМА 500 100 B W\nN B N_СЛУЧАЙНОЕ_ЧИСЛО_100_РЕЗУЛЬТАТ_ЛОЖЬ 500 200 B W\nN C РЕЗУЛЬТАТ_ЛОЖЬ? 500 300 D W\nN D ВВОД_ВАРИАНТ 500 400 I W\nN E ВАРИАНТ_N? 500 500 D W\nN F ВАРИАНТ_N? 500 600 D W\nN G ВЫВОД_УГАДАЛ 500 700 I W\nN H РЕЗУЛЬТАТ_ИСТИНА 500 800 B W\nN I ВЫВОД_N_БОЛЬШЕ 500 900 I W\nN J ВЫВОД_N_МЕНЬШЕ 500 900 I W\nN K КОНЦЕ_АЛГОРИТМА 500 1000 B W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE F H -\nE G K -\nE H K -\nE I K -\nE J K -\n\nU D E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\24_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО_АЛГОРИТМА 500 100 B W\nN B N_СЛУЧАЙНОЕ_ЧИСЛО_100_РЕЗУЛЬТАТ_ЛОЖЬ 500 200 B W\nN C РЕЗУЛЬТАТ_ЛОЖЬ? 500 300 D W\nN D ВВОД_ВАРИАНТ 500 400 I W\nN E ВАРИАНТ_N? 500 500 D W\nN F ВАРИАНТ_N? 500 600 D W\nN G ВЫВОД_УГАДАЛ 500 700 I W\nN H РЕЗУЛЬТАТ_ИСТИНА 500 800 B W\nN I ВЫВОД_N_БОЛЬШЕ 500 900 I W\nN J ВЫВОД_N_МЕНЬШЕ 500 900 I W\nN K КОНЦЕ_АЛГОРИТМА 500 1000 B W\n\nE D E -\nE E F -\nE F G -\nE F H -\nE G K -\nE H K -\nE I K -\nE J K -\n\nU D E -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\24_edit.pt",
+    "step_times": {
+      "answer_s": 7.755,
+      "dsl_gen_s": 40.3,
+      "edit_s": 39.056
+    }
+  },
+  {
+    "index": "25",
+    "image": "25.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\25_answer.pt",
+    "dsl_code": "N A Атрибут_1 100 100 E W\nN B Ключ_1 200 80 E W\nN C Сущность_1 300 200 B K\nN D Атрибут_4 500 150 E W\nN E Связь 600 200 D K\nN F Сущность_2 700 200 B K\nN G Ключ_2 800 100 E W\nN H Атрибут_2 800 200 E W\nN I Атрибут_3 800 300 E W\n\nE A C Атрибут_1\nE B C Ключ_1\nE D E Атрибут_4\nE E F Связь\nE G F Ключ_2\nE H F Атрибут_2\nE I F Атрибут_3",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\25_dsl.pt",
+    "edited_dsl": "N A Атрибут_1 100 100 E W\nN B Ключ_1 200 80 E W\nN C Сущность_1 300 200 B K\nN D Атрибут_4 500 150 E W\nN E Связь 600 200 D K\nN F Сущность_2 700 200 B K\nN G Ключ_2 800 100 E W\nN H Атрибут_2 800 200 E W\nN I Атрибут_3 800 300 E W\nN J Атрибут_5 900 200 I B\nE A C Атрибут_1\nE B C Ключ_1\nE D E Атрибут_4\nE E F Связь\nE G F Ключ_2\nE H F Атрибут_2\nE I F Атрибут_3\nE J C Атрибут_5",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\25_edit.pt",
+    "step_times": {
+      "answer_s": 0.36,
+      "dsl_gen_s": 27.718,
+      "edit_s": 31.192
+    }
+  },
+  {
+    "index": "26",
+    "image": "26.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Поиск максимального элемента в массиве.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\26_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 180 E W\nN B ВВЕСТИ_МАССИВ 500 290 I W\nN C max_:=массив(1) 500 400 B W\nN D i_:=2,_k 500 510 D W\nN E max_<_=массив(i) 500 620 D W\nN F max_:=массив(i) 500 730 B W\nN G ВЫВЕСТИ_max 500 840 B W\nN H КОНЕЦ 500 950 E W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -\n\nU D E Да\nU E D Нет",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\26_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 180 E W\nN B ВВЕСТИ_МАССИВ 500 290 I W\nN C max_:=массив(1) 500 400 B W\nN D i_:=2,_k 500 510 D W\nN E max_<_=массив(i) 500 620 D W\nN F max_:=массив(i) 500 730 B W\nN G ВЫВЕСТИ_max 500 840 B W\nN H КОНЕЦ 500 950 E W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -\n\nU D E Да\nU E D Нет",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\26_edit.pt",
+    "step_times": {
+      "answer_s": 1.73,
+      "dsl_gen_s": 24.967,
+      "edit_s": 24.631
+    }
+  },
+  {
+    "index": "27",
+    "image": "27.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "5",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\27_answer.pt",
+    "dsl_code": "N A Start 500 50 E P\nN B Patient_arrives 500 150 B Y\nE A B -\nN C Registered_patient 500 250 D O\nE B C -\nE C B -\nN D Register_patient 500 350 B Y\nE C D -\nN E Available_nurse 800 250 D O\nE C E -\nE D E -\nN F Wait_for_available_nurse 800 350 B Y\nE E F -\nN G Record_health_condition 800 450 B Y\nE E G -\nN H Available_doctor 800 550 D O\nE G H -\nN I Assign_patient_to_doctor 800 650 B Y\nE H I -\nN J Need_follow_up 800 750 D O\nE I J -\nN K Arrange_appointment 800 850 B Y\nE J K -\nN L Need_Medication 800 950 D O\nE K L -\nN M Give_patient_prescription 800 1050 B Y\nE L M -\nN N Patient_Leaves 800 1150 B Y\nE M N -\nE L N -\nN O Stop 800 1250 E P\nE N O -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\27_dsl.pt",
+    "edited_dsl": "N A Start 500 50 E P\nN B Patient_arrives 500 150 B Y\nE A B -\nN C Registered_patient 500 250 D O\nE B C -\nE C B -\nN D Register_patient 500 350 B Y\nE C D -\nN E Available_nurse 800 250 D O\nE C E -\nE D E -\nN F Wait_for_available_nurse 800 350 B Y\nE E F -\nN G Record_health_condition 800 450 B Y\nE E G -\nN H Available_doctor 800 550 D O\nE G H -\nN I Assign_patient_to_doctor 800 650 B Y\nE H I -\nN J Need_follow_up 800 750 D O\nE I J -\nN K Arrange_appointment 800 850 B Y\nE J K -\nN L Need_Medication 800 950 D O\nE K L -\nN M Give_patient_prescription 800 1050 B Y\nE L M -\nN N Patient_Leaves 800 1150 B Y\nE M N -\nE L N -\nN O Stop 800 1250 E P\nE N O -\nN Q Log_Successful_Care 800 1150 D O\nE N Q -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\27_edit.pt",
+    "step_times": {
+      "answer_s": 0.429,
+      "dsl_gen_s": 38.948,
+      "edit_s": 41.178
+    }
+  },
+  {
+    "index": "28",
+    "image": "28.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "диаграмма потока",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\28_answer.pt",
+    "dsl_code": "N A START 500 50 G\nN B INPUT 500 150 I Y\nN C PROCESS 500 250 B P\nN D DECISION 500 350 D R\nN E OUTPUT1 200 450 B B\nN F OUTPUT2 500 450 B B\nN G OUTPUT3 700 450 B B\nN H END 500 550 E G\n\nE A B -\nE B C -\nE C D -\nE D E -\nE D F -\nE D G -\nE E H -\nE F H -\nE G H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\28_dsl.pt",
+    "edited_dsl": "N A START 500 50 G\nN B INPUT 500 150 I Y\nN C PROCESS 500 250 B P\nN D DECISION 500 350 D R\nN E OUTPUT1 200 450 B B\nN F OUTPUT2 500 450 B B\nN G OUTPUT3 700 450 B B\nN H END 500 550 E G\nN E1 OUTPUT1_1 200 450 B B\nN F1 OUTPUT2_1 500 450 B B\nN G1 OUTPUT3_1 700 450 B B\nE A B -\nE B C -\nE C D -\nE D E -\nE D F -\nE D G -\nE E H -\nE F H -\nE G H -\nE E1 H -\nE F1 H -\nE G1 H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\28_edit.pt",
+    "step_times": {
+      "answer_s": 1.002,
+      "dsl_gen_s": 18.654,
+      "edit_s": 26.932
+    }
+  },
+  {
+    "index": "29",
+    "image": "29.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "100",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\29_answer.pt",
+    "dsl_code": "N A 1 100 100 C W\nN B 2 200 200 C W\nN C 3 300 300 C W\nN D 4 400 400 C W\nN E 5 500 500 C W\nE A B 10\nE A E 100\nE B C 50\nE C D 20\nE D E 60\nE E A 30\nE E B 10",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\29_dsl.pt",
+    "edited_dsl": "N A 1 100 100 C W\nN B 2 200 200 C W\nN C 3 300 300 C W\nN D 4 400 400 C W\nN E 5 500 500 C W\nE A B 120\nE A E 100\nE B C 50\nE C D 20\nE D E 60\nE E A 30\nE E B 10",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\29_edit.pt",
+    "step_times": {
+      "answer_s": 0.482,
+      "dsl_gen_s": 14.967,
+      "edit_s": 15.564
+    }
+  },
+  {
+    "index": "30",
+    "image": "30.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Граф.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\30_answer.pt",
+    "dsl_code": "N A Д 200 100 C W\nN B Б 800 100 C W\nN C К 500 300 C W\nN D П 100 700 C W\nN E М 900 700 C W\nU A B -\nU A C -\nU B C -\nU B E -\nU C D -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\30_dsl.pt",
+    "edited_dsl": "N A Д 200 100 C W\nN B Б 800 100 C W\nN C К 500 300 C W\nN D П 100 700 C W\nN E М 900 700 C W\nU A B -\nU A C -\nU B C -\nU B E -\nU C D -\nU A P_M -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\30_edit.pt",
+    "step_times": {
+      "answer_s": 0.451,
+      "dsl_gen_s": 11.317,
+      "edit_s": 11.857
+    }
+  },
+  {
+    "index": "31",
+    "image": "31.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "5",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\31_answer.pt",
+    "dsl_code": "N A 0 100 C W\nN B 1 300 E W\nN C 2 400 E W\nN D 3 500 E W\nN E 4 600 E W\nN F 5 800 E W\nN G 6 900 E W\nN H 7 100 E W\nN I 8 1100 E W\n\nU A B -\nU A C -\nU A D -\nU A E -\nU A F -\nU A G -\nU A H -\n\nU B C -\nU B D -\nU B E -\nU B F -\nU B G -\nU B H -\n\nU C D -\nU C E -\nU C F -\nU C G -\nU C H -\n\nU D E -\nU D F -\nU D G -\nU D H -\n\nU E F -\nU E G -\nU E H -\n\nU F G -\nU F H -\n\nU G H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\31_dsl.pt",
+    "edited_dsl": "N A 0 100 C W\nN B 1 300 E W\nN C 2 400 E W\nN D 3 500 E W\nN E 4 600 E W\nN F 5 800 E W\nN G 6 900 E W\nN H 7 100 E W\nN I 8 1100 E W\n\nU A B -\nU A C -\nU A D -\nU A E -\nU A F -\nU A G -\nU A H -\n\nU B C -\nU B D -\nU B E -\nU B F -\nU B G -\nU B H -\n\nU C D -\nU C E -\nU C F -\nU C G -\nU C H -\n\nU D E -\nU D F -\nU D G -\nU D H -\n\nU E F -\nU E G -\nU E H -\n\nU F G -\nU F H -\n\nU G H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\31_edit.pt",
+    "step_times": {
+      "answer_s": 0.362,
+      "dsl_gen_s": 26.08,
+      "edit_s": 26.002
+    }
+  },
+  {
+    "index": "32",
+    "image": "32.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\32_answer.pt",
+    "dsl_code": "N A Пуск 500 100 B P\nN B n 500 200 I R\nN C ans__1_i__1 500 300 H G\nN D ans__ans__i 500 400 B P\nN E i__i__1 500 500 H G\nN F i__n 500 600 D G\nN G ans 500 700 I R\nN H Останов 500 800 B P\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\32_dsl.pt",
+    "edited_dsl": "N A Пуск 500 100 B P\nN B n 500 200 I R\nN C ans__1_i__1 500 300 H G\nN D ans__ans__i 500 400 B P\nN E i__i__1 500 500 H G\nN F i__n 500 600 D G\nN G ans 500 700 I R\nN H Останов 500 800 B P\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\32_edit.pt",
+    "step_times": {
+      "answer_s": 0.426,
+      "dsl_gen_s": 19.798,
+      "edit_s": 19.481
+    }
+  },
+  {
+    "index": "33",
+    "image": "33.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "5",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\33_answer.pt",
+    "dsl_code": "N A УВЕЛИЧЕНИЕ_ПРОИЗВОДИТЕЛЬНОСТИ_КОМАНДЫ_НА_20% 500 100 B G\nN B ПЕРЕКРЕСТНОЕ_ОБУЧЕНИЕ_ЧЛЕНОВ_КОМАНДЫ 800 100 B B\nN C НАВЕДЕНИЕ_ПОРЯДКА 800 200 B B\nN D ПОИСК_КЛИЕНТОВ 800 300 B B\nN E РОТАЦИЯ_РАБОЧИХ_МЕСТ 900 100 I W\nN F ТЕНЕВАЯ_РАБОТА 900 150 I W\nN G СОВМЕСТНОЕ_ВЫПОЛНЕНИЕ_РАБОТЫ 900 200 I W\nN H УПРОЩЕНИЕ_СИСТЕМЫ_УЧЕТА_КЛИЕНТОВ 900 250 I W\nN I ОБУЧЕНИЕ_ТАЙМЕНДЖМЕНТУ 900 300 I W\nN J УМЕНЬШЕНИЕ_БЕСПОРЯДКА_В_ОФИСЕ 900 350 I W\nN K УВЕЛИЧЕНИЕ_ЧИСЛА_ХОЛОДНЫХ_ЗВОНКОВ 900 400 I W\nN L РАБОТА_С_СОЦИАЛЬНЫМИ_СЕТЯМИ 900 450 I W\nN M СПОНСОВАНИЕ_ОБЩЕСТВЕННЫХ_МЕРОПРИЯТИЙ 900 500 I W\nN N КРИСТИНА_ПОНЕДЕЛЬНИК_ДО_1600 900 100 C W\nN O КРИСТИНА_ДО_ЧЕТВЕРГА_1700 900 150 C W\nN P МАРИЯ_СРЕДА_1400 900 200 C W\nN Q ВАЛЕРИЯ_ПОНЕДЕЛЬНИК_ДО_1800 900 250 C W\nN R МАРИЯ_ВТОРНИК_1200 900 300 C W\nN S НАТАЛЬЯ_ДЕНИС_ДО_ПЯТНИЦЫ_1800 900 350 C W\nN T ДЕНИС_ДО_ЧЕТВЕРГА_1700 900 400 C W\nN U АЛЕКСЕЙ_ДО_ПЯТНИЦЫ_1800 900 450 C W\nN V МАРИЯ_ВТОРНИК",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\33_dsl.pt",
+    "edited_dsl": "N A УВЕЛИЧЕНИЕ_ПРОИЗВОДИТЕЛЬНОСТИ_КОМАНДЫ_НА_20% 500 100 B G\nN B ПЕРЕКРЕСТНОЕ_ОБУЧЕНИЕ_ЧЛЕНОВ_КОМАНДЫ 800 100 B B\nN C НАВЕДЕНИЕ_ПОРЯДКА 800 200 B B\nN D ПОИСК_КЛИЕНТОВ 800 300 B B\nN E РОТАЦИЯ_РАБОЧИХ_МЕСТ 900 100 I W\nN F ТЕНЕВАЯ_РАБОТА 900 150 I W\nN G СОВМЕСТНОЕ_ВЫПОЛНЕНИЕ_РАБОТЫ 900 200 I W\nN H УПРОЩЕНИЕ_СИСТЕМЫ_УЧЕТА_КЛИЕНТОВ 900 250 I W\nN I ОБУЧЕНИЕ_ТАЙМЕНДЖМЕНТУ 900 300 I W\nN J УМЕНЬШЕНИЕ_БЕСПОРЯДКА_В_ОФИСЕ 900 350 I W\nN K УВЕЛИЧЕНИЕ_ЧИСЛА_ХОЛОДНЫХ_ЗВОНКОВ 900 400 I W\nN L РАБОТА_С_СОЦИАЛЬНЫМИ_СЕТЯМИ 900 450 I W\nN M СПОНСОВАНИЕ_ОБЩЕСТВЕННЫХ_МЕРОПРИЯТИЙ 900 500 I W\nN N КРИСТИНА_ПОНЕДЕЛЬНИК_ДО_1600 900 100 C W\nN O КРИСТИНА_ДО_ЧЕТВЕРГА_1700 900 150 C W\nN P МАРИЯ_СРЕДА_1400 900 200 C W\nN Q ВАЛЕРИЯ_ПОНЕДЕЛЬНИК_ДО_1800 900 250 C W\nN R МАРИЯ_ВТОРНИК_1200 900 300 C W\nN S НАТАЛЬЯ_ДЕНИС_ДО_ПЯТНИЦЫ_1800 900 350 C W\nN T ДЕНИС_ДО_ЧЕТВЕРГА_1700 900 400 C W\nN U АЛЕКСЕЙ_ДО_ПЯТНИЦЫ_1800 900 450 C W\nN V МАРИЯ_ВТОРНИК",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\33_edit.pt",
+    "step_times": {
+      "answer_s": 0.544,
+      "dsl_gen_s": 89.906,
+      "edit_s": 87.174
+    }
+  },
+  {
+    "index": "34",
+    "image": "34.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Диаграмма связей бизнес-идей",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\34_answer.pt",
+    "dsl_code": "N A ЗООМАГАЗИН 80 300 B B\nN B СТО 80 400 B B\nN C ПЕКАРНЯ 80 500 B B\nN D ТРЕБОВАНИЯ_СООБЩЕСТВА 200 400 B B\nN E БИЗНЕС_ИДЕИ 400 400 P P\nN F МОТИВАЦИЯ 400 600 O O\nN G СУВЕНИРЫ_ИЗ_ДЕРЕВА 200 200 B G\nN H СВЕЖАЯ_ВЫПЕЧКА 400 200 B G\nN I 1000_И_1_МЕЛОЧЬ 600 200 B G\nN J УМЕНИЯ 400 300 B G\nN K ИНТЕРЕСЫ 600 400 C T\nN L ФУТБОЛЬНАЯ_СЕКЦИЯ 800 400 C T\nN M СПОРТИВНЫЙ_МАГАЗИН 800 500 C T\nN N КУЛИНАРИЯ 800 600 C T\nN O МАТЕРИАЛЬНО_ПОДДЕРЖИВАТЬ_РОДСТВЕННИКОВ 200 700 O O\nN P ПОПАСТЬ_В_СПИСОК_ФОРБС 400 700 O O\nN Q КУПИТЬ_ЯХТУ 600 700 O O\n\nE A D -\nE B D -\nE C D -\nE D E -\nE E F -\nE E J -\nE E K -\nE J G -\nE J H -\nE J I -\nE K L -\nE K M -\nE K N -\n\nU F O -\nU F P -\nU F Q -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\34_dsl.pt",
+    "edited_dsl": "N A ЗООМАГАЗИН 80 300 B B\nN B СТО 80 400 B B\nN C ПЕКАРНЯ 80 500 B B\nN D ТРЕБОВАНИЯ_СООБЩЕСТВА 200 400 B B\nN E БИЗНЕС_ИДЕИ 400 400 P P\nN F МОТИВАЦИЯ 400 600 P P\nN G СУВЕНИРЫ_ИЗ_ДЕРЕВА 200 200 B G\nN H СВЕЖАЯ_ВЫПЕЧКА 400 200 B G\nN I 1000_И_1_МЕЛОЧЬ 600 200 B G\nN J УМЕНИЯ 400 300 B G\nN K ИНТЕРЕСЫ 600 400 C T\nN L ФУТБОЛЬНАЯ_СЕКЦИЯ 800 400 C T\nN M СПОРТИВНЫЙ_МАГАЗИН 800 500 C T\nN N КУЛИНАРИЯ 800 600 C T\nN O МАТЕРИАЛЬНО_ПОДДЕРЖИВАТЬ_РОДСТВЕННИКОВ 200 700 O O\nN P ПОПАСТЬ_В_СПИСОК_ФОРБС 400 700 O O\nN Q КУПИТЬ_ЯХТУ 600 700 O O\n\nE A D -\nE B D -\nE C D -\nE D E -\nE E F -\nE E J -\nE E K -\nE J G -\nE J H -\nE J I -\nE K L -\nE K M -\nE K N -\n\nU F O -\nU F P -\nU F Q -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\34_edit.pt",
+    "step_times": {
+      "answer_s": 1.836,
+      "dsl_gen_s": 58.819,
+      "edit_s": 58.365
+    }
+  },
+  {
+    "index": "35",
+    "image": "35.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Фактор B удалён.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\35_answer.pt",
+    "dsl_code": "N A ФАКТОР_A 500 300 B W\nN B ФАКТОР_B 800 500 B W\nN C ФАКТОР_C 650 800 B W\nN D ФАКТОР_D 350 800 B W\nN E ФАКТОР_E 200 500 B W\nE A E -\nE A B -\nE A C -\nE A D -\nE B E -\nE B D -\nE B C -\nE E B -\nE D B -\nE D C -\nE E C -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\35_dsl.pt",
+    "edited_dsl": "N A FACTOR_A 500 300 B W\nN B FACTOR_B 800 500 B W\nN C FACTOR_C 650 800 B W\nN D FACTOR_D 350 800 B W\nN E FACTOR_E 200 500 B W\nE A E -\nE A B -\nE A C -\nE A D -\nE B E -\nE B D -\nE B C -\nE E B -\nE D B -\nE D C -\nE E C -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\35_edit.pt",
+    "step_times": {
+      "answer_s": 1.285,
+      "dsl_gen_s": 17.605,
+      "edit_s": 15.154
+    }
+  },
+  {
+    "index": "36",
+    "image": "36.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Structured, Semi-structured, Unstructured",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\36_answer.pt",
+    "dsl_code": "N A Data_Attributes 500 50 O orange\nN B Structure 200 150 B blue\nN C Datatype 400 150 B blue\nN D Shape 700 150 B blue\nN E Structured 200 250 B blue\nN F Semi_structured 200 350 B blue\nN G Unstructured 200 450 B blue\nN H Quantitative_or_Numerical 400 250 B blue\nN I Qualitative_or_Categorical 400 350 B blue\nN J Continuous 400 400 G green\nN K Discrete 400 500 G green\nN L Ordinal 400 450 G green\nN M Nominal 400 550 G green\nN N Wide 700 250 B blue\nN O Long 700 350 B blue\n\nE A B -\nE A C -\nE A D -\nE B E -\nE B F -\nE B G -\nE C H -\nE C I -\nE H J -\nE H K -\nE I L -\nE I M -\nE D N -\nE D O -\n\nU E H -\nU F H -\nU G H -\nU J K -\nU L M -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\36_dsl.pt",
+    "edited_dsl": "N A Data_Attributes 500 50 O orange\nN B Structure 200 150 B blue\nN C Datatype 400 150 B blue\nN D Shape 700 150 B blue\nN E Structured 200 250 B blue\nN F Semi_structured 200 350 B blue\nN G Unstructured 200 450 B blue\nN H Quantitative_or_Numerical 400 250 B blue\nN I Qualitative_or_Categorical 400 350 B blue\nN N Wide 700 250 B blue\nN O Long 700 350 B blue\n\nE A B -\nE A C -\nE A D -\nE B E -\nE B F -\nE B G -\nE C H -\nE C I -\nE D N -\nE D O -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\36_edit.pt",
+    "step_times": {
+      "answer_s": 1.372,
+      "dsl_gen_s": 23.722,
+      "edit_s": 22.899
+    }
+  },
+  {
+    "index": "37",
+    "image": "37.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Неудовлетворенность работой",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\37_answer.pt",
+    "dsl_code": "N A РОСТ_СПРОСА 300 100 B W\nN B НЕДОСТАТОК_ОПЫТА 600 200 B W\nN C НИЗКАЯ_ЗАРАБОТНАЯ_ПЛАТА 200 300 B W\nN D НЕУДОВЛЕТВОРЕННОСТЬ_РАБОТЫ 800 400 B W\nN E НЕВОЗМОЖНОСТЬ_КАРЬЕРНОГО_РОСТА 400 500 B W\nN F СТРЕССОВЫЕ_УСЛОВИЯ_РАБОТЫ 700 600 B W\n\nE A B -\nE A C -\nE B D -\nE C D -\nE C E -\nE E F -\nE E D -\nE F D -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\37_dsl.pt",
+    "edited_dsl": "N A РОСТ_СПРОСА 300 100 B W\nN B НЕДОСТАТОК_ОПЫТА 600 200 B W\nN C НИЗКАЯ_ЗАРАБОТНАЯ_ПЛАТА 200 300 B W\nN D НЕУДОВЛЕТВОРЕННОСТЬ_РАБОТЫ 800 400 B W\nN E НЕВОЗМОЖНОСТЬ_КАРЬЕРНОГО_РОСТА 400 500 B W\nN F СТРЕССОВЫЕ_УСЛОВИЯ_РАБОТЫ 700 600 B W\n\nE A B -\nE A C -\nE B D -\nE C D -\nE C E -\nE E F -\nE E D -\nE F D -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\37_edit.pt",
+    "step_times": {
+      "answer_s": 1.388,
+      "dsl_gen_s": 26.71,
+      "edit_s": 26.405
+    }
+  },
+  {
+    "index": "38",
+    "image": "38.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Administrative workload",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\38_answer.pt",
+    "dsl_code": "N A ADMINISTRATIVE_WORKLOAD 300 100 B R\nN B SUPPORT_FUNCTIONS_AVAILABILITY 600 150 B Y\nN C SCHEDULE_APPOINTMENTS 400 300 B P\nN D CHANGES_IN_SCHEDULED_APPOINTMENTS 500 400 B T\nN E EQUIPMENT_QUALITY_AND_RELIABILITY 100 450 B C\nN F EMERGENCY_APPOINTMENTS 100 600 B R\nN G NURSE_AVAILABILITY 700 500 B X\nN H DOCTORS_PAY_LEVEL 900 600 B O\n\nE A C \"3 in 1 out\"\nE B C \"1 in 3 out\"\nE C D \"4 in 1 out\"\nE D F \"0 in 3 out\"\nE E F \"0 in 3 out\"\nE F C \"2 in 2 out\"\nE G C \"1 in 5 out\"\nE H G \"0 in 1 out\"\nE G B \"1 in 3 out\"",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\38_dsl.pt",
+    "edited_dsl": "N A ADMINISTRATIVE_WORKLOAD 300 100 B R\nN B SUPPORT_FUNCTIONS_AVAILABILITY 600 150 B Y\nN C SCHEDULE_APPOINTMENTS 400 300 B P\nN D CHANGES_IN_SCHEDULED_APPOINTMENTS 500 400 B T\nN E EQUIPMENT_QUALITY_AND_RELIABILITY 100 450 B C\nN F EMERGENCY_APPOINTMENTS 100 600 B R\nN G NURSE_AVAILABILITY 700 500 B X\nN H DOCTORS_PAY_LEVEL 900 600 B O\n\nE A C \"3 in 1 out\"\nE B C \"1 in 3 out\"\nE C D \"4 in 1 out\"\nE D F \"0 in 3 out\"\nE E F \"0 in 3 out\"\nE F C \"2 in 2 out\"\nE G C \"1 in 5 out\"\nE H G \"0 in 1 out\"\nE G B \"1 in 3 out\"",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\38_edit.pt",
+    "step_times": {
+      "answer_s": 0.65,
+      "dsl_gen_s": 28.097,
+      "edit_s": 30.108
+    }
+  },
+  {
+    "index": "39",
+    "image": "39.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Нет",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\39_answer.pt",
+    "dsl_code": "N A БЛОК_1 800 50 B blue\nN B БЛОК_2 300 100 C W\nN C БЛОК_3 300 300 C W\nN D БЛОК_4 600 300 B W\nN E БЛОК_5 500 500 C R\nN F БЛОК_6 900 300 C W\nN G БЛОК_7 900 500 C W\nU A B -\nU B C -\nU C D -\nU D E -\nU F D -\nU G D -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\39_dsl.pt",
+    "edited_dsl": "N A БЛОК_1 800 50 B blue\nN B БЛОК_2 300 100 C W\nN C БЛОК_3 300 300 C W\nN D БЛОК_4 600 300 B W\nN E БЛОК_5 500 500 D R\nN F БЛОК_6 900 300 C W\nN G БЛОК_7 900 500 C W\nU A B -\nU B C -\nU C D -\nU D E -\nU F D -\nU G D -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\39_edit.pt",
+    "step_times": {
+      "answer_s": 0.488,
+      "dsl_gen_s": 18.733,
+      "edit_s": 18.272
+    }
+  },
+  {
+    "index": "40",
+    "image": "40.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "There is high unemployment, There are youth gangs, There is a high rate of divorce, There is a high rate of non-marriage, There is a high rate of teen pregnancy, Property values fall, Schools get worse",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\40_answer.pt",
+    "dsl_code": "N A DRUG_USE_IS_ENDEMIC 500 100 B Y\nN B THERE_IS_HIGH_UNEMPLOYMENT 300 200 B Y\nN C BUSINESSES_LEAVE_THE_AREA 700 200 B Y\nN D THERE_IS_A_HIGH_CRIME_RATE 800 300 B Y\nN E PROPERTY_VALUES_FALL 900 400 B Y\nN F SCHOOLS_GET_WORSE 800 500 B Y\nN G THERE_ARE_YOUTH_GANGS 400 300 B Y\nN H THERE_IS_A_HIGH_RATE_OF_DIVORCE 100 400 B Y\nN I THERE_IS_A_HIGH_RATE_OF_NON_MARRIAGE 100 500 B Y\nN J THERE_IS_A_HIGH_RATE_OF_TEN_PREGNANCY 100 600 B Y\nN K PEOPLE_WHO_CAN_AFORD_TO_LEAVE_LEAVE 600 600 B Y\n\nE A B -\nE A C -\nE A D -\nE A F -\nE A G -\nE A K -\n\nE B G -\nE B D -\nE B F -\nE B K -\n\nE C D -\nE C F -\nE C K -\n\nE D F -\nE D K -\n\nE G D -\nE G F -\nE G K -\n\nE H G -\nE I G -\nE J G -\n\nE K F -\nE K D -\nE K G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\40_dsl.pt",
+    "edited_dsl": "N A DRUG_USE_IS_ENDEMIC 500 100 B Y\nN B THERE_IS_HIGH_UNEMPLOYMENT 300 200 B Y\nN C BUSINESSES_LEAVE_THE_AREA 700 200 B Y\nN D THERE_IS_A_HIGH_CRIME_RATE 800 300 B Y\nN E PROPERTY_VALUES_FALL 900 400 B Y\nN F SCHOOLS_GET_WORSE 800 500 B Y\nN G THERE_ARE_YOUTH_GANGS 400 300 B Y\nN H THERE_IS_A_HIGH_RATE_OF_DIVORCE 100 400 B Y\nN I THERE_IS_A_HIGH_RATE_OF_NON_MARRIAGE 100 500 B Y\nN J THERE_IS_A_HIGH_RATE_OF_TEN_PREGNANCY 100 600 B Y\nN K PEOPLE_WHO_CAN_AFORD_TO_LEAVE_LEAVE 600 600 B Y\n\nE A B -\nE A C -\nE A D -\nE A F -\nE A G -\nE A K -\n\nE B G -\nE B D -\nE B F -\nE B K -\n\nE C D -\nE C F -\nE C K -\n\nE D F -\nE D K -\n\nE G D -\nE G F -\nE G K -\n\nE H G -\nE I G -\nE J G -\n\nE K F -\nE K D -\nE K G -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\40_edit.pt",
+    "step_times": {
+      "answer_s": 5.719,
+      "dsl_gen_s": 40.372,
+      "edit_s": 40.247
+    }
+  },
+  {
+    "index": "41",
+    "image": "41.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Faulty planning",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\41_answer.pt",
+    "dsl_code": "N A FAULTY_PLANNING 250 300 B T\nN B BREAKDOWN_OF_MCS 400 150 C C\nN C SPARES_NOT_AVAILABLE 800 100 I Y\nN D MATERIAL_NOT_AVAILABLE 700 300 I R\nN E SUPPLIER_NOT_PAID 900 400 I T\nN F UNABLE_TO_MEET_TARGET_PRODUCTION 500 500 I P\nN G LOW_SALES 300 600 I O\nN H FUNDS_NOT_REALIZED 100 700 I V\nN I FUNDS_CRISIS 500 700 I X\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE B F -\nE C D -\nE D F -\nE E D -\nE E I -\nE F H -\nE G H -\nE H I -\nE I E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\41_dsl.pt",
+    "edited_dsl": "N A FAULTY_PLANNING 250 300 B T\nN B BREAKDOWN_OF_MCS 400 150 C C\nN C SPARES_NOT_AVAILABLE 800 100 I Y\nN D MATERIAL_NOT_AVAILABLE 700 300 I R\nN E SUPPLIER_NOT_PAID 900 400 I T\nN F UNABLE_TO_MEET_TARGET_PRODUCTION 500 500 I P\nN G LOW_SALES 300 600 I O\nN H FUNDS_NOT_REALIZED 100 700 I V\nN I FUNDS_CRISIS 500 700 I X\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE B F -\nE C D -\nE D F -\nE E D -\nE E I -\nE F H -\nE G H -\nE H I -\nE I E -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\41_edit.pt",
+    "step_times": {
+      "answer_s": 0.702,
+      "dsl_gen_s": 26.335,
+      "edit_s": 26.931
+    }
+  },
+  {
+    "index": "42",
+    "image": "42.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "New software, 6",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\42_answer.pt",
+    "dsl_code": "N A STAFF_INCREASES 100 100 E G\nN B INCREASED_PROCESSING_COST 300 100 E G\nN C NEW_SOFTWARE 200 200 E G\nN D TRAIN_OPERATORS 400 200 E G\nN E UPGRAD_SUPPORT_EQUIPMENT 500 200 E G\nN F TELECOMMUNICATION_CHANGES 600 200 E G\nN G SERVICE_INTERRUPTIONS 600 300 E G\nN H COMPUTER_REPLACEMENT_PROJECT 400 300 E G\nN I GROWTH_AND_HIGHER_PROFIT_POTENTIAL 300 300 E G\nN J NEGOTIATE_NEW_MAINTENANCE_CONTRACTS 200 400 E G\nN K HIGH_LEVEL_OF_CUSTOMER_SERVICE 400 400 E G\nN L EXPAND_COMPUTER_ROOM 500 400 E G\nN M MORE_UTILITIES_HEAT_AIR_ELECTRICITY 800 400 E G\n\nE A B -\nE C B -\nE C D -\nE C I -\nE C J -\nE C H -\nE H D -\nE H G -\nE H L -\nE H M -\nE E D -\nE E F -\nE E G -\nE H K -\nE L M -\nE M B -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\42_dsl.pt",
+    "edited_dsl": "N A STAFF_INCREASES 100 100 E G\nN B INCREASED_PROCESSING_COST 300 100 E G\nN C NEW_SOFTWARE 200 200 E G\nN D TRAIN_OPERATORS 400 200 E G\nN E UPGRAD_SUPPORT_EQUIPMENT 500 200 E G\nN F TELECOMMUNICATION_CHANGES 600 200 E G\nN G SERVICE_INTERRUPTIONS 600 300 E G\nN H COMPUTER_REPLACEMENT_PROJECT 400 300 E G\nN I GROWTH_AND_HIGHER_PROFIT_POTENTIAL 300 300 E G\nN J NEGOTIATE_NEW_MAINTENANCE_CONTRACTS 200 400 E G\nN K HIGH_LEVEL_OF_CUSTOMER_SERVICE 400 400 E G\nN L EXPAND_COMPUTER_ROOM 500 400 E G\nN M MORE_UTILITIES_HEAT_AIR_ELECTRICITY 800 400 E G\n\nE A B -\nE C B -\nE C D -\nE C I -\nE C J -\nE C H -\nE H D -\nE H G -\nE H L -\nE H M -\nE E D -\nE E F -\nE E G -\nE H K -\nE L M -\nE M B -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\42_edit.pt",
+    "step_times": {
+      "answer_s": 0.865,
+      "dsl_gen_s": 39.019,
+      "edit_s": 39.175
+    }
+  },
+  {
+    "index": "43",
+    "image": "43.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\43_answer.pt",
+    "dsl_code": "N A СЛЕДСТВИЕ_1 200 200 B X\nN B Причина_1 500 200 B X\nN C Следствие_2 800 200 B X\nN D Причина_2 200 500 B X\nN E Следствие_3 200 700 B X\nN F Результат 500 500 B W\n\nE A B -\nE B C -\nE B F -\nE D E -\nE E F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\43_dsl.pt",
+    "edited_dsl": "N A СЛЕДСТВИЕ_1 200 200 B X\nN B Причина_1 500 200 B X\nN C Следствие_2 800 200 B X\nN D Причина_2 200 500 B X\nN E Следствие_3 200 700 B X\nN F Результат 500 500 B W\n\nE A B -\nE B C -\nE B F -\nE D E -\nE E F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\43_edit.pt",
+    "step_times": {
+      "answer_s": 0.434,
+      "dsl_gen_s": 16.824,
+      "edit_s": 16.156
+    }
+  },
+  {
+    "index": "44",
+    "image": "44.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Модель факторов влияющих на образовательную институциональную емкость и рынок труда в сфере профессионального образования.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\44_answer.pt",
+    "dsl_code": "N A PUBLIC_SUBSIDY 100 300 B Blue\nN B PLACEMENT_CAPACITY 200 100 R Red\nN C EDUCATIONAL_INSTITUTIONAL_CAPACITY 400 300 B Blue\nN D TUITION_FEES 100 500 P Purple\nN E PRIVATE_RATE_OF_RETURN 300 400 O Orange\nN F APPLICANT_NUMBERS_AND_QUALITY 300 500 O Orange\nN G CURRICULUM_CONTENT 500 400 G Green\nN H STATUS_OF_PROFESSION 500 600 Y Yellow\nN I PROFESSION_ROLE 600 500 M Magenta\nN J GRADUATE_NUMBERS 500 300 B Brown\nN K FACULTY 400 200 O Orange\nN L \"SHORTAGE\"_OR_\"SURPLUS\"_IN_RELATION_TO_DEMAND_OR_NEED 600 200 V Violet\nN M PROFESSIONAL_COMPENSATION 800 100 T Teal\nN N ECONOMY_AND_DEMOGRAPHICS 100 600 P Purple\n\nE A C -\nE B C -\nE D E -\nE D F -\nE E C -\nE F G -\nE F H -\nE G H -\nE G I -\nE H I -\nE I L -\nE J L -\nE K C -\nE K L -\nE L M -\nE M C -\nE N F -\n\nU C E -\nU C G -\nU C K -\nU C L -\nU C M -\nU C N -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\44_dsl.pt",
+    "edited_dsl": "N A PUBLIC_SUBSIDY 100 300 B Blue\nN B PLACEMENT_CAPACITY 200 100 R Red\nN C EDUCATIONAL_INSTITUTIONAL_CAPACITY 400 300 B Blue\nN D TUITION_FEES 100 500 P Purple\nN E PRIVATE_RATE_OF_RETURN 300 400 O Orange\nN F APPLICANT_NUMBERS_AND_QUALITY 300 500 O Orange\nN G CURRICULUM_CONTENT 500 400 G Green\nN H STATUS_OF_PROFESSION 500 600 Y Yellow\nN I PROFESSION_ROLE 600 500 M Magenta\nN J GRADUATE_NUMBERS 500 300 B Brown\nN K FACULTY 400 200 O Orange\nN L \"SHORTAGE\"_OR_\"SURPLUS\"_IN_RELATION_TO_DEMAND_OR_NEED 600 200 V Violet\nN M PROFESSIONAL_COMPENSATION 800 100 T Teal\nN N ECONOMY_AND_DEMOGRAPHICS 100 600 P Purple\n\nE A C -\nE B C -\nE D E -\nE D F -\nE E C -\nE F G -\nE F H -\nE G H -\nE G I -\nE H I -\nE I L -\nE J L -\nE K C -\nE K L -\nE L M -\nE M C -\nE N F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\44_edit.pt",
+    "step_times": {
+      "answer_s": 5.035,
+      "dsl_gen_s": 40.74,
+      "edit_s": 41.46
+    }
+  },
+  {
+    "index": "45",
+    "image": "45.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "9",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\45_answer.pt",
+    "dsl_code": "N A s 500 50 E W\nN B 1 200 150 E W\nN C 2 300 150 E W\nN D 3 400 150 E W\nN E 4 100 300 E W\nN F 5 200 300 E W\nN G 6 300 300 E W\nN H 7 400 300 E W\nN I 8 500 300 E W\nN J 9 350 450 E W\nN K 4 100 500 E W\nN L 4 200 500 E W\nN M 4 500 500 E W\n\nE A B -\nE A C -\nE A D -\nE B E -\nE B F -\nE C G -\nE C H -\nE D I -\nE I M -\n\nU G J -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\45_dsl.pt",
+    "edited_dsl": "N A 500 50 E W\nN B 1 200 150 E W\nN C 2 300 150 E W\nN D 3 400 150 E W\nN E 4 100 300 E W\nN F 5 200 300 E W\nN G 6 300 300 E W\nN H 7 400 300 E W\nN I 8 500 300 E W\nN J 9 350 450 E W\nN K 4 100 500 E W\nN L 4 200 500 E W\nN M 4 500 500 E W\n\nE A B -\nE A C -\nE A D -\nE B E -\nE B F -\nE C G -\nE C H -\nE D I -\nE I M -\n\nU G J -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\45_edit.pt",
+    "step_times": {
+      "answer_s": 0.505,
+      "dsl_gen_s": 28.225,
+      "edit_s": 27.862
+    }
+  },
+  {
+    "index": "46",
+    "image": "46.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "1097",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\46_answer.pt",
+    "dsl_code": "N A МОСКАВА 500 150 B G\nN B ЯРОСЛАВЛЬ 100 300 B G\nN C ТВЕРЬ 800 300 B G\nN D САНКТ_ПЕТЕРБУРГ 100 600 B G\nN E СМОЛЕНСК 800 600 B G\n\nE A B 212\nE A C 175\nE A D 794\nE A E 400\nE B D 794\nE D E 753\nE E A 406",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\46_dsl.pt",
+    "edited_dsl": "N A МОСКАВА 500 150 B G\nN B ЯРОСЛАВЛЬ 100 300 B G\nN C ТВЕРЬ 800 300 B G\nN D САНКТ_ПЕТЕРБУРГ 100 600 B G\nN E СМОЛЕНСК 800 600 B G\nN F СИМФЕРОПОЛЬ 1200 600 B G\nE A B 212\nE A C 175\nE A D 794\nE A E 400\nE B D 794\nE D E 753\nE E A 406\nE D F 1200",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\46_edit.pt",
+    "step_times": {
+      "answer_s": 0.702,
+      "dsl_gen_s": 16.92,
+      "edit_s": 22.521
+    }
+  },
+  {
+    "index": "47",
+    "image": "47.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Рабочник, Условия работы оборудования, окружающая среда, Производственная программа, Технические возможности оборудования",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\47_answer.pt",
+    "dsl_code": "N A ДРЕВОВИДНАЯ_ДИАГРАММА 500 50 E W\nN B НИЗКИЙ_КОЭФФИЦИЕНТ_ЗАГРУЗКИ_ОБОРУДОВАНИЯ 500 150 B B\nN C РАБОТНИК 200 300 B B\nN D УСЛОВИЯ_РАБОТЫ_ОБОРУДОВАНИЯ_ОКРУЖАЮЩАЯ_СРЕДА 400 300 B B\nN E ПРОИЗВОДСТВЕННАЯ_ПРОГРАММА 600 300 B B\nN F ТЕХНИЧЕСКИЕ_ВОЗМОЖНОСТИ_ОБОРУДОВАНИЯ 800 300 B B\nE B C -\nE B D -\nE B E -\nE B F -\nN G НИЗКИЙ_УРОВЕНЬ_ОПЫТА_РАБОТНИКА 100 400 B B\nN H НЕЗАИНТЕРЕСОВАННОСТЬ_В_ВЫПОЛНЕНИИ_ПОСТАВЛЕННОЙ_ЗАДАЧИ 200 400 B B\nE C G -\nE C H -\nN I ПЛОХАЯ_МОТИВАЦИЯ_РАБОТНИКА 200 500 B B\nE H I -\nE I J -\nN J УСЛОВИЯ_ТРУДА 200 600 B B\nN K ЗАРАБОТНАЯ_ПЛАТА 200 700 B B\nE I J -\nE I K -\nN L ВЫСОКАЯ_ВЛАЖНОСТЬ 400 400 B B\nN M НЕПОСТОЯННАЯ_ТЕМПЕРАТУРА_ВОЗДУХА 400 500 B B\nN N СКАЧКИ_НАПРЯЖЕНИЯ_В_СЕТИ 400 600 B B\nE D L -\nE D M -\nE D N -\nN O НЕВЕРНЫЙ_ПЛАН_ПО_ПРОИЗВОДСТВУ_ПРОДУКЦИИ 600 400 B B\nN P НЕХВАТКА_РЕСУРСОВ 600 500 B B\nN Q НЕПРАВИЛЬНО_ПОДОБРАННЫЙ_АССОРТИМЕНТ 600 600 B B\nN R НЕВЕРНОЕ_ОПРЕДЕЛЕНИЕ_СПРОСА_НА_ПРОДУКЦИЮ 600 700 B B\nE E O -\nE E P -\nE E Q -\nE E R -\nN S",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\47_dsl.pt",
+    "edited_dsl": "N A ДРЕВОВИДНАЯ_ДИАГРАММА 500 50 E W\nN B НИЗКИЙ_КОЭФФИЦИЕНТ_ЗАГРУЗКИ_ОБОРУДОВАНИЯ 500 150 B B\nN C РАБОТНИК 200 300 B B\nN D УСЛОВИЯ_РАБОТЫ_ОБОРУДОВАНИЯ_ОКРУЖАЮЩАЯ_СРЕДА 400 300 B B\nN E ПРОИЗВОДСТВЕННАЯ_ПРОГРАММА 600 300 B B\nN F ТЕХНИЧЕСКИЕ_ВОЗМОЖНОСТИ_ОБОРУДОВАНИЯ 800 300 B B\nE B C -\nE B D -\nE B E -\nE B F -\nN G НИЗКИЙ_УРОВЕНЬ_ОПЫТА_РАБОТНИКА 100 400 B B\nN H НЕЗАИНТЕРЕСОВАННОСТЬ_В_ВЫПОЛНЕНИИ_ПОСТАВЛЕННОЙ_ЗАДАЧИ 200 400 B B\nE C G -\nE C H -\nN I ПЛОХАЯ_МОТИВАЦИЯ_РАБОТНИКА 200 500 B B\nE H I -\nE I J -\nN J УСЛОВИЯ_ТРУДА 200 600 B B\nN K ЗАРАБОТНАЯ_ПЛАТА 200 700 B B\nE I J -\nE I K -\nN L ВЫСОКАЯ_ВЛАЖНОСТЬ 400 400 B B\nN M НЕПОСТОЯННАЯ_ТЕМПЕРАТУРА_ВОЗДУХА 400 500 B B\nN N СКАЧКИ_НАПРЯЖЕНИЯ_В_СЕТИ 400 600 B B\nE D L -\nE D M -\nE D N -\nN O НЕВЕРНЫЙ_ПЛАН_ПО_ПРОИЗВОДСТВУ_ПРОДУКЦИИ 600 400 B B\nN P НЕХВАТКА_РЕСУРСОВ 600 500 B B\nN Q НЕПРАВИЛЬНО_ПОДОБРАННЫЙ_АССОРТИМЕНТ 600 600 B B\nN R НЕВЕРНОЕ_ОПРЕДЕЛЕНИЕ_СПРОСА_НА_ПРОДУКЦИЮ 600 700 B B\nE E O -\nE E P -\nE E Q -\nE E R -\nN S",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\47_edit.pt",
+    "step_times": {
+      "answer_s": 4.174,
+      "dsl_gen_s": 88.668,
+      "edit_s": 89.233
+    }
+  },
+  {
+    "index": "48",
+    "image": "48.webp",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "7",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\48_answer.pt",
+    "dsl_code": "N A ЗАПУСК_КЛИЕНТА 500 100 E W\nN B ВВОД_ДАННЫХ_(ЛОГИН_ПАРОЛЬ) 500 200 B W\nN C ПОИСК_СООТВЕТСТВИЯ_В_БАЗЕ_ЛОГИНОВ 500 300 D W\nN D ОКНО_ПРИВЕТСТВИЯ 500 400 B W\nN E РАБОТА_В_СИСТЕМЕ 500 500 B W\nN F УВЕДОМЛЕНИЕ_Об_ОШИБКЕ 800 300 B W\n\nE A B -\nE B C -\nE C D УСПЕШНО\nE C F Не_успешно\nE D E -\nE F B -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\48_dsl.pt",
+    "edited_dsl": "N A ЗАПУСК_КЛИЕНТА 500 100 E W\nN B ВВОД_ДАННЫХ_(ЛОГИН_ПАРОЛЬ) 500 200 B W\nN C ПОИСК_СООТВЕТСТВИЯ_В_БАЗЕ_ЛОГИНОВ 500 300 D W\nN D ГЛАВНОЕ_МЕНЮ 500 400 B W\nN E РАБОТА_В_СИСТЕМЕ 500 500 B W\nN F УВЕДОМЛЕНИЕ_Об_ОШИБКЕ 800 300 B W\n\nE A B -\nE B C -\nE C D УСПЕШНО\nE C F Не_успешно\nE D E -\nE F B -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\48_edit.pt",
+    "step_times": {
+      "answer_s": 0.35,
+      "dsl_gen_s": 20.365,
+      "edit_s": 24.304
+    }
+  },
+  {
+    "index": "49",
+    "image": "49.png",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\49_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 50 E W\nN B Измерить_температуру_t° 500 150 B W\nN C t°≥37°? 500 250 D W\nN D Идти_в_школу 500 350 B W\nN E Остаться_дома 800 350 B W\nN F Вызвать_врача 800 450 B W\nN G Конец 500 550 E W\n\nE A B -\nE B C -\nE C D Да\nE C E Да\nE D G -\nE E F -\nE F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\49_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 50 E W\nN B Измерить_температуру_t° 500 150 B W\nN C t°≥37°? 500 250 D W\nN D Идти_в_школу 500 350 B W\nN E Остаться_дома 800 350 B W\nN F Вызвать_врача 800 450 B W\nN G Конец 500 550 E W\nN H Заболеть 800 400 I W\nE A B -\nE B C -\nE C D Да\nE C E Да\nE D G -\nE E F -\nE F G -\nE D H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\49_edit.pt",
+    "step_times": {
+      "answer_s": 0.461,
+      "dsl_gen_s": 20.983,
+      "edit_s": 23.152
+    }
+  },
+  {
+    "index": "50",
+    "image": "50.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "диаграмма потока данных",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\50_answer.pt",
+    "dsl_code": "N A Start 500 100 E K\nN B Process 500 250 B Y\nN C Decision 500 400 D R\nN D Input 250 500 I B\nN E Input 750 500 I B\nN F Process 500 600 B Y\nN G End 500 800 E K\nE A B -\nE B C -\nE C D \"No\"\nE C E \"Yes\"\nE D F -\nE E F -\nE F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\50_dsl.pt",
+    "edited_dsl": "N A Start 500 100 E K\nN B Process 500 250 B Y\nN C Output 500 400 D R\nN D Output 250 500 D B\nN E Output 750 500 D B\nN F Process 500 600 B Y\nN G End 500 800 E K\nE A B -\nE B C -\nE C D \"No\"\nE C E \"Yes\"\nE D F -\nE E F -\nE F G -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\50_edit.pt",
+    "step_times": {
+      "answer_s": 1.217,
+      "dsl_gen_s": 16.368,
+      "edit_s": 15.868
+    }
+  },
+  {
+    "index": "51",
+    "image": "51.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Посадка саженца; 4",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\51_answer.pt",
+    "dsl_code": "N A НАЧАЛО 380 390 E W\nN B ВЫКОПАТЬ_ЯМУ 380 450 B W\nN C ОПУСТИТЬ_В_ЯМУ_САЖЕНЕЦ 380 510 B W\nN D ЗАКОПАТЬ_ЯМУ 380 570 B W\nN E ПОЛИТЬ_САЖЕНЕЦ 380 630 B W\nN F КОНЕЦ 380 690 E W\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\51_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 380 390 E W\nN B ВЫКОПАТЬ_ЯМУ 380 450 B W\nN C ОПУСТИТЬ_В_ЯМУ_САЖЕНЕЦ 380 510 B W\nN D ЗАКОПАТЬ_ЯМУ 380 570 B O\nN E ПОЛИТЬ_САЖЕНЕЦ 380 630 B W\nN F КОНЕЦ 380 690 E W\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\51_edit.pt",
+    "step_times": {
+      "answer_s": 1.863,
+      "dsl_gen_s": 14.533,
+      "edit_s": 19.293
+    }
+  },
+  {
+    "index": "52",
+    "image": "52.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "1",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\52_answer.pt",
+    "dsl_code": "N A НАЧАЛО 380 350 E W\nN B 4*4=16 380 400 B W\nN C 16+2=18 380 450 B W\nN D 18:2=9 380 500 B W\nN E 8+2=10 380 550 B W\nN F 10*9=90 380 600 B W\nN G ОТВЕТ_90 380 650 I W\nN H КОНЕЦ 380 700 E W\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\52_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 380 350 E W\nN B 4*4=16 380 400 B Y\nN C 16+2=18 380 450 B G\nN D 18:2=9 380 500 B Y\nN E 8+2=10 380 550 B G\nN F 10*9=90 380 600 B Y\nN G ОТВЕТ_90 380 650 I W\nN H КОНЕЦ 380 700 E W\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\52_edit.pt",
+    "step_times": {
+      "answer_s": 0.586,
+      "dsl_gen_s": 22.72,
+      "edit_s": 22.515
+    }
+  },
+  {
+    "index": "53",
+    "image": "53.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "диаграмма влияющих факторов; ошибки при наборе текста",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\53_answer.pt",
+    "dsl_code": "N A Скорость 280 400 B W\nN B Оператор 490 400 B W\nN C Опыт 700 400 B W\nN D Ошибки_при_наборе_текста 490 500 D R\nN E Телефонные_звонки 280 480 B W\nN F Шум 280 580 B W\nN G Условия_работы 490 580 B W\nN H Расположение_источника 600 500 B W\nN I Освещение 600 580 B W\nN J Тип_оборудования 490 620 B W\nN K Яркость 600 620 B W\n\nE A D -\nE B D -\nE C D -\nE E D -\nE F D -\nE G D -\nE H D -\nE I D -\nE J D -\nE K D -\n\nU A B -\nU B C -\nU E G -\nU G J -\nU G I -\nU H I -\nU I K -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\53_dsl.pt",
+    "edited_dsl": "N A Скорость 280 400 B W\nN B Оператор 490 400 B W\nN C Опыт 700 400 B W\nN D Ошибки_при_наборе_текста 490 500 D R\nN E Телефонные_звонки 280 480 B W\nN F Шум 280 580 B W\nN G Условия_работы 490 580 B W\nN H Расположение_источника 600 500 B W\nN I Освещение 600 580 B W\nN J Тип_оборудования 490 620 B W\nN K Яркость 600 620 B W\n\nE A D -\nE B D -\nE C D -\nE E D -\nE F D -\nE G D -\nE H D -\nE I D -\nE J D -\nE K D -\n\nU A B -\nU B C -\nU E G -\nU G J -\nU G I -\nU H I -\nU I K -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\53_edit.pt",
+    "step_times": {
+      "answer_s": 2.561,
+      "dsl_gen_s": 33.798,
+      "edit_s": 32.967
+    }
+  },
+  {
+    "index": "54",
+    "image": "54.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Диаграммы UML. 14.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\54_answer.pt",
+    "dsl_code": "N A ДИАГРАММЫ_UML 500 150 B W\nN B СТРУКТУРНЫЕ_ДИАГРАММЫ 300 300 B W\nN C ДИАГРАММЫ_ПОВЕДЕНИЯ 700 300 B W\nN D ДИАГРАММА_КЛАССОВ 100 400 B W\nN E ДИАГРАММА_ОБЪЕКТОВ 200 400 B W\nN F ДИАГРАММА_КОМПОНЕНТОВ 300 400 B W\nN G ДИАГРАММА_ПРОФИЛЕЙ 400 400 B W\nN H ДИАГРАММА_РАЗВЕРТЫВАНИЯ 100 500 B W\nN I ДИАГРАММА_ПАКЕТОВ 200 500 B W\nN J ДИАГРАММА_КООПЕРАЦИИ 300 500 B W\nN K ДИАГРАММА_СОСТОЯНИЙ 500 400 B W\nN L ДИАГРАММА_ПРЕЦЕДЕНТОВ 600 400 B W\nN M ДИАГРАММЫ_ВЗАИМОДЕЙСТВИЙ 500 500 B W\nN N ДИАГРАММА_ПОСЛЕДОВАТЕЛЬНОСТИ 500 600 B W\nN O ДИАГРАММА_СИНХРОНИЗАЦИИ 600 600 B W\nN P ДИАГРАММА_КОММУНИКАЦИИ 500 700 B W\nN Q ДИАГРАММА_ОБСОРА_ВЗАИМОДЕЙСТВИЯ 700 700 B W\nN R ДИАГРАММА_ДЕЯТЕЛЬНОСТИ 800 500 B W\n\nE A B -\nE A C -\nE B D -\nE B E -\nE B F -\nE B G -\nE B H -\nE B I -\nE B J -\nE C K -\nE C L -\nE C M -\nE M N -\nE M O -\nE M P -\nE M Q -\nE M R -\n\nU M N -\nU M O -\nU M P -\nU M Q -\nU M R -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\54_dsl.pt",
+    "edited_dsl": "N A ДИАГРАММЫ_UML 500 150 B R\nN B СТРУКТУРНЫЕ_ДИАГРАММЫ 300 300 B O\nN C ДИАГРАММЫ_ПОВЕДЕНИЯ 700 300 B Y\nN D ДИАГРАММА_КЛАССОВ 100 400 B R\nN E ДИАГРАММА_ОБЪЕКТОВ 200 400 B O\nN F ДИАГРАММА_КОМПОНЕНТОВ 300 400 B Y\nN G ДИАГРАММА_ПРОФИЛЕЙ 400 400 B R\nN H ДИАГРАММА_РАЗВЕРТЫВАНИЯ 100 500 B O\nN I ДИАГРАММА_ПАКЕТОВ 200 500 B Y\nN J ДИАГРАММА_КООПЕРАЦИИ 300 500 B R\nN K ДИАГРАММА_СОСТОЯНИЙ 500 400 B O\nN L ДИАГРАММА_ПРЕЦЕДЕНТОВ 600 400 B Y\nN M ДИАГРАММЫ_ВЗАИМОДЕЙСТВИЙ 500 500 B R\nN N ДИАГРАММА_ПОСЛЕДОВАТЕЛЬНОСТИ 500 600 B O\nN O ДИАГРАММА_СИНХРОНИЗАЦИИ 600 600 B Y\nN P ДИАГРАММА_КОММУНИКАЦИИ 500 700 B R\nN Q ДИАГРАММА_ОБСОРА_ВЗАИМОДЕЙСТВИЯ 700 700 B O\nN R ДИАГРАММА_ДЕЯТЕЛЬНОСТИ 800 500 B Y\n\nE A B -\nE A C -\nE B D -\nE B E -\nE B F -\nE B G -\nE B H -\nE B I -\nE B J -\nE C K -\nE C L -\nE C M -\nE M N -\nE M O -\nE M P -\nE M Q -\nE M R -\n\nU M N -\nU M O -\nU M P -\nU M Q -\nU M R -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\54_edit.pt",
+    "step_times": {
+      "answer_s": 1.894,
+      "dsl_gen_s": 71.981,
+      "edit_s": 75.553
+    }
+  },
+  {
+    "index": "55",
+    "image": "55.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Д-Б-М",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\55_answer.pt",
+    "dsl_code": "N A Д 380 200 C W\nN B Б 700 200 C W\nN C К 550 400 C W\nN D М 790 500 C W\nN E П 220 550 C W\nU A B -\nU A C -\nU B C -\nU B D -\nU C E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\55_dsl.pt",
+    "edited_dsl": "N A Д 380 200 C W\nN B Б 700 200 C W\nN C К 550 400 C W\nN D М 790 500 C W\nN E П 220 550 C W\nU A B -\nU A C -\nU B C -\nU B D -\nU C E -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\55_edit.pt",
+    "step_times": {
+      "answer_s": 1.123,
+      "dsl_gen_s": 11.783,
+      "edit_s": 11.143
+    }
+  },
+  {
+    "index": "56",
+    "image": "56.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "4",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\56_answer.pt",
+    "dsl_code": "N A A 400 200 C B\nN B B 700 150 C B\nN C C 700 300 C B\nN D D 200 350 C B\nN F F 400 400 C B\nN G G 400 500 C B\nN H H 600 450 C B\n\nU A B -\nU A C -\nU A D -\nU F G -\nU F H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\56_dsl.pt",
+    "edited_dsl": "N A A 400 200 C B\nN B B 700 150 C B\nN C C 700 300 C B\nN D D 200 350 C B\nN F F 400 400 C B\nN G G 400 500 C B\nN H H 600 450 C B\nU A B -\nU A C -\nU A D -\nU F G -\nU F H -\nE D F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\56_edit.pt",
+    "step_times": {
+      "answer_s": 0.606,
+      "dsl_gen_s": 15.105,
+      "edit_s": 15.128
+    }
+  },
+  {
+    "index": "57",
+    "image": "57.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Нахождение максимального значения среди трёх чисел a, b и c.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\57_answer.pt",
+    "dsl_code": "N A Start 580 150 E G\nN B Declare_variables_a_b_and_c 580 250 B B\nN C Assign_a_b_and_c 580 350 B B\nN D Is_a>b? 580 450 D B\nN E Print_b 300 600 I B\nN F Print_c 580 600 I B\nN G Print_a 800 600 I B\nN H Stop 580 700 B R\n\nE A B -\nE B C -\nE C D -\nE D E False\nE D F True\nE D G True\nE E H -\nE F H -\nE G H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\57_dsl.pt",
+    "edited_dsl": "N A Start 580 150 E G\nN B Declare_variables_a_b_and_c 580 250 B B\nN C Assign_a_b_and_c 580 350 B B\nN D Is_a>b? 580 450 D Y\nN E Print_b 300 600 I B\nN F Print_c 580 600 I B\nN G Print_a 800 600 I B\nN H Stop 580 700 B R\n\nE A B -\nE B C -\nE C D -\nE D E False\nE D F True\nE D G True\nE E H -\nE F H -\nE G H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\57_edit.pt",
+    "step_times": {
+      "answer_s": 2.709,
+      "dsl_gen_s": 20.867,
+      "edit_s": 20.486
+    }
+  },
+  {
+    "index": "58",
+    "image": "58.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\58_answer.pt",
+    "dsl_code": "N A A 100 500 E W\nN B B 200 100 E W\nN C C 300 300 E W\nN D D 250 400 E W\nN E E 350 500 E W\nN F F 500 100 E W\nN G G 500 300 E W\nN H H 500 400 E W\nN I I 800 400 E W\nN J J 650 600 E W\nN K K 800 200 E W\n\nE A B -\nE A C -\nE A D -\nE A E -\nE B C -\nE B F -\nE B G -\nE C G -\nE C H -\nE D E -\nE D H -\nE E H -\nE E J -\nE F G -\nE F K -\nE G H -\nE G I -\nE G K -\nE H I -\nE H J -\nE H K -\nE I J -\nE I K -\nE J K -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\58_dsl.pt",
+    "edited_dsl": "N A A 100 500 E W\nN B B 200 100 E W\nN C C 300 300 E W\nN D D 250 400 E W\nN E E 350 500 E W\nN F F 500 100 E W\nN G G 500 300 E W\nN H H 500 400 E W\nN I I 800 400 E W\nN J J 650 600 E W\nN K K 800 200 E W\n\nE A B -\nE A C -\nE A D -\nE A E -\nE B C -\nE B F -\nE B G -\nE C G -\nE C H -\nE D E -\nE D H -\nE E H -\nE E J -\nE F G -\nE F K -\nE G H -\nE G I -\nE G K -\nE H I -\nE H J -\nE H K -\nE I J -\nE I K -\nE J K -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\58_edit.pt",
+    "step_times": {
+      "answer_s": 0.626,
+      "dsl_gen_s": 31.062,
+      "edit_s": 30.338
+    }
+  },
+  {
+    "index": "59",
+    "image": "59.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Процесс продажи и доставки товара с учетом подтверждения счета клиентом.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\59_answer.pt",
+    "dsl_code": "N A НАЧАЛО 600 100 E W\nN B УСТАНОВЛЕНИЕ_КОНТАКА_С_КЛИЕНТОМ 600 200 B W\nN C ВЫЯВЛЕНИЕ_ПОТРЕБНОСТИ_КЛИЕНТА 600 300 B W\nN D ФОРМИРОВАНИЕ_СЧЕТА_ИСХОДЯ_ИЗ_ПОТРЕБНОСТИ_КЛИЕНТА 600 400 D W\nN E КЛИЕНТ_СЧЕТ_ПОДТВЕРДИЛ 600 500 B W\nN F ОШИБКА_СЧЕТА_КЛИЕНТОМ 600 600 B W\nN G СОГЛАСОВАНИЕ_ФОРМАТА_ДОСТАВКИ_И_АДРЕСА 600 700 B W\nN H ДОСТАВКА_ТОВАРА 600 800 B W\nN I КОНЦ 600 900 E W\n\nE A B -\nE B C -\nE C D -\nE D E да\nE D F нет\nE E G -\nE G H -\nE H I -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\59_dsl.pt",
+    "edited_dsl": "N A START 600 100 E W\nN B ESTABLISH_CONTACT_WITH_CUSTOMER 600 200 B W\nN C IDENTIFY_CUSTOMER_NEEDS 600 300 B W\nN D CREATE_INVOICE_BASED_ON_CUSTOMER_NEEDS 600 400 D W\nN E CUSTOMER_CONFIRMED_INVOICE 600 500 B W\nN F CUSTOMER_INVOICE_ERROR 600 600 B W\nN G AGREEMENT_DELIVERY_FORMAT_AND_ADDRESS 600 700 B W\nN H DELIVER_GOODS 600 800 B W\nN I END 600 900 E W\n\nE A B -\nE B C -\nE C D -\nE D E yes\nE D F no\nE E G -\nE G H -\nE H I -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\59_edit.pt",
+    "step_times": {
+      "answer_s": 3.285,
+      "dsl_gen_s": 38.455,
+      "edit_s": 24.141
+    }
+  },
+  {
+    "index": "60",
+    "image": "60.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "9",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\60_answer.pt",
+    "dsl_code": "N A 0 200 300 E W\nN B 1 300 400 E W\nN C 2 400 300 E W\nN D 3 500 300 E W\nN E 4 500 400 E W\nN F 5 300 200 E W\nN G 6 600 200 E W\nN H 7 800 300 E W\nN I 8 400 500 E W\nN J 9 600 500 E W\n\nU A B -\nU A C -\nU A F -\nU B C -\nU B I -\nU C D -\nU C E -\nU C I -\nU D E -\nU D G -\nU E G -\nU E I -\nU E J -\nU F D -\nU F G -\nU G H -\nU G J -\nU I J -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\60_dsl.pt",
+    "edited_dsl": "N A 0 200 300 E W\nN B 1 300 400 E W\nN C 2 400 300 E W\nN D 3 500 300 E W\nN E 4 500 400 E W\nN F 5 300 200 E W\nN G 6 600 200 E W\nN H 7 800 300 E W\nN I 8 400 500 E W\nN J 9 600 500 E W\nN K 10 400 400 E W\nU A B -\nU A C -\nU A F -\nU B C -\nU B I -\nU C D -\nU C E -\nU C I -\nU D E -\nU D G -\nU E G -\nU E I -\nU E J -\nU F D -\nU F G -\nU G H -\nU G J -\nU I J -\nU K E -\nU K H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\60_edit.pt",
+    "step_times": {
+      "answer_s": 0.627,
+      "dsl_gen_s": 27.95,
+      "edit_s": 25.825
+    }
+  },
+  {
+    "index": "61",
+    "image": "61.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\61_answer.pt",
+    "dsl_code": "N A Коучинг_центр 100 300 B W\nN B Кафе_элитной_выпечки 200 350 B W\nN C Психология_личности 80 400 E O\nN D Кулинария 250 450 E O\nN E Интересы 200 500 I O\nN F Мотивация 200 550 I W\nN G Первооткрыватель 100 600 D P\nN H Лидер 300 600 D P\nN I Частные_клиенты 200 650 D P\nN J Бизнес_идеи 400 500 B B\nN K PR_агентство 350 350 B Y\nN L Party_center 500 350 B Y\nN M репетиторство 650 350 B Y\nN N Лего_центр 800 350 B Y\nN O коммуникация 400 400 C G\nN P творчество 600 400 C G\nN Q обучение 800 400 C G\nN R Умения 600 500 C G\nN S Потребности_общества 600 550 R R\nN T досуг 600 600 B P\nN U Клуб_для_пенсионеров 500 650 B C\nN V Парк_отдыха_и_занятый_спортом 650 650 B C\n\nE A J -\nE B J -\nE C J -\nE D J -\nE E J -\nE F J -\nE G J -\nE H J -\nE I J -\nE J K -\nE J L -\nE J M -\nE J N -\nE J O -\nE J P -\nE J Q -\nE J R -\nE J S -\nE J T -\nE J U -\nE J V -\n\nU K O -\nU L O -\nU M O -\nU N O -\nU O P -\nU O Q -\nU P R -\nU Q R -\nU R S -\nU S T -\nU T U -\nU T V -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\61_dsl.pt",
+    "edited_dsl": "N A Коучинг_центр 100 300 B W\nN B Кафе_элитной_выпечки 200 350 B W\nN C Психология_личности 80 400 E O\nN D Кулинария 250 450 E O\nN E Интересы 200 500 I O\nN F Мотивация 200 550 I W\nN G Первооткрыватель 100 600 D P\nN H Лидер 300 600 D P\nN I Частные_клиенты 200 650 D P\nN J Бизнес_идеи 400 500 B B\nN K PR_агентство 350 350 B Y\nN L Party_center 500 350 B Y\nN M репетиторство 650 350 B Y\nN N Лего_центр 800 350 B Y\nN O коммуникация 400 400 C G\nN P творчество 600 400 C G\nN Q обучение 800 400 C G\nN R Умения 600 500 C G\nN S Потребности_общества 600 550 R R\nN T досуг 600 600 B P\nN U Клуб_для_пенсионеров 500 650 B C\nN V Парк_отдыха_и_занятый_спортом 650 650 B C\nN W бассейн 700 600 B P\nE A J -\nE B J -\nE C J -\nE D J -\nE E J -\nE F J -\nE G J -\nE H J -\nE I J -\nE J K -\nE J L -\nE J M -\nE J N -\nE J O -\nE J P -\nE J Q -\nE J R -\nE J S -\nE J T -\nE J U -\nE J V -\nE T W -  \nU K O -\nU L O -\nU M O -\nU N O -\nU O P -\nU O Q -\nU P R -\nU Q R -\nU R S -\nU S T -\nU T U -\nU T V -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\61_edit.pt",
+    "step_times": {
+      "answer_s": 0.625,
+      "dsl_gen_s": 66.365,
+      "edit_s": 68.249
+    }
+  },
+  {
+    "index": "62",
+    "image": "62.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "4",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\62_answer.pt",
+    "dsl_code": "N A КЛИЕНТЫ 380 300 B W\nN B Наименование_компании 300 250 E W\nN C Адрес 250 290 E W\nN D Телефон 400 270 E W\nN E Город 480 310 E W\nN F ФИО_клиента 160 340 E W\nN G ИНН 230 370 E W\nN H Индекс 420 350 E W\nN I Заказ/Договор 550 350 B W\nN J Сумма_по_договору 650 390 E W\nN K Дата_договора 580 420 E W\nN L Номер_договора 380 450 E W\nN M Дата_заказа 480 450 E W\nN N Заказы 400 500 B W\nN O Срок_выполнения 550 500 E W\nN P Код_услуги 250 520 E W\nN Q Наименование_заказа 320 540 E W\nN R Номер_заказа 420 560 E W\nN S Заказ/Услуги 320 600 B W\nN T Услуги 360 700 B W\nN U Код_услуги 280 660 E W\nN V Наименование_услуги 360 640 E W\nN W Сотрудники 600 580 B W\nN X Код_сотрудника 580 560 E W\nN Y ФИО_сотрудника 660 560 E W\nN Z Адрес 500 580 E W\nN AA Телефон 460 610 E W\nN AB ИНН 720 610 E W\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE A H -\nE A I -\nE I J -\nE I K -\nE I L -\nE I M -\nE I N -\nE N O -\nE N P -\nE N Q -\nE N R -\nE N S -\nE S T -\nE S U -\nE S V -\nE N W -\nE W X -\nE W Y -\nE W Z -\nE W AA -\nE W AB -\n\nU S U -\nU S V -\nU S T -\nU S U -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\62_dsl.pt",
+    "edited_dsl": "N A КЛИЕНТЫ 380 300 B W\nN B Наименование_компании 300 250 E W\nN C Адрес 250 290 E W\nN D Телефон 400 270 E W\nN E Город 480 310 E W\nN F ФИО_клиента 160 340 E W\nN G ИНН 230 370 E W\nN H Индекс 420 350 E W\nN I Заказ/Договор 550 350 B W\nN J Сумма_по_договору 650 390 E W\nN K Дата_договора 580 420 E W\nN L Номер_договора 380 450 E W\nN M Дата_заказа 480 450 E W\nN N Заказы 400 500 B W\nN O Срок_выполнения 550 500 E W\nN P Код_услуги 250 520 E W\nN Q Наименование_заказа 320 540 E W\nN R Номер_заказа 420 560 E W\nN S Заказ/Услуги 320 600 B W\nN T Услуги 360 700 B W\nN U Код_услуги 280 660 E W\nN V Наименование_услуги 360 640 E W\nN W Сотрудники 600 580 B W\nN X Код_сотрудника 580 560 E W\nN Y ФИО_сотрудника 660 560 E W\nN Z Адрес 500 580 E W\nN AA Телефон 460 610 E W\nN AB ИНН 720 610 E W\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE A H -\nE A I -\nE I J -\nE I K -\nE I L -\nE I M -\nE I N -\nE N O -\nE N P -\nE N Q -\nE N R -\nE N S -\nE S T -\nE S U -\nE S V -\nE N W -\nE W X -\nE W Y -\nE W Z -\nE W AA -\nE W AB -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\62_edit.pt",
+    "step_times": {
+      "answer_s": 0.61,
+      "dsl_gen_s": 78.133,
+      "edit_s": 75.806
+    }
+  },
+  {
+    "index": "63",
+    "image": "63.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "интернет-торговля",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\63_answer.pt",
+    "dsl_code": "N A ENTITY 180 190 B W\nN B ACTION 250 200 D B\nN C ATTRIBUTE 300 200 C R\nN D COMPANY 650 220 B W\nN E NAME 750 230 C R\nN F CUSTOMER 380 400 B W\nN G ADDRESS 400 320 C R\nN H EMAIL 470 360 C R\nN I ITEM 620 420 B W\nN J NAME_ITEM 720 390 C R\nN K PRICE 720 450 C R\nN L SHIPPING 120 440 B W\nN M ORDER 450 650 B W\nN N SHOPPING_CART 620 640 B W\nN O CREDIT_CARD 220 550 B W\nN P E_COMMERCE 220 680 B W\n\nE A B -\nE A C -\nE D B PRODUCES\nE F G SHIPS_ITEM\nE F H ORDERS\nE F I HAS\nE I J CONTAINS\nE I K CONTAINS\nE L M FORWARDS_ORDER\nE O P VERIFIES\nE P M PROCESSES\nE M N CREATES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\63_dsl.pt",
+    "edited_dsl": "N A ENTITY 180 190 B W\nN B ACTION 250 200 D B\nN C ATTRIBUTE 300 200 C O\nN D COMPANY 650 220 B W\nN E NAME 750 230 C R\nN F CUSTOMER 380 400 B W\nN G ADDRESS 400 320 C R\nN H EMAIL 470 360 C R\nN I ITEM 620 420 B W\nN J NAME_ITEM 720 390 C R\nN K PRICE 720 450 C R\nN L SHIPPING 120 440 B W\nN M ORDER 450 650 B W\nN N SHOPPING_CART 620 640 B W\nN O CREDIT_CARD 220 550 B W\nN P E_COMMERCE 220 680 B W\n\nE A B -\nE A C -\nE D B PRODUCES\nE F G SHIPS_ITEM\nE F H ORDERS\nE F I HAS\nE I J CONTAINS\nE I K CONTAINS\nE L M FORWARDS_ORDER\nE O P VERIFIES\nE P M PROCESSES\nE M N CREATES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N M PROCESSING\nE N O VERIFIES\nE N P PROCESSES\nE M N CREATES\nE M O VERIFIES\nE M P PROCESSES\nE N I CONTAINS\nE N",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\63_edit.pt",
+    "step_times": {
+      "answer_s": 1.356,
+      "dsl_gen_s": 88.772,
+      "edit_s": 87.368
+    }
+  },
+  {
+    "index": "64",
+    "image": "64.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\64_answer.pt",
+    "dsl_code": "N A CUSTOMER 380 190 B T\nN B PROJECT 620 190 B T\nN C DEVELOPER 620 420 B T\nN D SOFTWARE_DEVELOPMENT_COMPANY 450 420 B T\nN E CONTACT 320 190 E P\nN F ID 740 160 E P\nN G NAME 320 250 E P\nN H NAME 740 230 E P\nN I NAME 380 400 E P\nN J LOCATION 360 470 E P\nN K TECHNOLOGY 550 510 E P\nN L NAME 620 510 E P\nN M HOURLY_RATE 690 510 E P\n\nE A B ORDERS\nE B C WORKS\nE C D EMPLOYES\nE D A PAYS\nE A C SPECIALIZES\nE B D SPECIALIZES\nE D C -\n\nU A E -\nU B F -\nU C L -\nU D J -\nU D K -\nU D M -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\64_dsl.pt",
+    "edited_dsl": "N A CUSTOMER 380 190 B T\nN B PROJECT 620 190 B T\nN C DEVELOPER 620 420 B T\nN D SOFTWARE_DEVELOPMENT_COMPANY 450 420 B T\nN E CONTACT 320 190 E P\nN F ID 740 160 E P\nN G NAME 320 250 E P\nN H NAME 740 230 E P\nN I NAME 380 400 E P\nN J LOCATION 360 470 E P\nN K TECHNOLOGY 550 510 E P\nN L NAME 620 510 E P\nN M HOURLY_RATE 690 510 E P\nN N EMAIL 740 510 E P\n\nE A B ORDERS\nE B C WORKS\nE C D EMPLOYES\nE D A PAYS\nE A C SPECIALIZES\nE B D SPECIALIZES\nE D C -\n\nU A E -\nU B F -\nU C L -\nU D J -\nU D K -\nU D M -\nU D N -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\64_edit.pt",
+    "step_times": {
+      "answer_s": 0.628,
+      "dsl_gen_s": 31.626,
+      "edit_s": 33.483
+    }
+  },
+  {
+    "index": "65",
+    "image": "65.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "5",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\65_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 100 E B\nN B ЗВОНКОН_ДОМОЙ 500 200 I B\nN C ДОМА_ЕСТЬ_ХЛЕБ_? 500 300 D B\nN D ПОДПРОГРАММА_ПОКУПКИ_ТОВАРОВ 800 300 B B\nN E ИДЕМ_ДОМОЙ 500 400 I B\nN F КОНЕЦ 500 500 E B\n\nE A B -\nE B C -\nE C D НЕТ\nE C E ДА\nE D E -\nE E F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\65_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 100 E R\nN B ЗВОНКОН_ДОМОЙ 500 200 I R\nN C ДОМА_ЕСТЬ_ХЛЕБ_? 500 300 D R\nN D ПОДПРОГРАММА_ПОКУПКИ_ТОВАРОВ 800 300 B R\nN E ИДЕМ_ДОМОЙ 500 400 I R\nN F КОНЕЦ 500 500 E R\n\nE A B -\nE B C -\nE C D НЕТ\nE C E ДА\nE D E -\nE E F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\65_edit.pt",
+    "step_times": {
+      "answer_s": 0.636,
+      "dsl_gen_s": 21.379,
+      "edit_s": 20.735
+    }
+  },
+  {
+    "index": "66",
+    "image": "66.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Количество чисел > 5",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\66_answer.pt",
+    "dsl_code": "N A НАЧАЛО 350 50 C W\nN B УСТАНОВКА_ЭКРАНА 350 150 I W\nN C НАЧАЛЬНЫЕ_ЗНАЧЕНИЯ_ПЕРЕМЕННЫХ 350 250 I W\nN D ГЕНЕРАТОР_СЛУЧАЙНЫХ_ЧИСЕЛ 350 350 B W\nN E А = RAND 380 400 B W\nN F СЧЁТЧИК_КОЛИЧЕСТВА_ЧИСЕЛ 350 450 B W\nN G N = N + 1 390 500 B W\nN H N <= 20 450 550 D W\nN I ПЕЧАТЬ_КОЛИЧЕСТВА_ЧИСЕЛ_ > 5 250 650 I W\nN J КОНЕЦ 300 700 C W\nN K А > 5 600 550 D W\nN L СЧЁТЧИК_КОЛИЧЕСТВА_ЧИСЕЛ_ > 5 600 650 B W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -\nE H I -\nE H K -\nE K J -\nE K L -\nE L J -\n\nU I J -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\66_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 350 50 C W\nN B УСТАНОВКА_ЭКРАНА 350 150 I W\nN C НАЧАЛЬНЫЕ_ЗНАЧЕНИЯ_ПЕРЕМЕННЫХ 350 250 I W\nN D ГЕНЕРАТОР_СЛУЧАЙНЫХ_ЧИСЕЛ 350 350 B W\nN E А = RAND 380 400 B W\nN F СЧЁТЧИК_КОЛИЧЕСТВА_ЧИСЕЛ 350 450 B W\nN G N = N + 1 390 500 B W\nN H N <= 10 450 550 D W\nN I ПЕЧАТЬ_КОЛИЧЕСТВА_ЧИСЕЛ_ > 10 250 650 I W\nN J КОНЕЦ 300 700 C W\nN K А > 10 600 550 D W\nN L СЧЁТЧИК_КОЛИЧЕСТВА_ЧИСЕЛ_ > 10 600 650 B W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -\nE H I -\nE H K -\nE K J -\nE K L -\nE L J -\n\nU I J -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\66_edit.pt",
+    "step_times": {
+      "answer_s": 1.33,
+      "dsl_gen_s": 44.054,
+      "edit_s": 44.936
+    }
+  },
+  {
+    "index": "67",
+    "image": "67.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\67_answer.pt",
+    "dsl_code": "N A A 300 300 C W\nN B B 450 200 C W\nN C C 600 200 C W\nN D D 450 500 C W\nN E E 600 500 C W\nN F F 800 350 C W\nE A B -\nE A C -\nE A D -\nE B C -\nE C D -\nE C E -\nE C F -\nE D E -\nE E C -\nE E F -\nE F C -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\67_dsl.pt",
+    "edited_dsl": "N A A 300 300 C W\nN B B 450 200 C W\nN C C 600 200 C W\nN D D 450 500 C W\nN E E 600 500 C W\nN F F 800 350 C W\nE A B -\nE A C -\nE A D -\nE B C -\nE C D -\nE C E -\nE C F -\nE D E -\nE E C -\nE E F -\nE F C -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\67_edit.pt",
+    "step_times": {
+      "answer_s": 0.623,
+      "dsl_gen_s": 16.495,
+      "edit_s": 15.813
+    }
+  },
+  {
+    "index": "68",
+    "image": "68.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2,3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\68_answer.pt",
+    "dsl_code": "N A 0 380 E W\nN B 1 490 E W\nN C 2 580 E W\nN D 3 200 E B\nN E 4 450 E W\nN F 5 400 E W\nN G 6 460 E W\nN H 7 550 E W\nN I 8 280 E B\nN J 9 500 E W\nN K 10 420 E W\nN L 11 350 E B\n\nE A C -\nE B C -\nE C H -\nE D I -\nE E H -\nE F I -\nE G J -\nE H J -\nE I J -\nE J K -\nE K L -\n\nU A B -\nU B F -\nU C G -\nU D E -\nU E F -\nU F G -\nU G H -\nU H I -\nU I J -\nU J K -\nU K L -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\68_dsl.pt",
+    "edited_dsl": "N A 0 380 E W\nN B 1 490 E W\nN C 2 580 E W\nN D 3 200 E B\nN E 4 450 E W\nN F 5 400 E W\nN G 6 460 E W\nN H 7 550 E W\nN I 8 280 E B\nN J 9 500 E W\nN K 10 420 E W\nN L 11 350 E B\n\nE A C -\nE B C -\nE C H -\nE D I -\nE E H -\nE F I -\nE G J -\nE H J -\nE I J -\nE J K -\nE K L -\n\nU A B -\nU B F -\nU C G -\nU D E -\nU E F -\nU F G -\nU G H -\nU H I -\nU I J -\nU J K -\nU K L -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\68_edit.pt",
+    "step_times": {
+      "answer_s": 0.872,
+      "dsl_gen_s": 27.747,
+      "edit_s": 27.646
+    }
+  },
+  {
+    "index": "69",
+    "image": "69.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "7",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\69_answer.pt",
+    "dsl_code": "N A Код_клиента 200 200 E W\nN B Клиент 250 300 B W\nN C Номер_заказа 400 200 E W\nN D Заказ_клиента 450 250 B W\nN E Номер_счета 200 400 E W\nN F Счет 250 450 I W\nN G Код_продавца 700 180 E W\nN H Продавец 750 230 B W\nN I Каталог 650 380 B W\nN J Код_товара 800 390 E W\nN K Товар 750 440 B W\nN L Склад 750 490 B W\n\nE A B Заказывает\nE B D Заказывает\nE C D Оформляет\nE D I Включает\nE E F Оплачивается\nE D I Включает\nE I K Выбирается\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Ф",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\69_dsl.pt",
+    "edited_dsl": "N A Код_клиента 200 200 E W\nN B Клиент 250 300 B W\nN C Номер_заказа 400 200 E W\nN D Заказ_клиента 450 250 B W\nN E Номер_счета 200 400 E W\nN F Счет 250 450 I W\nN G Код_продавца 700 180 E W\nN H Продавец 750 230 B W\nN I Каталог 650 380 B W\nN J Код_товара 800 390 E W\nN K Товар 750 440 B W\nN L Склад 750 490 B W\n\nE A B Заказывает\nE B D Заказывает\nE C D Оформляет\nE D I Включает\nE E F Оплачивается\nE D I Включает\nE I K Выбирается\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Формируется\nE L K Формируется\nE J K Формируется\nE K L Ф",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\69_edit.pt",
+    "step_times": {
+      "answer_s": 0.623,
+      "dsl_gen_s": 89.128,
+      "edit_s": 88.211
+    }
+  },
+  {
+    "index": "70",
+    "image": "70.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Систему управления учебным процессом в университете",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\70_answer.pt",
+    "dsl_code": "N A STUDENT_ID 280 200 E P\nN B ENROLLMENT_DATE 350 200 E P\nN C COURSE_NAME 290 300 E P\nN D STUDENT 600 150 B O\nN E ADDRESS 620 180 E P\nN F TELEPHONE 650 160 E P\nN G NAME 700 140 E P\nN H DATE_OF_BIRTH 730 190 E P\nN I NID 760 220 E P\nN J ENROLMENT 380 250 B Y\nN K LECTURE 550 350 B Y\nN L CC_ID 450 380 E C\nN M SUBJECT 430 450 E C\nN N TIME 600 320 E C\nN O DATE 630 380 E C\nN P LECTURER_NAME 650 420 E C\nN Q LECTURERS 580 500 B O\nN R LECTURER_ID 700 450 E C\nN S EMAIL 750 520 E C\nN T PHONE_NUMBER 700 550 E C\nN U ADDRESS_LECTURER 650 580 E C\nN V SUBJECTS 350 550 B Y\nN W SUBJECT_CODE 300 580 E C\nN X SUBJECT_UNIT 300 610 E C\nN Y SUBJECT_DESC 300 640 E C\n\nE A J STUDENT_ENROLS_IN_ENROLMENT\nE B J ENROLMENT_HAS_DATE\nE C J ENROLMENT_HAS_COURSE\nE D J STUDENT_IS_ENROLLED\nE E D ADDRESS_OF_STUDENT\nE F D TELEPHONE_OF_STUDENT\nE G D NAME_OF_STUDENT\nE H D DATE_OF_BIRTH_OF_STUDENT\nE I D NID_OF_STUDENT\nE J K ENROLMENT_LEADS_TO_LECTURE\nE L K CC_ID_OF_LECTURE\nE M K SUBJECT_OF_LECTURE\nE N K TIME_OF_LECTURE\nE O K DATE_OF_LECTURE\nE P K LECTURER_NAME_OF_LECTURE\nE Q K LECTURER_ASSIGNED_TO_LECTURE\nE R Q LECTURER_ID_OF_Lecturer\nE S Q EMAIL_OF_Lecturer\nE T Q PHONE_NUMBER_OF_Lecturer\nE U Q ADDRESS_OF_Lecturer\nE V Q SUBJECTS_ASSOCIATED_WITH_LECTURE\nE W V SUBJECT_CODE_OF_SUBJECT\nE X V SUBJECT_UNIT_OF_SUBJECT\nE Y V SUBJECT_DESCRIPTION_OF_SUBJECT",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\70_dsl.pt",
+    "edited_dsl": "N A STUDENT_ID 280 200 E P\nN B ENROLLMENT_DATE 350 200 E P\nN C COURSE_NAME 290 300 E P\nN D STUDENT 600 150 B O\nN E ADDRESS 620 180 E P\nN F TELEPHONE 650 160 E P\nN G NAME 700 140 E P\nN H DATE_OF_BIRTH 730 190 E P\nN I NID 760 220 E P\nN J ENROLMENT 380 250 B Y\nN K LECTURE 550 350 B Y\nN L CC_ID 450 380 E C\nN M SUBJECT 430 450 E C\nN N TIME 600 320 E C\nN O DATE 630 380 E C\nN P LECTURER_NAME 650 420 E C\nN Q LECTURERS 580 500 B O\nN R LECTURER_ID 700 450 E C\nN S EMAIL 750 520 E C\nN T PHONE_NUMBER 700 550 E C\nN U ADDRESS_LECTURER 650 580 E C\nN V SUBJECTS 350 550 B Y\nN W SUBJECT_CODE 300 580 E C\nN X SUBJECT_UNIT 300 610 E C\nN Y SUBJECT_DESC 300 640 E C\n\nE A J STUDENT_ENROLS_IN_ENROLMENT\nE B J ENROLMENT_HAS_DATE\nE C J ENROLMENT_HAS_COURSE\nE D J STUDENT_IS_ENROLLED\nE E D ADDRESS_OF_STUDENT\nE F D TELEPHONE_OF_STUDENT\nE G D NAME_OF_STUDENT\nE H D DATE_OF_BIRTH_OF_STUDENT\nE I D NID_OF_STUDENT\nE J K ENROLMENT_LEADS_TO_LECTURE\nE L K CC_ID_OF_LECTURE\nE M K SUBJECT_OF_LECTURE\nE N K TIME_OF_LECTURE\nE O K DATE_OF_LECTURE\nE P K LECTURER_NAME_OF_LECTURE\nE Q K LECTURER_ASSIGNED_TO_LECTURE\nE R Q LECTURER_ID_OF_Lecturer\nE S Q EMAIL_OF_Lecturer\nE T Q PHONE_NUMBER_OF_Lecturer\nE U Q ADDRESS_OF_Lecturer\nE V Q SUBJECTS_ASSOCIATED_WITH_LECTURE\nE W V SUBJECT_CODE_OF_SUBJECT\nE X V SUBJECT_UNIT_OF_SUBJECT\nE Y V SUBJECT_DESCRIPTION_OF_SUBJECT",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\70_edit.pt",
+    "step_times": {
+      "answer_s": 1.965,
+      "dsl_gen_s": 77.123,
+      "edit_s": 77.443
+    }
+  },
+  {
+    "index": "71",
+    "image": "71.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "1",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\71_answer.pt",
+    "dsl_code": "N A Начало 580 190 E W\nN B Ввод_a_b_c 580 240 D W\nE A B -\nN C a_0 580 290 D W\nE B C -\nN D d_b2_minus_4ac 680 310 D W\nE C D -\nN E a_less_than_0 780 330 D W\nE D E -\nN F c_0 500 360 D W\nE E F -\nN G x_minus_cb_over_2a 580 380 B W\nE F G -\nN H \"Нет_вещественных_корней\" 680 380 B W\nE E H -\nN I \"Любое_x\" 480 430 B W\nE G I -\nN J \"нет_решений\" 580 430 B W\nE G J -\nN K Выход_x 580 480 B W\nE I K -\nE J K -\nN L Выход_x1_x2 700 480 B W\nE H L -\nE K L -\nN M Конец 600 550 C W\nE L M -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\71_dsl.pt",
+    "edited_dsl": "N A Начало 580 190 E W\nN B Ввод_a_b_c 580 240 D W\nE A B -\nN C a_0 580 290 D W\nE B C -\nN D d_b2_minus_4ac 680 310 D W\nE C D -\nN E a_less_than_0 780 330 D W\nE D E -\nN F c_0 500 360 D W\nE E F -\nN G x_minus_cb_over_2a 580 380 B W\nE F G -\nN H \"Нет_вещественных_корней\" 680 380 B W\nE E H -\nN I \"Любое_x\" 480 430 B W\nE G I -\nN J \"нет_решений\" 580 430 B W\nE G J -\nN K Выход_x 580 480 B W\nE I K -\nE J K -\nN L Выход_x1_x2 700 480 B W\nE H L -\nE K L -\nN M Конец 600 550 C W\nE L M -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\71_edit.pt",
+    "step_times": {
+      "answer_s": 0.613,
+      "dsl_gen_s": 36.069,
+      "edit_s": 34.443
+    }
+  },
+  {
+    "index": "72",
+    "image": "72.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "шар",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\72_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 300 B W\nN B ВЗЯТЬ_ШАР 500 400 B W\nN C ШАР_БЕЛЫЙ_? 500 500 D W\nN D УБРАТЬ_НАПРАВО 300 600 B W\nN E УБРАТЬ_НАЛЕВО 700 600 B W\nN F ЕСТЬ_ШАРЫ_? 500 700 D W\nN G КОНЕЦ 500 800 B W\n\nE A B -\nE B C ШАР_БЕЛЫЙ?\nE C D НЕТ\nE C E ДА\nE D F -\nE E F -\nE F G НЕТ\nE F G ДА",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\72_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 300 B W\nN B ВЗЯТЬ_КАМЕНЬ 500 400 B W\nN C КАМЕНЬ_БЕЛЫЙ_? 500 500 D W\nN D УБРАТЬ_НАПРАВО 300 600 B W\nN E УБРАТЬ_НАЛЕВО 700 600 B W\nN F ЕСТЬ_КАМЕНЬ_? 500 700 D W\nN G КОНЕЦ 500 800 B W\n\nE A B -\nE B C КАМЕНЬ_БЕЛЫЙ?\nE C D НЕТ\nE C E ДА\nE D F -\nE E F -\nE F G НЕТ\nE F G ДА",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\72_edit.pt",
+    "step_times": {
+      "answer_s": 0.737,
+      "dsl_gen_s": 24.634,
+      "edit_s": 24.973
+    }
+  },
+  {
+    "index": "73",
+    "image": "73.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "7",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\73_answer.pt",
+    "dsl_code": "N A 1 300 400 E W\nN B 2 500 600 E W\nN C 3 400 300 E W\nN D 4 600 400 E W\nN E 5 500 200 E W\nN F 6 300 500 E W\nN G 7 600 300 E W\nU A B -\nU A C -\nU A D -\nU A E -\nU A F -\nU A G -\nU B C -\nU B D -\nU B E -\nU B F -\nU B G -\nU C D -\nU C E -\nU C F -\nU C G -\nU D E -\nU D F -\nU D G -\nU E F -\nU E G -\nU F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\73_dsl.pt",
+    "edited_dsl": "N A 1 300 400 E W\nN B 2 500 600 E W\nN C 3 400 300 E W\nN D 4 600 400 E W\nN E 5 500 200 E W\nN F 6 300 500 E W\nN G 7 600 300 E W\nU A B -\nU A C -\nU A D -\nU A E -\nU A F -\nU A G -\nU B C -\nU B D -\nU B E -\nU B F -\nU B G -\nU C D -\nU C E -\nU C F -\nU C G -\nU D E -\nU D F -\nU D G -\nU E F -\nU E G -\nU F G -\nU B E -   // Удалена связь между 2 и 5\nU C E     // Добавлена связь между 3 и 5",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\73_edit.pt",
+    "step_times": {
+      "answer_s": 0.626,
+      "dsl_gen_s": 23.533,
+      "edit_s": 27.428
+    }
+  },
+  {
+    "index": "74",
+    "image": "74.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Игра \"Угадай число\", где компьютер загадывает случайное число от 1 до 100, а пользователь пытается его угадать, получая подсказки \"больше\" или \"меньше\", и выигрывает при правильном угадывании.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\74_answer.pt",
+    "dsl_code": "N A НАЧАЛО_АЛГОРИТМА 580 170 B W\nN B N_СПУТАННОЕ_ЧИСЛО_100_РЕЗУЛЬТАТ_ЛОЖЬ 580 250 B W\nN C РЕЗУЛЬТАТ_ЛОЖЬ? 690 340 D W\nN D ВВОД_ВАРИАНТ 600 440 I W\nN E ВАРИАНТ_N? 600 520 D W\nN F ВАРИАНТ_N? 600 520 D W\nN G ВЫВОД_Н_БОЛЬШЕ 350 620 I W\nN H ВЫВОД_Н_МЕНЬШЕ 450 620 I W\nN I ВЫВОД_УГАДАЛ 700 580 I W\nN J РЕЗУЛЬТАТ_ИСТИНА 700 640 B W\nN K КОНЕЦ_АЛГОРИТМА 600 800 B W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE F H -\nE H J -\nE G J -\nE H J -\nE J K -\n\nU D E -\nU E F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\74_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО_АЛГОРИТМА 580 170 B W\nN B N_СПУТАННОЕ_ЧИСЛО_100_РЕЗУЛЬТАТ_ЛОЖЬ 580 250 B W\nN C РЕЗУЛЬТАТ_ЛОЖЬ? 690 340 D W\nN D ВВОД_ВАРИАНТ 600 440 I W\nN E ВАРИАНТ_N? 600 520 D W\nN F ВАРИАНТ_N? 600 520 D W\nN G ВЫВОД_Н_БОЛЬШЕ 350 620 I W\nN H ВЫВОД_Н_МЕНЬШЕ 450 620 I W\nN I ВЫВОД_УГАДАЛ 700 580 I W\nN J РЕЗУЛЬТАТ_ИСТИНА 700 640 B W\nN K КОНЕЦ_АЛГОРИТМА 600 800 B W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE F H -\nE H J -\nE G J -\nE H J -\nE J K -\n\nU D E -\nU E F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\74_edit.pt",
+    "step_times": {
+      "answer_s": 8.858,
+      "dsl_gen_s": 41.072,
+      "edit_s": 40.641
+    }
+  },
+  {
+    "index": "75",
+    "image": "75.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\75_answer.pt",
+    "dsl_code": "N A Атрибут_1 200 300 E W\nN B Ключ_1 300 300 E W\nN C Сущность_1 400 300 B W\nN D Атрибут_4 500 350 E W\nN E Связь 550 350 D W\nN F Сущность_2 700 350 B W\nN G Ключ_2 800 350 E W\nN H Атрибут_2 900 400 E W\nN I Атрибут_3 900 450 E W\n\nE A C Атрибут_1\nE B C Ключ_1\nE D E Атрибут_4\nE E F Связь\nE G F Ключ_2\nE H F Атрибут_2\nE I F Атрибут_3",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\75_dsl.pt",
+    "edited_dsl": "N A Атрибут_1 200 300 E W\nN B Ключ_1 300 300 E W\nN C Сущность_1 400 300 B W\nN D Атрибут_4 500 350 E W\nN E Связь 550 350 D W\nN F Сущность_2 700 350 B W\nN G Ключ_2 800 350 E W\nN H Атрибут_2 900 400 E W\nN I Атрибут_3 900 450 E W\nN J Атрибут_5 400 320 I B\nE A C Атрибут_1\nE B C Ключ_1\nE D E Атрибут_4\nE E F Связь\nE G F Ключ_2\nE H F Атрибут_2\nE I F Атрибут_3",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\75_edit.pt",
+    "step_times": {
+      "answer_s": 0.605,
+      "dsl_gen_s": 28.007,
+      "edit_s": 30.051
+    }
+  },
+  {
+    "index": "76",
+    "image": "76.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Поиск максимального элемента в массиве.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\76_answer.pt",
+    "dsl_code": "N A Начало 580 220 E W\nN B Ввести_массив 600 300 I W\nE A B -\nN C max_:=_массив(1) 600 390 B W\nE B C -\nN D i:=2,_k 600 480 D W\nE C D -\nN E max_<=_массив(i) 600 570 D W\nE D E -\nU E F - \nN G max_:=_массив(i) 600 660 B W\nE F G -\nE E G Да\nE E G Нет\nE G H -\nN H Вывести_max 600 750 B W\nE G H -\nN I Конец 600 840 E W\nE H I -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\76_dsl.pt",
+    "edited_dsl": "N A Начало 580 220 E W\nN B Ввести_массив 600 300 I W\nE A B -\nN C max_:=_массив(1) 600 390 B W\nE B C -\nN D i:=2,_k 600 480 D W\nE C D -\nN E max_<=_массив(i) 600 570 D W\nE D E -\nU E F - \nN G max_:=_массив(i) 600 660 B W\nE F G -\nE E G Да\nE E G Нет\nE G H -\nN H Вывести_max 600 750 B W\nE G H -\nN I Конец 600 840 E W\nE H I -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\76_edit.pt",
+    "step_times": {
+      "answer_s": 1.71,
+      "dsl_gen_s": 24.377,
+      "edit_s": 24.266
+    }
+  },
+  {
+    "index": "77",
+    "image": "77.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "5",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\77_answer.pt",
+    "dsl_code": "N A Start 400 150 E W\nN B Patient_arrives 400 250 B Y\nE A B -\nN C Registered_patient 400 350 D Y\nE B C -\nE C B -\nN D Register_patient 380 450 B Y\nE C D -\nN E Available_nurse 500 350 D Y\nE C E -\nE D E -\nN F Wait_for_available_nurse 500 450 B Y\nE E F -\nN G Record_health_condition 650 350 B Y\nE E G -\nN H Available_doctor 650 450 D Y\nE G H -\nN I Assign_patient_to_doctor 750 450 B Y\nE H I -\nN J Need_follow_up 750 550 D Y\nE I J -\nN K Arrange_appointment 850 550 B Y\nE J K -\nN L Give_patient_prescription 850 650 B Y\nE J L -\nN M Need_Medication 750 650 D Y\nE L M -\nE K M -\nN N Patient_Leaves 750 750 B Y\nE M N -\nE L N -\nE K N -\nN O Stop 750 850 E W\nE N O -\nE M O -\nE L O -\nE K O -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\77_dsl.pt",
+    "edited_dsl": "N A Start 400 150 E W\nN B Patient_arrives 400 250 B Y\nE A B -\nN C Registered_patient 400 350 D Y\nE B C -\nE C B -\nN D Register_patient 380 450 B Y\nE C D -\nN E Available_nurse 500 350 D Y\nE C E -\nE D E -\nN F Wait_for_available_nurse 500 450 B Y\nE E F -\nN G Record_health_condition 650 350 B Y\nE E G -\nN H Available_doctor 650 450 D Y\nE G H -\nN I Assign_patient_to_doctor 750 450 B Y\nE H I -\nN J Need_follow_up 750 550 D Y\nE I J -\nN K Arrange_appointment 850 550 B Y\nE J K -\nN L Give_patient_prescription 850 650 B Y\nE J L -\nN M Need_Medication 750 650 D Y\nE L M -\nE K M -\nN N Patient_Leaves 750 750 B Y\nE M N -\nE L N -\nE K N -\nN O Stop 750 850 E W\nE N O -\nE M O -\nE L O -\nE K O -\nN P Log_Successful_Care 900 750 B Y\nE N P -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\77_edit.pt",
+    "step_times": {
+      "answer_s": 0.623,
+      "dsl_gen_s": 40.085,
+      "edit_s": 42.943
+    }
+  },
+  {
+    "index": "78",
+    "image": "78.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "диаграмма потока",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\78_answer.pt",
+    "dsl_code": "N A START 500 100 E G\nN B INPUT 500 200 I Y\nN C PROCESS 500 300 B P\nN D DECISION 500 400 D R\nN E OUTPUT1 500 500 B B\nN F OUTPUT2 500 500 B B\nN G OUTPUT3 500 500 B B\nE A B -\nE B C -\nE C D -\nE D E -\nE D F -\nE D G -\nE E G -\nE F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\78_dsl.pt",
+    "edited_dsl": "N A START 500 100 E G\nN B INPUT 500 200 I Y\nN C PROCESS 500 300 B P\nN D DECISION 500 400 D R\nN E OUTPUT1 500 500 B B\nN F OUTPUT2 500 500 B B\nN G OUTPUT3 500 500 B B\nN H OUTPUT1_COPY 500 500 B B\nN I OUTPUT2_COPY 500 500 B B\nN J OUTPUT3_COPY 500 500 B B\nE A B -\nE B C -\nE C D -\nE D E -\nE D F -\nE D G -\nE E G -\nE F G -\nE D H -\nE D I -\nE D J -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\78_edit.pt",
+    "step_times": {
+      "answer_s": 1.035,
+      "dsl_gen_s": 16.907,
+      "edit_s": 23.567
+    }
+  },
+  {
+    "index": "79",
+    "image": "79.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "100",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\79_answer.pt",
+    "dsl_code": "N A 1 500 300 C W\nN B 2 300 400 C W\nN C 3 400 500 C W\nN D 4 600 500 C W\nN E 5 600 300 C W\nE A B 10\nE A E 100\nE A D 30\nE B C 50\nE C D 20\nE D E 60\nE C E 10",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\79_dsl.pt",
+    "edited_dsl": "N A 1 500 300 C W\nN B 2 300 400 C W\nN C 3 400 500 C W\nN D 4 600 500 C W\nN E 5 600 300 C W\nE A B 120\nE A E 100\nE A D 30\nE B C 50\nE C D 20\nE D E 60\nE C E 10",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\79_edit.pt",
+    "step_times": {
+      "answer_s": 0.853,
+      "dsl_gen_s": 15.644,
+      "edit_s": 15.073
+    }
+  },
+  {
+    "index": "80",
+    "image": "80.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "граф",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\80_answer.pt",
+    "dsl_code": "N A Д 400 300 C W\nN B К 500 400 C W\nN C Е 200 500 C W\nN D Б 800 300 C W\nN E М 800 500 C W\nU A B -\nU A D -\nU B C -\nU B D -\nU B E -\nU C E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\80_dsl.pt",
+    "edited_dsl": "N A Д 400 300 C W\nN B К 500 400 C W\nN C Е 200 500 C W\nN D Б 800 300 C W\nN E М 800 500 C W\nU A B -\nU A D -\nU B C -\nU B D -\nU B E -\nU C E -\nU A P -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\80_edit.pt",
+    "step_times": {
+      "answer_s": 0.62,
+      "dsl_gen_s": 12.123,
+      "edit_s": 12.139
+    }
+  },
+  {
+    "index": "81",
+    "image": "81.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "8",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\81_answer.pt",
+    "dsl_code": "N A 0 300 E W\nN B 1 400 E W\nN C 2 350 E W\nN D 3 450 E W\nN E 4 500 E W\nN F 5 300 E W\nN G 6 600 E W\nN H 7 300 E W\nN I 8 600 E W\n\nU A B -\nU A C -\nU A D -\nU A F -\nU B C -\nU B D -\nU B H -\nU C D -\nU C E -\nU D E -\nU D H -\nU E H -\nU F G -\nU G I -\nU H I -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\81_dsl.pt",
+    "edited_dsl": "N A 0 300 E W\nN B 1 400 E W\nN C 2 350 E W\nN D 3 450 E W\nN E 4 500 E W\nN F 5 300 E W\nN G 6 600 E W\nN H 7 300 E W\nN I 8 600 E W\nU A B -\nU A C -\nU A D -\nU A F -\nU B C -\nU B D -\nU B H -\nU C D -\nU C E -\nU D E -\nU D H -\nU E H -\nU F G -\nU G I -\nU H I -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\81_edit.pt",
+    "step_times": {
+      "answer_s": 0.615,
+      "dsl_gen_s": 19.968,
+      "edit_s": 19.64
+    }
+  },
+  {
+    "index": "82",
+    "image": "82.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\82_answer.pt",
+    "dsl_code": "N A ПУСК 500 50 E B\nN B n 500 150 I O\nN C ans_is_1_i_is_1 500 250 B G\nN D ans_is_ans_star_i 500 350 B B\nN E i_is_i_plus_1 500 450 B G\nN F i_less_equal_n 500 550 D G\nN G ans 500 650 I O\nN H ОСТАНОВ 500 750 B B\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nU F G -\nE G H -\n\nU F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\82_dsl.pt",
+    "edited_dsl": "N A ПУСК 500 50 E B\nN B n_500_150_I_O 500 150 I O\nN C ans_is_1_i_is_1 500 250 B G\nN D ans_is_ans_star_i 500 350 B B\nN E i_is_i_plus_1 500 450 B G\nN F i_less_equal_n 500 550 D G\nN G ans 500 650 I O\nN H ОСТАНОВ 500 750 B B\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nU F G -\nE G H -\n\nU F G -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\82_edit.pt",
+    "step_times": {
+      "answer_s": 0.631,
+      "dsl_gen_s": 20.705,
+      "edit_s": 22.123
+    }
+  },
+  {
+    "index": "83",
+    "image": "83.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "6",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\83_answer.pt",
+    "dsl_code": "N A ПЕРЕКРЕСТНОЕ_ОБУЧЕНИЕ_ЧЛЕНОВ_КОМАНДЫ 300 180 B B\nN B УВЕЛИЧЕНИЕ_ПРОИЗВОДИТЕЛЬНОСТИ_КОМАНДЫ_НА_20% 50 350 I G\nN C НАВЕДЕНИЕ_ПОРЯДКА 300 350 B B\nN D ПОИСК_КЛИЕНТОВ 300 450 B B\nN E РОТАЦИЯ_РАБОЧИХ_МЕСТ 500 160 B W\nN F ТЕНЕВАЯ_РАБОТА 500 200 B W\nN G СОВМЕСТНОЕ_ВЫПОЛНЕНИЕ_РАБОТ 500 240 B W\nN H УПРОЩЕНИЕ_СИСТЕМЫ_УЧЕТА_КЛИЕНТОВ 500 280 B W\nN I ОБУЧЕНИЕ_ТАИМ-МЕНЕДЖМЕНТУ 500 320 B W\nN J УМЕНЬШЕНИЕ_БЕСПОДАРКА_В_ОФИСЕ 500 360 B W\nN K УВЕЛИЧЕНИЕ_ЧИСЛА_ХОЛОДНЫХ_ЗВОНКОВ 500 400 B W\nN L РАБОТА_С_СОЦИАЛЬНЫМИ_СЕТЯМИ 500 440 B W\nN M СПОНСИРОВАНИЕ_ОБЩЕСТВЕННЫХ_МЕРОПРИЯТИЙ 500 480 B W\nN N КРИСТИНА 650 160 C W\nN O МАРИЯ 650 200 C W\nN P ВАЛЕРИЯ 650 240 C W\nN Q МАРИЯ 650 280 C W\nN R НАТАЛЬЯ_Денис 650 320 C W\nN S ДЕНИС 650 360 C W\nN T АЛЕКСЕЙ 650 400 C W\nN U МАРИЯ 650 440 C W\n\nE A B -\nE A C -\nE A D -\nE C E -\nE C F -\nE C G -\nE C H -\nE C I -\nE C J -\nE D K -\nE D L -\nE D M -\n\nU E N \"Кристина Понедельник, до 16:00\"\nU F N \"Кристина до четверга 17:00\"\nU G O \"Мария Среда, 14:00\"\nU H P \"Валерия Понедельник, до 18:00",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\83_dsl.pt",
+    "edited_dsl": "N A ПЕРЕКРЕСТНОЕ_ОБУЧЕНИЕ_ЧЛЕНОВ_КОМАНДЫ 300 180 B B\nN B УВЕЛИЧЕНИЕ_ПРОИЗВОДИТЕЛЬНОСТИ_КОМАНДЫ_НА_20% 50 350 I G\nN C НАВЕДЕНИЕ_ПОРЯДКА 300 350 B B\nN D ПОИСК_КЛИЕНТОВ 300 450 B B\nN E РОТАЦИЯ_РАБОЧИХ_МЕСТ 500 160 B W\nN F ТЕНЕВАЯ_РАБОТА 500 200 B W\nN G СОВМЕСТНОЕ_ВЫПОЛНЕНИЕ_РАБОТ 500 240 B W\nN H УПРОЩЕНИЕ_СИСТЕМЫ_УЧЕТА_КЛИЕНТОВ 500 280 B W\nN I ОБУЧЕНИЕ_ТАИМ-МЕНЕДЖМЕНТУ 500 320 B W\nN J УМЕНЬШЕНИЕ_БЕСПОДАРКА_В_ОФИСЕ 500 360 B W\nN K УВЕЛИЧЕНИЕ_ЧИСЛА_ХОЛОДНЫХ_ЗВОНКОВ 500 400 B W\nN L РАБОТА_С_СОЦИАЛЬНЫМИ_СЕТЯМИ 500 440 B W\nN M СПОНСИРОВАНИЕ_ОБЩЕСТВЕННЫХ_МЕРОПРИЯТИЙ 500 480 B W\nN N КРИСТИНА 650 160 C W\nN O МАРИЯ 650 200 C W\nN P ВАЛЕРИЯ 650 240 C W\nN Q МАРИЯ 650 280 C W\nN R НАТАЛЬЯ_Денис 650 320 C W\nN S ДЕНИС 650 360 C W\nN T АЛЕКСЕЙ 650 400 C W\nN U МАРИЯ 650 440 C W\n\nE A B -\nE A C -\nE A D -\nE C E -\nE C F -\nE C G -\nE C H -\nE C I -\nE C J -\nE D K -\nE D L -\nE D M -\n\nU E N \"Кристина Понедельник, до 16:00\"\nU F N \"Кристина до четверга 17:00\"\nU G O \"Мария Среда, 14:00\"\nU H P \"Валерия Понедельник, до 18:00",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\83_edit.pt",
+    "step_times": {
+      "answer_s": 0.624,
+      "dsl_gen_s": 90.172,
+      "edit_s": 88.876
+    }
+  },
+  {
+    "index": "84",
+    "image": "84.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Диаграмма связей бизнес-идей",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\84_answer.pt",
+    "dsl_code": "N A СУВЕНИРЫ_ИЗ_ДЕРЕВА 380 220 B G\nN B СВЕЖАЯ_ВЫПЕЧКА 530 240 B G\nN C 1000_И_1_МЕЛОЧЬ 690 240 B G\nN D УМЕНИЯ 530 320 B G\nN E ЗООМАГАЗИН 230 350 B B\nN F СТО 230 470 B B\nN G ПЕКАРНЯ 230 590 B B\nN H ТРЕБОВАНИЯ_СООБЩЕСТВА 380 490 B B\nN I БИЗНЕС_ИДЕИ 530 470 B B\nN J ИНТЕРЕСЫ 730 470 B B\nN K ФУТБОЛЬНАЯ_СЕКЦИЯ 880 380 B G\nN L СПОРТИВНЫЙ_МАГАЗИН 880 490 B G\nN M КУЛИНАРИЯ 880 600 B G\nN N МОТИВАЦИЯ 530 620 B O\nN O МАТЕРИАЛЬНО_ПОДДЕРЖИВАТЬ_РОДСТВЕННИКОВ 380 700 B O\nN P ПОПАСТЬ_В_СПИСОК_ФОРБС 530 700 B O\nN Q КУПИТЬ_ЯХТУ 680 700 B O\n\nE A D -\nE B D -\nE C D -\nE E I -\nE F H -\nE G H -\nE H I -\nE I N -\nE J I -\nE K J -\nE L J -\nE M J -\nE N O -\nE N P -\nE N Q -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\84_dsl.pt",
+    "edited_dsl": "N A СУВЕНИРЫ_ИЗ_ДЕРЕВА 380 220 B G\nN B СВЕЖАЯ_ВЫПЕЧКА 530 240 B G\nN C 1000_И_1_МЕЛОЧЬ 690 240 B G\nN D УМЕНИЯ 530 320 B G\nN E ЗООМАГАЗИН 230 350 B B\nN F СТО 230 470 B B\nN G ПЕКАРНЯ 230 590 B B\nN H ТРЕБОВАНИЯ_СООБЩЕСТВА 380 490 B B\nN I БИЗНЕС_ИДЕИ 530 470 B B\nN J ИНТЕРЕСЫ 730 470 B B\nN K ФУТБОЛЬНАЯ_СЕКЦИЯ 880 380 B G\nN L СПОРТИВНЫЙ_МАГАЗИН 880 490 B G\nN M КУЛИНАРИЯ 880 600 B G\nN N МОТИВАЦИЯ 530 620 B P\nN O МАТЕРИАЛЬНО_ПОДДЕРЖИВАТЬ_РОДСТВЕННИКОВ 380 700 B O\nN P ПОПАСТЬ_В_СПИСОК_ФОРБС 530 700 B O\nN Q КУПИТЬ_ЯХТУ 680 700 B O\n\nE A D -\nE B D -\nE C D -\nE E I -\nE F H -\nE G H -\nE H I -\nE I N -\nE J I -\nE K J -\nE L J -\nE M J -\nE N O -\nE N P -\nE N Q -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\84_edit.pt",
+    "step_times": {
+      "answer_s": 1.847,
+      "dsl_gen_s": 58.41,
+      "edit_s": 57.917
+    }
+  },
+  {
+    "index": "85",
+    "image": "85.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "ФАКТОР A\nФАКТОР E\nФАКТОР D\nФАКТОР C",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\85_answer.pt",
+    "dsl_code": "N A ФАКТОР_A 580 300 B W\nN B ФАКТОР_B 790 500 B W\nN C ФАКТОР_C 680 700 B W\nN D ФАКТОР_D 480 700 B W\nN E ФАКТОР_E 400 500 B W\nE A E -\nE A B -\nE A C -\nE A D -\nE B E -\nE B D -\nE B C -\nE C E -\nE C D -\nE D E -\nE D B -\nE D C -\nE E B -\nE E C -\nE E D -\nE E A -\nE B A -\nE C A -\nE D A -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\85_dsl.pt",
+    "edited_dsl": "N A FACTOR_A 580 300 B W\nN B FACTOR_B 790 500 B W\nN C FACTOR_C 680 700 B W\nN D FACTOR_D 480 700 B W\nN E FACTOR_E 400 500 B W\nE A E -\nE A B -\nE A C -\nE A D -\nE B E -\nE B D -\nE B C -\nE C E -\nE C D -\nE D E -\nE D B -\nE D C -\nE E B -\nE E C -\nE E D -\nE E A -\nE B A -\nE C A -\nE D A -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\85_edit.pt",
+    "step_times": {
+      "answer_s": 3.787,
+      "dsl_gen_s": 21.392,
+      "edit_s": 19.326
+    }
+  },
+  {
+    "index": "86",
+    "image": "86.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Structured, Semi-structured, Unstructured",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\86_answer.pt",
+    "dsl_code": "N A Data_Attributes 500 100 B O\nN B Structure 280 200 B Y\nN C Datatype 500 200 B Y\nN D Shape 720 200 B Y\nN E Structured 280 350 B B\nN F Semi-structured 280 450 B B\nN G Unstructured 280 550 B B\nN H Quantitative_or_Numerical 490 350 B B\nN I Continuous 490 450 B G\nN J Discrete 490 550 B G\nN K Qualitative_or_Categorical 600 350 B B\nN L Ordinal 600 450 B G\nN M Nominal 600 550 B G\nN N Wide 720 350 B B\nN O Long 720 450 B B\nE A B -\nE A C -\nE A D -\nE B E -\nE B F -\nE B G -\nE C H -\nE C I -\nE C J -\nE C K -\nE K L -\nE K M -\nE D N -\nE D O -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\86_dsl.pt",
+    "edited_dsl": "N A Data_Attributes 500 100 B O\nN B Structure 280 200 B Y\nN C Datatype 500 200 B Y\nN D Shape 720 200 B Y\nN E Structured 280 350 B B\nN F Semi-structured 280 450 B B\nN G Unstructured 280 550 B B\nN H Quantitative_or_Numerical 490 350 B B\nN I Continuous 490 450 B G\nN J Discrete 490 550 B G\nN K Qualitative_or_Categorical 600 350 B B\nN L Ordinal 600 450 B G\nN M Nominal 600 550 B G\nN N Wide 720 350 B B\nN O Long 720 450 B B\nE A B -\nE A C -\nE A D -\nE B E -\nE B F -\nE B G -\nE C H -\nE C I -\nE C J -\nE C K -\nE K L -\nE K M -\nE D N -\nE D O -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\86_edit.pt",
+    "step_times": {
+      "answer_s": 1.479,
+      "dsl_gen_s": 35.493,
+      "edit_s": 35.013
+    }
+  },
+  {
+    "index": "87",
+    "image": "87.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Низкая заработная плата",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\87_answer.pt",
+    "dsl_code": "N A РОСТ_СПРОСА 580 290 B W\nN B НЕДОСТАТОК_ОПыта 720 320 B W\nN C НИЗКАЯ_ЗАРАБОТНАЯ_ПЛАТА 380 410 B W\nN D НЕУДОВЛЕТВОРЕНИЕ_РАБОТЫ 780 450 B W\nN E НЕВОЗМОЖНОСТЬ_КАРЬЕРНОГО_РОСТА 480 580 B W\nN F СТРЕССОВЫЕ_УСЛОВИЯ_РАБОТЫ 660 580 B W\n\nE A C -\nE A B -\nE B D -\nE C D -\nE C E -\nE C F -\nE D E -\nE D F -\nE E F -\nE F D -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\87_dsl.pt",
+    "edited_dsl": "N A DEMAND_580 580 290 B W\nN B LACK_OF_EXPERIENCE 720 320 B W\nN C LOW_WAGE 380 410 B W\nN D JOB_DISCONTENTMENT 780 450 B W\nN E IMPOSSIBILITY_OF_CAREER_GROWTH 480 580 B W\nN F STRESSFUL_WORK_CONDITIONS 660 580 B W\n\nE A C -\nE A B -\nE B D -\nE C D -\nE C E -\nE C F -\nE D E -\nE D F -\nE E F -\nE F D -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\87_edit.pt",
+    "step_times": {
+      "answer_s": 1.509,
+      "dsl_gen_s": 26.975,
+      "edit_s": 18.935
+    }
+  },
+  {
+    "index": "88",
+    "image": "88.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Administrative workload",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\88_answer.pt",
+    "dsl_code": "N A ADMINISTRATIVE_WORKLOAD 300 150 B R\nN B SUPPORT_FUNCTIONS_AVAILABILITY 600 200 B Y\nN C SCHEDULE_APPOINTMENTS 350 350 B P\nN D CHANGES_IN_SCHEDULED_APPOINTMENTS 550 450 B G\nN E EQUIPMENT_QUALITY_AND_RELIABILITY 180 600 B B\nN F EMERGENCY_APPOINTMENTS 180 750 B O\nN G NURSE_AVAILABILITY 650 700 B K\nN H DOCTORS_PAY_LEVEL 900 750 B O\n\nE A C \"3 in 1 out\"\nE B C \"1 in 3 out\"\nE C D \"4 in 1 out\"\nE C E \"0 in 3 out\"\nE C F \"2 in 2 out\"\nE C G \"1 in 5 out\"\nE C H \"0 in 1 out\"\nE D G \"1 in 3 out\"\nE D F \"2 in 2 out\"\nE E F \"0 in 3 out\"\nE G A \"1 in 3 out\"",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\88_dsl.pt",
+    "edited_dsl": "N A ADMINISTRATIVE_WORKLOAD 300 150 B R\nN B SUPPORT_FUNCTIONS_AVAILABILITY 600 200 B Y\nN C SCHEDULE_APPOINTMENTS 350 350 B P\nN D CHANGES_IN_SCHEDULED_APPOINTMENTS 550 450 B G\nN E EQUIPMENT_QUALITY_AND_RELIABILITY 180 600 B B\nN F EMERGENCY_APPOINTMENTS 180 750 B O\nN G NURSE_AVAILABILITY 650 700 B K\nN H DOCTORS_PAY_LEVEL 900 750 B O\n\nE A C \"3 in 1 out\"\nE B C \"1 in 3 out\"\nE C D \"4 in 1 out\"\nE C E \"0 in 3 out\"\nE C F \"2 in 2 out\"\nE C G \"1 in 5 out\"\nE C H \"0 in 1 out\"\nE D G \"1 in 3 out\"\nE D F \"2 in 2 out\"\nE E F \"0 in 3 out\"\nE G A \"1 in 3 out\"",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\88_edit.pt",
+    "step_times": {
+      "answer_s": 0.869,
+      "dsl_gen_s": 32.233,
+      "edit_s": 31.431
+    }
+  },
+  {
+    "index": "89",
+    "image": "89.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Нет",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\89_answer.pt",
+    "dsl_code": "N A Блок_1 600 200 B B\nN B Блок_2 300 300 C W\nN C Блок_3 300 500 C W\nN D Блок_4 500 500 B W\nN E Блок_5 500 800 C R\nN F Блок_6 700 500 C W\nN G Блок_7 700 700 C W\nE A B -\nE B C -\nE C D -\nE D E -\nU F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\89_dsl.pt",
+    "edited_dsl": "N A БЛОК_1 600 200 B W\nN B БЛОК_2 300 300 C W\nN C БЛОК_3 300 500 C W\nN D БЛОК_4 500 500 B W\nN E БЛОК_5 500 800 C R\nN F БЛОК_6 700 500 C W\nN G БЛОК_7 700 700 C W\nE A B -\nE B C -\nE C D -\nE D E -\nU F G -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\89_edit.pt",
+    "step_times": {
+      "answer_s": 0.744,
+      "dsl_gen_s": 17.746,
+      "edit_s": 18.029
+    }
+  },
+  {
+    "index": "90",
+    "image": "90.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Property values fall, Schools get worse",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\90_answer.pt",
+    "dsl_code": "N A DRUG_USE_IS_ENDEMIC 500 100 B Y\nN B THERE_IS_HIGH_UNEMPLOYMENT 350 250 B Y\nN C THERE_ARE_YOUTH_GANGS 280 350 B Y\nN D THERE_IS_A_HIGH_RATE_OF_DIVORCE 200 450 B Y\nN E THERE_IS_A_HIGH_RATE_OF_NON_MARRIAGE 300 700 B Y\nN F THERE_IS_A_HIGH_RATE_OF_TEN_PREGNANCY 450 700 B Y\nN G BUSINESSES_LEAVE_THE_AREA 650 200 B Y\nN H THERE_IS_A_HIGH_CRIME_RATE 750 350 B Y\nN I PROPERTY_VALUES_FALL 900 550 B Y\nN J SCHOOLS_GET_WORSE 750 650 B Y\nN K PEOPLE_WHO_CAN_AFORD_TO_LEAVE_LEAVE 650 700 B Y\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE A H -\nE A I -\nE A J -\nE A K -\n\nE B C -\nE B D -\nE B E -\nE B F -\nE B G -\nE B H -\nE B I -\nE B J -\nE B K -\n\nE C D -\nE C E -\nE C F -\nE C G -\nE C H -\nE C I -\nE C J -\nE C K -\n\nE D E -\nE D F -\nE D G -\nE D H -\nE D I -\nE D J -\nE D K -\n\nE E F -\nE E G -\nE E H -\nE E I -\nE E J -\nE E K -\n\nE F G -\nE F H -\nE F I -\nE F J -\nE F K -\n\nE G H -\nE G I -\nE G J -\nE G K -\n\nE H I -\nE H J -\nE H K -\n\nE I J -\nE I K -\n\nE J K -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\90_dsl.pt",
+    "edited_dsl": "N A DRUG_USE_IS_ENDEMIC 500 100 B Y\nN B THERE_IS_HIGH_UNEMPLOYMENT 350 250 B Y\nN C THERE_ARE_YOUTH_GANGS 280 350 B Y\nN D THERE_IS_A_HIGH_RATE_OF_DIVORCE 200 450 B Y\nN E THERE_IS_A_HIGH_RATE_OF_NON_MARRIAGE 300 700 B Y\nN F THERE_IS_A_HIGH_RATE_OF_TEN_PREGNANCY 450 700 B Y\nN G BUSINESSES_LEAVE_THE_AREA 650 200 B Y\nN H THERE_IS_A_HIGH_CRIME_RATE 750 350 B Y\nN I PROPERTY_VALUES_FALL 900 550 B Y\nN J SCHOOLS_GET_WORSE 750 650 B Y\nN K PEOPLE_WHO_CAN_AFORD_TO_LEAVE_LEAVE 650 700 B Y\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE A H -\nE A I -\nE A J -\nE A K -\n\nE B C -\nE B D -\nE B E -\nE B F -\nE B G -\nE B H -\nE B I -\nE B J -\nE B K -\n\nE C D -\nE C E -\nE C F -\nE C G -\nE C H -\nE C I -\nE C J -\nE C K -\n\nE D E -\nE D F -\nE D G -\nE D H -\nE D I -\nE D J -\nE D K -\n\nE E F -\nE E G -\nE E H -\nE E I -\nE E J -\nE E K -\n\nE F G -\nE F H -\nE F I -\nE F J -\nE F K -\n\nE G H -\nE G I -\nE G J -\nE G K -\n\nE H I -\nE H J -\nE H K -\n\nE I J -\nE I K -\n\nE J K -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\90_edit.pt",
+    "step_times": {
+      "answer_s": 1.366,
+      "dsl_gen_s": 55.104,
+      "edit_s": 55.288
+    }
+  },
+  {
+    "index": "91",
+    "image": "91.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Faulty planning",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\91_answer.pt",
+    "dsl_code": "N A FAULTY_PLANNING 100 500 B G\nN B BREAKDOWN_OF_MCS 300 300 B C\nN C SPARES_NOT_AVAILABLE 600 200 B Y\nN D MATERIAL_NOT_AVAILABLE 600 400 B O\nN E SUPPLIER_NOT_PAID 800 400 B G\nN F UNABLE_TO_MEET_TARGET_PRODUCTION 400 500 B P\nN G LOW_SALES 200 600 B O\nN H FUNDS_CRISIS 600 700 B X\nN I FUNDS_NOT_REALIZED 400 800 B X\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE A H -\nE A I -\n\nE B F -\nE C F -\nE D F -\nE E F -\nE G F -\nE H I -\nE I E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\91_dsl.pt",
+    "edited_dsl": "N A FAULTY_PLANNING 100 500 B G\nN B BREAKDOWN_OF_MCS 300 300 B C\nN C SPARES_NOT_AVAILABLE 600 200 B Y\nN D MATERIAL_NOT_AVAILABLE 600 400 B O\nN E SUPPLIER_NOT_PAID 800 400 B G\nN F UNABLE_TO_MEET_TARGET_PRODUCTION 400 500 B P\nN G LOW_SALES 200 600 B O\nN H FUNDS_CRISIS 600 700 B X\nN I FUNDS_NOT_REALIZED 400 800 B X\n\nE A B -\nE A C -\nE A D -\nE A E -\nE A F -\nE A G -\nE A H -\nE A I -\n\nE B F -\nE C F -\nE D F -\nE E F -\nE G F -\nE H I -\nE I E -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\91_edit.pt",
+    "step_times": {
+      "answer_s": 0.848,
+      "dsl_gen_s": 27.671,
+      "edit_s": 27.107
+    }
+  },
+  {
+    "index": "92",
+    "image": "92.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "10",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\92_answer.pt",
+    "dsl_code": "N A STAFF_INCREASES 100 200 B G\nN B NEW_SOFTWARE 200 300 B G\nN C TRAIN_USERS 80 400 B G\nN D GROWTH_AND_HIGHER_PROFIT_POTENTIAL 250 400 B G\nN E NEGOTIATE_NEW_MAINTENANCE_CONTRACTS 150 600 B G\nN F TRAINING_OPERATORS 350 350 B G\nN G COMPUTER_REPLACEMENT_PROJECT 300 500 B G\nN H HIGHER_LEVEL_OF_CUSTOMER_SERVICE 350 650 B G\nN I INSTALL_NEW_MAINFRAME 500 500 B G\nN J UPGRAD_SUPPORT_EQUIPMENT 500 350 B G\nN K TELECOMMUNICATION_CHANGES 650 350 B G\nN L SERVICE_INTERRUPTIONS 650 500 B G\nN M EXPAND_COMPUTER_ROOM 500 650 B G\nN N MORE_UTILITIES_HEAT_AIR_ELECTRICITY 800 650 B G\nN O INCREASED_PROCESSING_COST 300 200 B G\n\nE A B -\nE B C -\nE B D -\nE B E -\nE B F -\nE B G -\nE F G -\nE G I -\nE G H -\nE G J -\nE J K -\nE J L -\nE J M -\nE M N -\nE I J -\nE I M -\nE J L -\nE K L -\nE L N -\nE O G -\n\nU B G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\92_dsl.pt",
+    "edited_dsl": "N A STAFF_INCREASES 100 200 B G\nN B NEW_SOFTWARE 200 300 B G\nN C TRAIN_USERS 80 400 B G\nN D GROWTH_AND_HIGHER_PROFIT_POTENTIAL 250 400 B G\nN E NEGOTIATE_NEW_MAINTENANCE_CONTRACTS 150 600 B G\nN F TRAINING_OPERATORS 350 350 B G\nN G COMPUTER_REPLACEMENT_PROJECT 300 500 B G\nN H HIGHER_LEVEL_OF_CUSTOMER_SERVICE 350 650 B G\nN I INSTALL_NEW_MAINFRAME 500 500 B G\nN J UPGRAD_SUPPORT_EQUIPMENT 500 350 B G\nN K TELECOMMUNICATION_CHANGES 650 350 B G\nN L SERVICE_INTERRUPTIONS 650 500 B G\nN M EXPAND_COMPUTER_ROOM 500 650 B G\nN N MORE_UTILITIES_HEAT_AIR_ELECTRICITY 800 650 B G\nN O INCREASED_PROCESSING_COST 300 200 B G\n\nE A B -\nE B C -\nE B D -\nE B E -\nE B F -\nE B G -\nE F G -\nE G I -\nE G H -\nE G J -\nE J K -\nE J L -\nE J M -\nE M N -\nE I J -\nE I M -\nE J L -\nE K L -\nE L N -\nE O G -\n\nU B G -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\92_edit.pt",
+    "step_times": {
+      "answer_s": 0.743,
+      "dsl_gen_s": 46.069,
+      "edit_s": 45.786
+    }
+  },
+  {
+    "index": "93",
+    "image": "93.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\93_answer.pt",
+    "dsl_code": "N A СЛЕДСТВИЕ_1 300 250 B W\nN B ПРИЧИНА_1 500 250 B W\nN C СЛЕДСТВИЕ_2 700 250 B W\nN D ПРИЧИНА_2 300 500 B W\nN E РЕЗУЛЬТАТ 500 500 B W\nN F СЛЕДСТВИЕ_3 300 650 B W\n\nE A B -\nE B C -\nE A E -\nE D E -\nE D F -\nE F E -\nE C E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\93_dsl.pt",
+    "edited_dsl": "N A СЛЕДСТВИЕ_1 300 250 B W\nN B ПРИЧИНА_1 500 250 B W\nN C СЛЕДСТВИЕ_2 700 250 B W\nN D ПРИЧИНА_2 300 500 B W\nN E РЕЗУЛЬТАТ 500 500 B W\nN F СЛЕДСТВИЕ_3 300 650 B W\n\nE A B -\nE B C -\nE A E -\nE D E -\nE D F -\nE F E -\nE C E -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\93_edit.pt",
+    "step_times": {
+      "answer_s": 0.593,
+      "dsl_gen_s": 19.577,
+      "edit_s": 18.87
+    }
+  },
+  {
+    "index": "94",
+    "image": "94.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Система факторов влияющих на образовательную институциональную емкость и рынок труда в сфере профессионального образования.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\94_answer.pt",
+    "dsl_code": "N A PUBLIC_SUBSIDY 80 400 B B\nN B TUITION_FEES 120 600 B P\nN C PRIVATE_RATE_OF_RETURN 200 500 B R\nN D APPLICANT_NUMBERS_AND_QUALITY 300 650 B R\nN E ECONOMY_AND_DEMOGRAPHICS 350 800 B B\nN F EDUCATIONAL_INSTITUTIONAL_CAPACITY 400 400 B B\nN G FACULTY 500 250 B O\nN H CURRICULUM_CONTENT 600 550 B G\nN I STATUS_OF_PROFESSION 550 650 B K\nN J PROFESSION_ROLE 700 650 B R\nN K GRADUATE_NUMBERS 550 400 B W\nN L SHORTAGE_OR_SURPLUS_IN_RELATION_TO_DEMAND_OR_NEED 700 300 B P\nN M PROFESSIONAL_COMPENSATION 750 100 B B\nN N PLACEMENT_CAPACITY 250 200 B R\n\nE A F -\nE B C -\nE C D -\nE D F -\nE E D -\nE F G -\nE F H -\nE F I -\nE G K -\nE H I -\nE I J -\nE J K -\nE K L -\nE L M -\nE M N -\nE N G -\nE N F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\94_dsl.pt",
+    "edited_dsl": "N A PUBLIC_SUBSIDY 80 400 B B\nN B TUITION_FEES 120 600 B P\nN C PRIVATE_RATE_OF_RETURN 200 500 B R\nN D APPLICANT_NUMBERS_AND_QUALITY 300 650 B R\nN E ECONOMY_AND_DEMOGRAPHICS 350 800 B B\nN F EDUCATIONAL_INSTITUTIONAL_CAPACITY 400 400 B B\nN G FACULTY 500 250 B O\nN H CURRICULUM_CONTENT 600 550 B G\nN I STATUS_OF_PROFESSION 550 650 B K\nN J PROFESSION_ROLE 700 650 B R\nN K GRADUATE_NUMBERS 550 400 B W\nN L SHORTAGE_OR_SURPLUS_IN_RELATION_TO_DEMAND_OR_NEED 700 300 B P\nN M PROFESSIONAL_COMPENSATION 750 100 B B\nN N PLACEMENT_CAPACITY 250 200 B R\n\nE A F -\nE B C -\nE C D -\nE D F -\nE E D -\nE F G -\nE F H -\nE F I -\nE G K -\nE H I -\nE I J -\nE J K -\nE K L -\nE L M -\nE M N -\nE N G -\nE N F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\94_edit.pt",
+    "step_times": {
+      "answer_s": 4.399,
+      "dsl_gen_s": 40.649,
+      "edit_s": 40.447
+    }
+  },
+  {
+    "index": "95",
+    "image": "95.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "9",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\95_answer.pt",
+    "dsl_code": "N A S 500 100 C W\nN B 1 200 300 C W\nN C 2 400 300 C W\nN D 3 600 300 C W\nN E 4 100 500 C W\nN F 5 300 500 C W\nN G 6 400 600 C W\nN H 7 500 600 C W\nN I 8 600 500 C W\nN J 9 500 700 C W\nN K 4 700 700 C W\nN L 4 700 700 C W\n\nE A B -\nE A C -\nE A D -\n\nE B E -\nE B F -\nE B G -\n\nE C H -\nE C J -\n\nE D I -\nE I K -\nE I L -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\95_dsl.pt",
+    "edited_dsl": "N A S_500 100 C W\nN B 1_200 300 C W\nN C 2_400 300 C W\nN D 3_600 300 C W\nN E 4_100 500 C W\nN F 5_300 500 C W\nN G 6_400 600 C W\nN H 7_500 600 C W\nN I 8_600 500 C W\nN J 9_500 700 C W\nN K 4_700 700 C W\nN L 4_700 700 C W\n\nE A B -\nE A C -\nE A D -\n\nE B E -\nE B F -\nE B G -\n\nE C H -\nE C J -\n\nE D I -\nE I K -\nE I L -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\95_edit.pt",
+    "step_times": {
+      "answer_s": 0.617,
+      "dsl_gen_s": 27.761,
+      "edit_s": 26.682
+    }
+  },
+  {
+    "index": "96",
+    "image": "96.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "194",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\96_answer.pt",
+    "dsl_code": "N A Ярославль 1010 300 E W\nN B Москва 1147 500 E W\nN C Тверь 1135 700 E W\nN D Санкт-Петербург 1703 300 E W\nN E Смоленск 863 500 E W\n\nE A B 272\nE B C 175\nE B D 713\nE B E 400\nE C E 406\nE D E 753",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\96_dsl.pt",
+    "edited_dsl": "N A Ярославль 1010 300 E W\nN B Москва 1147 500 E W\nN C Тверь 1135 700 E W\nN D Санкт-Петербург 1703 300 E W\nN E Смоленск 863 500 E W\nN F Симферополь 1703 300 E W\nE A B 272\nE B C 175\nE B D 713\nE B E 400\nE C E 406\nE D E 753\nE D F 1200",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\96_edit.pt",
+    "step_times": {
+      "answer_s": 0.877,
+      "dsl_gen_s": 16.905,
+      "edit_s": 19.362
+    }
+  },
+  {
+    "index": "97",
+    "image": "97.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Рабочий, Условия работы оборудования, окружающая среда, Производственная программа, Технические возможности оборудования",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\97_answer.pt",
+    "dsl_code": "N A НИЗКИЙ_КОЭФФИЦИЕНТ_ЗАГРУЗКИ_ОБОРУДОВАНИЯ 500 150 B B\nN B РАБОТНИК 200 300 B B\nN C УСЛОВИЯ_РАБОТЫ_ОБОРУДОВАНИЯ_ОКРУЖАЮЩАЯ_СРЕДА 400 300 B B\nN D ПРОИЗВОДСТВЕННАЯ_ПРОГРАММА 600 300 B B\nN E ТЕХНИЧЕСКИЕ_ВОЗМОЖНОСТИ_ОБОРУДОВАНИЯ 800 300 B B\nE A B -\nE A C -\nE A D -\nE A E -\nE B F НИЗКИЙ_УРОВЕНЬ_ОПЫТА_РАБОТНИКА 100 400 B B\nE B G НЕЗАИНТЕРЕСОВАННОСТЬ_В_ВЫПОЛНЕНИИ_ПОСТАВЛЕННОЙ_ЗАДАЧИ 250 400 B B\nE B H ПЛОХАЯ_МОТИВАЦИЯ_РАБОТНИКА 300 500 B B\nE C I ВЫСОКАЯ_ВЛАЖНОСТЬ 450 400 B B\nE C J НЕПОСТОЯННАЯ_ТЕМПЕРАТУРА_ВОЗДУХА 500 500 B B\nE C K СКАЧКИ_НАПРЯЖЕНИЯ_В_СЕТИ 550 600 B B\nE D L НЕВЕРНЫЙ_ПЛАН_ПО_ПРОИЗВОДСТВУ_ПРОДУКЦИИ 650 400 B B\nE D M НЕХВАТКА_РЕСУРСОВ 700 500 B B\nE D N НЕПРАВИЛЬНО_ПОДОБРАННЫЙ_АССОРТИМЕНТ 750 600 B B\nE D O НЕВЕРНОЕ_ОПРЕДЕЛЕНИЕ_СПРОСА_НА_ПРОДУКЦИЮ 800 600 B B\nE E P ПЛОХОЙ_КОНТРОЛЬ_ЗА_ПРОВЕДЕНИЕМ_РЕМОНТОВ 900 400 B B\nE E Q ИЗНОС_ОБОРУДОВАНИЯ 950 500 B B\nE H R УСЛОВИЯ_ТРУДА 300 600 B B\nE R S ЗАРАБОТНАЯ_ПЛАТА 300 700 B B",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\97_dsl.pt",
+    "edited_dsl": "N A НИЗКИЙ_КОЭФФИЦИЕНТ_ЗАГРУЗКИ_ОБОРУДОВАНИЯ 500 150 B B\nN B РАБОТНИК 200 300 B B\nN C УСЛОВИЯ_РАБОТЫ_ОБОРУДОВАНИЯ_ОКРУЖАЮЩАЯ_СРЕДА 400 300 B B\nN D ПРОИЗВОДСТВЕННАЯ_ПРОГРАММА 600 300 B B\nN E ТЕХНИЧЕСКИЕ_ВОЗМОЖНОСТИ_ОБОРУДОВАНИЯ 800 300 B B\nN F УСТАРЕВШЕЕ_ОБОРУДОВАНИЕ 850 300 B B\nE A B -\nE A C -\nE A D -\nE A E -\nE B F НИЗКИЙ_УРОВЕНЬ_ОПЫТА_РАБОТНИКА 100 400 B B\nE B G НЕЗАИНТЕРЕСОВАННОСТЬ_В_ВЫПОЛНЕНИИ_ПОСТАВЛЕННОЙ_ЗАДАЧИ 250 400 B B\nE B H ПЛОХАЯ_МОТИВАЦИЯ_РАБОТНИКА 300 500 B B\nE C I ВЫСОКАЯ_ВЛАЖНОСТЬ 450 400 B B\nE C J НЕПОСТОЯННАЯ_ТЕМПЕРАТУРА_ВОЗДУХА 500 500 B B\nE C K СКАЧКИ_НАПРЯЖЕНИЯ_В_СЕТИ 550 600 B B\nE D L НЕВЕРНЫЙ_ПЛАН_ПО_ПРОИЗВОДСТВУ_ПРОДУКЦИИ 650 400 B B\nE D M НЕХВАТКА_РЕСУРСОВ 700 500 B B\nE D N НЕПРАВИЛЬНО_ПОДОБРАННЫЙ_АССОРТИМЕНТ 750 600 B B\nE D O НЕВЕРНОЕ_ОПРЕДЕЛЕНИЕ_СПРОСА_НА_ПРОДУКЦИЮ 800 600 B B\nE E P ПЛОХОЙ_КОНТРОЛЬ_ЗА_ПРОВЕДЕНИЕМ_РЕМОНТОВ 900 400 B B\nE E Q ИЗНОС_ОБОРУДОВАНИЯ 950 500 B B\nE H R УСЛОВИЯ_ТРУДА 300",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\97_edit.pt",
+    "step_times": {
+      "answer_s": 4.336,
+      "dsl_gen_s": 89.693,
+      "edit_s": 88.889
+    }
+  },
+  {
+    "index": "98",
+    "image": "98.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "7",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\98_answer.pt",
+    "dsl_code": "N A ЗАПУСК_КЛИЕНТА 500 100 B W\nN B ВВОД_ДАННЫХ_(ЛОГИН_ПАРОЛЬ) 500 200 B W\nN C ПОИСК_СООТВЕТСТВИЯ_В_БАЗЕ_ЛОГИНОВ 500 300 D W\nN D ОКНО_ПРИВЕТСТВИЯ 500 400 B W\nN E РАБОТА_В_СИСТЕМЕ 500 500 B W\nN F УВЕДОМЛЕНИЕ_Об_ОШИБКЕ 800 300 B W\n\nE A B -\nE B C -\nE C D УСПЕШНО\nE C F НЕ_УСПЕШНО\nE D E -\nE F A -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\98_dsl.pt",
+    "edited_dsl": "N A ЗАПУСК_КЛИЕНТА 500 100 B W\nN B ВВОД_ДАННЫХ_(ЛОГИН_ПАРОЛЬ) 500 200 B W\nN C ПОИСК_СООТВЕТСТВИЯ_В_БАЗЕ_ЛОГИНОВ 500 300 D W\nN D ГЛАВНОЕ_МЕНЮ 500 400 B W\nN E РАБОТА_В_СИСТЕМЕ 500 500 B W\nN F УВЕДОМЛЕНИЕ_Об_ОШИБКЕ 800 300 B W\n\nE A B -\nE B C -\nE C D УСПЕШНО\nE C F НЕ_УСПЕШНО\nE D E -\nE F A -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\98_edit.pt",
+    "step_times": {
+      "answer_s": 0.624,
+      "dsl_gen_s": 27.634,
+      "edit_s": 26.017
+    }
+  },
+  {
+    "index": "99",
+    "image": "99.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\99_answer.pt",
+    "dsl_code": "N A НАЧАЛО 500 150 E W\nN B Измерить_температуру_t° 500 250 B W\nN C t°≥37°? 500 400 D W\nN D Идти_в_школу 200 500 B W\nN E Остаться_дома 800 500 B W\nN F Вызвать_врача 800 650 B W\nN G Конец 500 800 E W\n\nE A B -\nE B C -\nE C D Нет\nE C E Да\nE D G -\nE E F -\nE F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\99_dsl.pt",
+    "edited_dsl": "N A НАЧАЛО 500 150 E W\nN B Измерить_температуру_t° 500 250 B W\nN C t°≥37°? 500 400 D W\nN D Идти_в_школу 200 500 B W\nN E Остаться_дома 800 500 B W\nN F Вызвать_врача 800 650 B W\nN G Конец 500 800 E W\nN H Заболеть 500 500 B W\nE A B -\nE B C -\nE C D Нет\nE C E Да\nE D G -\nE E F -\nE F G -\nE D H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\99_edit.pt",
+    "step_times": {
+      "answer_s": 0.622,
+      "dsl_gen_s": 21.095,
+      "edit_s": 21.623
+    }
+  },
+  {
+    "index": "100",
+    "image": "100.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "диаграмма потока данных",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\100_answer.pt",
+    "dsl_code": "N A Start 500 100 E K\nN B Process 500 250 B Y\nN C Decision 500 400 D R\nN D Input 300 500 I K\nN E Input 700 500 I K\nN F Process 500 600 B Y\nN G End 500 800 E K\nE A B -\nE B C -\nE C D \"No\"\nE C E \"Yes\"\nE D F -\nE E F -\nE F G -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\100_dsl.pt",
+    "edited_dsl": "N A Start 500 100 E K\nN B Process 500 250 B Y\nN C Output 500 400 D R\nN D Output 300 500 D R\nN E Output 700 500 D R\nN F Process 500 600 B Y\nN G End 500 800 E K\nE A B -\nE B C -\nE C D \"No\"\nE C E \"Yes\"\nE D F -\nE E F -\nE F G -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\100_edit.pt",
+    "step_times": {
+      "answer_s": 1.175,
+      "dsl_gen_s": 16.508,
+      "edit_s": 15.881
+    }
+  },
+  {
+    "index": "101",
+    "image": "101.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "A-B, A-C, A-E, B-D, B-E, E-F",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\101_answer.pt",
+    "dsl_code": "N A A 200 500 E W\nN B B 400 400 E W\nN C C 250 300 E W\nN D D 450 150 E W\nN E E 400 600 E W\nN F F 700 450 E W\nU A B -\nU A C -\nU B D -\nU B E -\nU E F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\101_dsl.pt",
+    "edited_dsl": "N A A 200 500 E W\nN B B 400 400 E W\nN C C 250 300 E W\nN D D 450 150 E W\nN E E 400 600 E W\nN F F 700 450 E W\nN G G 600 400 E W\nU A B -\nU A C -\nU B D -\nU B E -\nU E F -\nU D G -\nU E G -\nU F G -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\101_edit.pt",
+    "step_times": {
+      "answer_s": 2.595,
+      "dsl_gen_s": 13.255,
+      "edit_s": 15.926
+    }
+  },
+  {
+    "index": "102",
+    "image": "102.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "классификация животных по количеству клеток и наличию хорды",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\102_answer.pt",
+    "dsl_code": "N A ЦАРСТВО_ГИПОТЕТИЧНЫХ 300 80 E W\nN B ОДНОКЛЕТОЧНЫЕ 100 200 E W\nN C МНОГОКЛЕТОЧНЫЕ 500 200 E W\nE A B -\nE A C -\nN D ПАРОКЛИНЬЕ 200 300 E W\nN E ХОРДОВЫЕ 100 400 E W\nN F КИШЕЧНО_ПОЛОСТАНЫЕ 300 400 E W\nE C D -\nE C E -\nE C F -\nN G ЧЕРВИ 600 300 E W\nN H МАЛЫШКИ 700 300 E W\nN I ЗЕЛЕНЫЕ_СПОРЫ 900 400 E W\nE C G -\nE C H -\nE C I -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\102_dsl.pt",
+    "edited_dsl": "N A ЦАРСТВО_ГИПОТЕТИЧНЫХ 300 80 E W\nN B ОДНОКЛЕТОЧНЫЕ 100 200 E W\nN C МНОГОКЛЕТОЧНЫЕ 500 200 E W\nE A B -\nE A C -\nN D ПАРОКЛИНЬЕ 200 300 E W\nN E ХОРДОВЫЕ 100 400 E W\nN F КИШЕЧНО_ПОЛОСТАНЫЕ 300 400 E W\nE C D -\nE C E -\nE C F -\nN G ЧЕРВИ 600 300 E W\nN H МАЛЫШКИ 700 300 E W\nN I ЗЕЛЕНЫЕ_СПОРЫ 900 400 E W\nE C G -\nE C H -\nE C I -\nN J МЛЕКОПИТАЮЩИЕ 400 500 B W\nN K ХЛАДНОКРОВНЫЕ 500 500 B W\nE E J -\nE E K -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\102_edit.pt",
+    "step_times": {
+      "answer_s": 2.733,
+      "dsl_gen_s": 29.331,
+      "edit_s": 35.06
+    }
+  },
+  {
+    "index": "103",
+    "image": "103.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "980",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\103_answer.pt",
+    "dsl_code": "N A С_П 200 100 E W\nN B МОСКВА 500 300 E W\nN C КАЗАНЬ 800 600 E W\nN D КРЫМ 100 700 E W\n\nE A B 453\nE B C 391\nE B D 980\nE C D 641\nE A C 855",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\103_dsl.pt",
+    "edited_dsl": "N A С_П 200 100 E W\nN B МОСКВА 500 300 E W\nN C КАЗАНЬ 800 600 E W\nN D КРЫМ 100 700 E W\nN F КАЛИНИНГРАД 2544 0 E W\nE A B 453\nE B C 391\nE B D 980\nE C D 641\nE A C 855",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\103_edit.pt",
+    "step_times": {
+      "answer_s": 0.931,
+      "dsl_gen_s": 13.816,
+      "edit_s": 15.802
+    }
+  },
+  {
+    "index": "104",
+    "image": "104.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Игра в угадывание числа от 1 до 100 с повтором попыток до правильного ответа, при успехе выводится \"Congratulations\" и \"KOHEU\".",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\104_answer.pt",
+    "dsl_code": "N A CTAPT 100 50 E W\nN B d=rand(1,100) 500 50 B W\nN C b=input() 500 150 B W\nN D b=a 500 250 D W\nN E congratulations 500 350 I W\nN F KOHEIY 500 450 E W\n\nE A B -\nE B C -\nE C D -\nE D E TRUE\nE D F FALSE\nE E F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\104_dsl.pt",
+    "edited_dsl": "N A CTAPT 100 50 E W\nN B d=rand(1,100) 500 50 B W\nN C b=input() 500 150 B W\nN D b=a 500 250 D W\nN E congratulations 500 350 I W\nN F KOHEIY 500 450 E W\nE A B -\nE B C -\nE C D -\nE D E TRUE\nE D F FALSE\nE E F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\104_edit.pt",
+    "step_times": {
+      "answer_s": 5.91,
+      "dsl_gen_s": 16.03,
+      "edit_s": 15.035
+    }
+  },
+  {
+    "index": "105",
+    "image": "105.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "Вычисление факториала числа.",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\105_answer.pt",
+    "dsl_code": "N A CTAPT 200 80 E W\nN B d_input(1) 300 150 B W\nN C k=1;i=1 400 150 H W\nN D i:=k*i 500 150 B W\nN E i=a 600 250 D W\nN F true 600 350 T W\nN G k 700 450 I W\nN H CTOP 100 550 E W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\105_dsl.pt",
+    "edited_dsl": "N A CTAPT 200 80 E W\nN B d_input(1) 300 150 B W\nN C k=1;i=1 400 150 H G\nN D i:=k*i 500 150 B W\nN E i=a 600 250 D W\nN F true 600 350 T W\nN G k 700 450 I W\nN H CTOP 100 550 E W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\105_edit.pt",
+    "step_times": {
+      "answer_s": 1.461,
+      "dsl_gen_s": 19.122,
+      "edit_s": 18.898
+    }
+  },
+  {
+    "index": "106",
+    "image": "106.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\106_answer.pt",
+    "dsl_code": "N A ПУНКТ 100 100 E W\nN B ПОСАДИТЬ_ПОШТЕНИЕ 200 150 E W\nN C ДЕНЬ_0 400 150 D W\nN D ПАИТЬ 500 200 B W\nN E РАСПРЕДЕЛИТЬ_ДЕНГИ 600 300 D W\nN F НЕВЕРНЫЙ_ВЫБОР 300 400 I W\nN G УРОКА_НЕТ? 400 450 D W\nN H СОБРАТЬ_ГРУППУ 500 550 B W\nN I СТОП 100 700 E W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -\nE H I -\n\nU F G НЕТ\nU G H да\nU H I -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\106_dsl.pt",
+    "edited_dsl": "N A ПУНКТ_100_100 100 100 E W\nN B ПОСАДИТЬ_ПОШТЕНИЕ 200 150 E W\nN C ДЕНЬ_0 400 150 D W\nN D ПАИТЬ 500 200 B W\nN E РАСПРЕДЕЛИТЬ_ДЕНГИ 600 300 D W\nN F НЕВЕРНЫЙ_ВЫБОР 300 400 I W\nN G УРОКА_НЕТ? 400 450 D W\nN H СОБРАТЬ_ГРУППУ 500 550 B W\nN I СТОП 100 700 E W\n\nE A B -\nE B C -\nE C D -\nE D E -\nE E F -\nE F G -\nE G H -\nE H I -\n\nU G H да\nU H I -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\106_edit.pt",
+    "step_times": {
+      "answer_s": 0.666,
+      "dsl_gen_s": 29.761,
+      "edit_s": 28.754
+    }
+  },
+  {
+    "index": "107",
+    "image": "107.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "7",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\107_answer.pt",
+    "dsl_code": "N A СТАРТ 200 80 E W\nN B ЗАГРУЗКА_ФАЙЛА 400 80 B W\nN C УСПЕХ 500 150 D W\nN D ОШИБКА 700 190 B W\nN E РАЗАРХИВАЦИЯ 500 300 B W\nN F i_=1 200 350 B W\nN G i_!=1 200 400 D W\nN H УСПЕХ 500 450 D W\nN I ПОЛЬЗУЙТЕСЬ 500 550 B W\nN J ВЫХОД 700 600 E W\n\nE A B ЗАГРУЗКА_ФАЙЛА\nE B C УСПЕХ?\nE C D НЕТ\nE C E ДА\nE E F РАЗАРХИВАЦИЯ\nE F G i_=1\nE G H УСПЕХ?\nE H J НЕТ\nE H I ДА\nE I J ВЫХОД",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\107_dsl.pt",
+    "edited_dsl": "N A СТАРТ 200 80 E W\nN B ЗАГРУЗКА_ФАЙЛА 400 80 B W\nN C УСПЕХ 500 150 D W\nN D ОШИБКА 700 190 B W\nN E РАЗАРХИВАЦИЯ 500 300 B W\nN F i_=1 200 350 B W\nN G i_!=1 200 400 D W\nN H УСПЕХ 500 450 D W\nN I ПОЛЬЗУЙТЕСЬ 500 550 B W\nN J ВЫХОД 700 600 E W\n\nE A B ЗАГРУЗКА_ФАЙЛА\nE B C УСПЕХ?\nE C D НЕТ\nE C E ДА\nE E F РАЗАРХИВАЦИЯ\nE F G i_=1\nE G H УСПЕХ?\nE H J НЕТ\nE H I ДА\nE I J ВЫХОД",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\107_edit.pt",
+    "step_times": {
+      "answer_s": 0.622,
+      "dsl_gen_s": 34.318,
+      "edit_s": 33.871
+    }
+  },
+  {
+    "index": "108",
+    "image": "108.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "3",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\108_answer.pt",
+    "dsl_code": "N A 1 180 400 E W\nN B 2 500 400 E W\nN C 3 500 200 E W\nN D 4 350 300 E W\nN E 5 200 200 E W\nN F 6 300 500 E W\n\nU A B -\nU A C -\nU A D -\nU A E -\nU A F -\n\nU B C -\nU B D -\nU B E -\nU B F -\n\nU C D -\nU C E -\nU C F -\n\nU D E -\nU D F -\n\nU E F -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\108_dsl.pt",
+    "edited_dsl": "N A 1 180 400 E W\nN B 2 500 400 E W\nN C 3 500 200 E W\nN D 4 350 300 E W\nN E 5 200 200 E W\nN F 6 300 500 E W\n\nU A B -\nU A C -\nU A D -\nU A E -\nU A F -\n\nU B C -\nU B D -\nU B E -\nU B F -\n\nU C D -\nU C E -\nU C F -\n\nU D E -\nU D F -\n\nU E F -\n\nU C F -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\108_edit.pt",
+    "step_times": {
+      "answer_s": 0.612,
+      "dsl_gen_s": 18.947,
+      "edit_s": 18.765
+    }
+  },
+  {
+    "index": "109",
+    "image": "109.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "0",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\109_answer.pt",
+    "dsl_code": "N A 0 300 C W\nN B 1 400 E W\nN C 2 500 E W\nN D 3 550 E W\nN E 4 600 E W\nN F 5 600 E W\nN G 6 400 E W\nN H 7 500 E W\nN I 8 550 E W\nN J 9 600 E W\nN K 10 600 E W\nN L 11 600 E W\nN M 12 600 E W\n\nE A B -\nE B C -\nE C D -\nE C E -\nE A G -\nE G H -\nE G I -\nE H J -\nE H K -\nE I L -\nE I M -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\109_dsl.pt",
+    "edited_dsl": "N A 0 300 C W\nN B 1 400 E W\nN C 2 500 E W\nN D 3 550 E W\nN E 4 600 E W\nN F 5 600 E W\nN G 6 400 E W\nN H 7 500 E W\nN I 8 550 E W\nN J 9 600 E W\nN K 10 600 E W\nN L 11 600 E W\nN M 12 600 E W\nE A B -\nE B C -\nE C D -\nE C E -\nE A G -\nE G H -\nE G I -\nE H J -\nE H K -\nE I L -\nE I M -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\109_edit.pt",
+    "step_times": {
+      "answer_s": 0.619,
+      "dsl_gen_s": 21.348,
+      "edit_s": 22.988
+    }
+  },
+  {
+    "index": "110",
+    "image": "110.jpg",
+    "steps_completed": [
+      "answer",
+      "dsl_gen",
+      "edit"
+    ],
+    "answer": "2",
+    "answer_logits": "C:\\diplom\\dataset\\logits\\110_answer.pt",
+    "dsl_code": "N A 1 200 100 E W\nN B 2 400 100 E W\nN C 3 200 300 E W\nN D 4 400 300 E W\nN E 5 800 300 E W\nN F 6 200 500 E W\nU A B -\nU C D -\nU C F -\nU D E -",
+    "dsl_logits": "C:\\diplom\\dataset\\logits\\110_dsl.pt",
+    "edited_dsl": "N A 1 200 100 E W\nN B 2 400 100 E W\nN C 3 200 300 E W\nN D 4 400 300 E W\nN E 5 800 300 E W\nN F 6 200 500 E W\nU A B -\nU C D -\nU C F -\nU D E -\nU A E -\nU B E -",
+    "edit_logits": "C:\\diplom\\dataset\\logits\\110_edit.pt",
+    "step_times": {
+      "answer_s": 0.81,
+      "dsl_gen_s": 13.898,
+      "edit_s": 6.853
+    }
+  }
+]

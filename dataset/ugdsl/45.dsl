@@ -1,0 +1,25 @@
+N A s 500 50 E W
+N B 1 200 150 E W
+N C 2 300 150 E W
+N D 3 400 150 E W
+N E 4 100 300 E W
+N F 5 200 300 E W
+N G 6 300 300 E W
+N H 7 400 300 E W
+N I 8 500 300 E W
+N J 9 350 450 E W
+N K 4 100 500 E W
+N L 4 200 500 E W
+N M 4 500 500 E W
+
+E A B -
+E A C -
+E A D -
+E B E -
+E B F -
+E C G -
+E C H -
+E D I -
+E I M -
+
+U G J -

@@ -1,0 +1,12 @@
+N A 1 200 100 E W
+N B 2 400 100 E W
+N C 3 200 300 E W
+N D 4 400 300 E W
+N E 5 800 300 E W
+N F 6 200 500 E W
+U A B -
+U C D -
+U C F -
+U D E -
+U A E -
+U B E -

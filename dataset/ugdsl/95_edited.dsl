@@ -1,0 +1,27 @@
+N A S_500 100 C W
+N B 1_200 300 C W
+N C 2_400 300 C W
+N D 3_600 300 C W
+N E 4_100 500 C W
+N F 5_300 500 C W
+N G 6_400 600 C W
+N H 7_500 600 C W
+N I 8_600 500 C W
+N J 9_500 700 C W
+N K 4_700 700 C W
+N L 4_700 700 C W
+
+E A B -
+E A C -
+E A D -
+
+E B E -
+E B F -
+E B G -
+
+E C H -
+E C J -
+
+E D I -
+E I K -
+E I L -

@@ -1,0 +1,24 @@
+N A 0 300 C W
+N B 1 400 E W
+N C 2 500 E W
+N D 3 550 E W
+N E 4 600 E W
+N F 5 600 E W
+N G 6 400 E W
+N H 7 500 E W
+N I 8 550 E W
+N J 9 600 E W
+N K 10 600 E W
+N L 11 600 E W
+N M 12 600 E W
+E A B -
+E B C -
+E C D -
+E C E -
+E A G -
+E G H -
+E G I -
+E H J -
+E H K -
+E I L -
+E I M -

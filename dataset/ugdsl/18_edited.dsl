@@ -1,0 +1,27 @@
+N A 0 100 200 E W
+N B 1 300 200 E W
+N C 2 500 200 E W
+N D 3 300 100 E B
+N E 4 500 100 E W
+N F 5 300 300 E W
+N G 6 500 300 E W
+N H 7 500 400 E W
+N I 8 400 100 E B
+N J 9 500 500 E W
+N K 10 600 400 E W
+N L 11 600 100 E B
+
+E A C -
+E B C -
+E C H -
+E D I -
+E E H -
+E F I -
+E F J -
+E G J -
+E G K -
+E H J -
+E I K -
+E I L -
+E J K -
+E K L -

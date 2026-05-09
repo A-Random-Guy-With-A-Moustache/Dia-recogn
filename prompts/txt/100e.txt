@@ -1,0 +1,1 @@
+Удали все блоки Input и замени Decision на output.

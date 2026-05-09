@@ -1,0 +1,10 @@
+N A Д 380 200 C W
+N B Б 700 200 C W
+N C К 550 400 C W
+N D М 790 500 C W
+N E П 220 550 C W
+U A B -
+U A C -
+U B C -
+U B D -
+U C E -
