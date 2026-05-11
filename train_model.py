@@ -478,7 +478,7 @@ def main():
         cosine_restart = CosineAnnealingWarmRestarts(
             optimizer,
             T_0=steps_per_epoch,
-            T_mult=1
+            T_mult=1,
             eta_min=1e-6,
             last_epoch=-1
         )

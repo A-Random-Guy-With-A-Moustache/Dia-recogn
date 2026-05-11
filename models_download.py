@@ -38,9 +38,16 @@ for model_key in MODELS:
     print(f"##### DOWNLOADING {model_key} #####")
     model = MODELS[model_key]
     model_path = MODELS_DIR / model['subfolder']
-    snapshot_download(
-        repo_id=model['repo_id'],
-        local_dir=str(model_path),
-        max_workers=8,
-        token=HF_TOKEN,
-    )
+    try:
+        snapshot_download(
+            repo_id=model['repo_id'],
+            local_dir=str(model_path),
+            max_workers=8,
+            token=HF_TOKEN,
+        )
+    except:
+        snapshot_download(
+            repo_id=model['repo_id'],
+            local_dir=str(model_path),
+            max_workers=8,
+        )     
