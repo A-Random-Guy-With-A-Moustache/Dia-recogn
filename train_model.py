@@ -426,7 +426,7 @@ def main():
     print("Инициализация QLoRA окружения (RTX 5070 12 GB)...")
     device = torch.device("cuda:0")
 
-    student_path = MODELS_DIR / "analyzer"
+    student_path = MODELS_DIR / "analyzer-4B"
     if not student_path.exists():
         raise FileNotFoundError(f"Базовая модель не найдена: {student_path}")
 
